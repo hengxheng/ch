@@ -1,0 +1,20 @@
+wp-data
+wp-app/*
+!wp-app/wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+wp-app/wp-content/*
+!wp-app/wp-content/plugins/
+!wp-app/wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+wp-app/wp-content/plugins/*
+!wp-app/wp-content/plugins/elementor-custom-widget
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-app/wp-content/themes/*
+!wp-app/wp-content/themes/CleanHealth
+wp-app/wp-content/themes/CleanHealth/node_modules
