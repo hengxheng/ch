@@ -9,37 +9,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
 </head>
 
 <body>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
-
-		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
-
-			<div class="site-branding-container">
-				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-			</div><!-- .site-branding-container -->
-
-			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
-				<div class="site-featured-image">
-					<?php
-						twentynineteen_post_thumbnail();
-						the_post();
-						$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null;
-
-						$classes = 'entry-header';
-					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
-						$classes = 'entry-header has-discussion';
-					}
-					?>
-					<div class="<?php echo $classes; ?>">
-						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-					</div><!-- .entry-header -->
-					<?php rewind_posts(); ?>
+<header id="masthead" class="site-header">
+	<div class="header-top">
+		<div class="content-inner">
+			<div class="social-top-menu">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header-middle">
+		<div class="content-inner">
+			<div class="col-2-section">
+				<div class="site-description">
+					<?php echo get_bloginfo( 'description', 'display' ); ?>
 				</div>
-			<?php endif; ?>
-		</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+				<nav class="secondary-menu">
+					<ul>
+						<li><a href="#"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a></li>		
+						<li><a href="#">SHOP</a></li>
+						<li><a href="#"><i class="fa fa-shopping-cart"></i> 0 ITEMS - $0.00</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class="content-inner">
+			<div class="col-2-section">
+				<div class="site-logo"><?php the_custom_logo(); ?></div>
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_class'     => 'main-menu',
+								'after'	=> '<span>|</span> ',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							)
+						);
+					?>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header><!-- #masthead -->

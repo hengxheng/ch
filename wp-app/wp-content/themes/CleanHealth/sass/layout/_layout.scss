@@ -1,11 +1,33 @@
 
 /** === Layout === */
 
-#page {
-	width: 100%;
+body{
+	font-family: 'ProximaNova-Regular';
 }
 
 .site-content {
 	overflow: hidden;
 }
 
+.content-inner{
+	max-width: $content-width;
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 10px;
+	
+	@media screen{
+		
+	}
+}
+
+.col-2-section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+@import "header";
+@import "footer";

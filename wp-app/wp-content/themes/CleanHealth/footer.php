@@ -1,50 +1,68 @@
 <?php
 /**
  * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
  */
 
 ?>
 
-	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-		<div class="site-info">
-			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			<?php if ( ! empty( $blog_info ) ) : ?>
-				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>,
-			<?php endif; ?>
-			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-			}
-			?>
-			<?php if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'footer-menu',
-							'depth'          => 1,
-						)
-					);
-					?>
-				</nav><!-- .footer-navigation -->
-			<?php endif; ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-</div><!-- #page -->
-
+<footer id="colophon" class="site-footer">
+	<div class="content-inner">
+	<div class="footer-top">
+		<div class="footer-col">
+			<div class="footer-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png"/>
+			</div>
+			<?php echo do_shortcode('[widget id="custom_html-2"]'); ?>
+			<div class="footer-social">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				</ul>
+			</div>
+			<div class="footer-rologo">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/rto-logo.png"/>
+			</div>
+		</div>
+		<div class="footer-col">
+			<div class="footer-col-title">
+				LINKS
+			</div>
+			<nav class="footer-navigation" aria-label="Footer Menu">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'footer',
+						'menu_class'     => 'footer-menu',
+						'depth'          => 1,
+					)
+				);
+				?>
+			</nav>
+		</div>
+		<div class="footer-col">
+			<div class="footer-col-title">
+				INSTAGRAM
+			</div>
+			<div id="instragram-widget"></div>
+		</div>
+		<div class="footer-col">
+			<div class="footer-col-title">
+				CONTACT
+			</div>
+			<div id="footer-contact">
+			</div>
+		</div>
+			</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="content-inner">
+			<p id="copyright">2019 <span>Clean Health Fitness Institute</span>, with All rights reserved.</p>
+		</div>
+	</div>
+</footer><!-- #colophon -->
 <?php wp_footer(); ?>
 
 </body>
