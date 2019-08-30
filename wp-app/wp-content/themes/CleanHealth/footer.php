@@ -7,7 +7,7 @@
 
 
 <footer id="colophon" class="site-footer">
-	<div class="content-inner">
+	<div class="content-inner withPadding">
 	<div class="footer-top">
 		<div class="footer-col">
 			<div class="footer-logo">
@@ -58,7 +58,7 @@
 			</div>
 	</div>
 	<div class="footer-bottom">
-		<div class="content-inner">
+		<div class="content-inner withPadding">
 			<p id="copyright">2019 <span>Clean Health Fitness Institute</span>, with All rights reserved.</p>
 		</div>
 	</div>

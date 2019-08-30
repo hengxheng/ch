@@ -38,9 +38,12 @@
                 a{
                     color: #fff;
                     display:block;
-                    padding: 5px;
+                    padding: 9px 5px;
                     text-align: center;
                     text-decoration: none;
+                    height: 25px;
+                    font-size: 14px;
+                    line-height: 25px;
                     &:hover{
                         background: $green;
                     }
@@ -54,6 +57,9 @@
     box-sizing: border-box;
     padding: 10px 0;
     #site-navigation{
+        .menu-main-container{
+            display: inline-block;
+        }
         ul{
             list-style: none;
             margin: 0;
@@ -63,6 +69,8 @@
                 font-size: 12px;
                 vertical-align: middle;
                 a{
+                    text-transform: uppercase;
+                    font-family: 'ProximaNova-Bold';
                     font-size: 13px;
                     color: #000;
                     display:inline-block;
@@ -79,6 +87,20 @@
                     }
                 }
             }
+        }
+        #header-search{
+            display:inline-block;
+            padding: 5px 0 5px 13px;
+            #header-search-btn{
+                display:inline-block;
+                font-size: 20px;
+                color: #000;
+                text-decoration: none;
+                &:hover{
+                    color: $green;
+                }
+            }
+            
         }
     }
 }

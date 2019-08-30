@@ -16,7 +16,7 @@
 <?php wp_body_open(); ?>
 <header id="masthead" class="site-header">
 	<div class="header-top">
-		<div class="content-inner">
+		<div class="content-inner withPadding">
 			<div class="social-top-menu">
 				<ul>
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	<div class="header-middle">
-		<div class="content-inner">
+		<div class="content-inner withPadding">
 			<div class="col-2-section">
 				<div class="site-description">
 					<?php echo get_bloginfo( 'description', 'display' ); ?>
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<div class="header-bottom">
-		<div class="content-inner">
+		<div class="content-inner withPadding">
 			<div class="col-2-section">
 				<div class="site-logo"><?php the_custom_logo(); ?></div>
 				<nav id="site-navigation" class="main-navigation">
@@ -58,6 +58,7 @@
 							)
 						);
 					?>
+					<div id="header-search"><a id="header-search-btn" href="#"><i class="fa fa-search"></i></a></div>
 				</nav>
 			</div>
 		</div>

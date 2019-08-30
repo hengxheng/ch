@@ -61,7 +61,7 @@ class Plugin {
 	private function include_widgets_files() {
 		require_once( __DIR__ . '/widgets/partner-list.php' );
 		require_once( __DIR__ . '/widgets/inline-editing.php' );
-		require_once( __DIR__ . '/widgets/slider.php' );
+		require_once( __DIR__ . '/widgets/home-slider.php' );
 		require_once( __DIR__ . '/widgets/multiple-column-layout.php' );
 		require_once( __DIR__ . '/widgets/story-line.php' );
 		require_once( __DIR__ . '/widgets/team-profile.php' );
@@ -80,12 +80,13 @@ class Plugin {
 		$this->include_widgets_files();
 
 		// Register Widgets
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Home_Slider() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Partner_List() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Custom_El_Slider() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Multiple_Column_Layout() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Story_Line() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Profile() );
+
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}
 
 	function add_elementor_widget_categories( $elements_manager ) {

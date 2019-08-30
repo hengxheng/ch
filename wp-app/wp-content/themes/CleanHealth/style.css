@@ -452,6 +452,17 @@ template {
   font-style: normal;
 }
 
+.w-btn {
+  font-family: 'ProximaNova-Semibold';
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 16px;
+  line-height: 16px;
+}
+
 /** === Layout === */
 body {
   font-family: 'ProximaNova-Regular';
@@ -466,6 +477,9 @@ body {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+.content-inner.withPadding {
   padding: 0 10px;
 }
 
@@ -474,6 +488,51 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.triangle-strip {
+  width: 25px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.triangle-strip .t1 {
+  width: 100%;
+  height: 50px;
+  background: #9aca3c;
+}
+
+.triangle-strip .t2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 25px 0;
+  border-color: transparent #9aca3c transparent transparent;
+}
+
+.triangle-strip .t3 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 25px 25px;
+  border-color: transparent transparent #9aca3c transparent;
+}
+
+.triangle-strip .t4 {
+  width: 100%;
+  height: 150px;
+  background: #9aca3c;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: none !important;
+}
+
+.elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
+  padding: 0 !important;
 }
 
 .header-top {
@@ -525,9 +584,12 @@ body {
 .header-middle .secondary-menu ul li a {
   color: #fff;
   display: block;
-  padding: 5px;
+  padding: 9px 5px;
   text-align: center;
   text-decoration: none;
+  height: 25px;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .header-middle .secondary-menu ul li a:hover {
@@ -537,6 +599,10 @@ body {
 .header-bottom {
   box-sizing: border-box;
   padding: 10px 0;
+}
+
+.header-bottom #site-navigation .menu-main-container {
+  display: inline-block;
 }
 
 .header-bottom #site-navigation ul {
@@ -552,6 +618,8 @@ body {
 }
 
 .header-bottom #site-navigation ul li a {
+  text-transform: uppercase;
+  font-family: 'ProximaNova-Bold';
   font-size: 13px;
   color: #000;
   display: inline-block;
@@ -566,6 +634,22 @@ body {
 
 .header-bottom #site-navigation ul li:last-child span {
   display: none;
+}
+
+.header-bottom #site-navigation #header-search {
+  display: inline-block;
+  padding: 5px 0 5px 13px;
+}
+
+.header-bottom #site-navigation #header-search #header-search-btn {
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.header-bottom #site-navigation #header-search #header-search-btn:hover {
+  color: #9aca3c;
 }
 
 .site-footer {
@@ -652,4 +736,110 @@ body {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
+}
+
+.partner-list {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px 0;
+}
+
+.partner-list .partner-list-title {
+  font-family: 'GoboldBold';
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.partner-list .partner-list-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partner-list .partner-list-content .pl-block {
+  width: 10%;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.partner-list .partner-list-content .pl-block img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+#home-slider .embed-responsive {
+  height: 475px;
+  width: 100%;
+  background-size: cover !important;
+  position: relative;
+}
+
+#home-slider .home-slider-content {
+  z-index: 49;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  text-align: right;
+}
+
+#home-slider .home-slider-content .home-slider-content-inner {
+  display: inline-block;
+  text-align: left;
+}
+
+#home-slider .home-slider-content .home-slider-content-inner .hs-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#home-slider .home-slider-content .home-slider-content-inner .home-slide-text {
+  background: #9aca3c;
+  width: 450px;
+  height: 250px;
+  color: #fff;
+  padding: 25px;
+  margin: 0 0 10px;
+}
+
+#home-slider .home-slider-content .home-slider-content-inner .home-slide-small {
+  font-family: 'ProximaNova-LightIt';
+  font-size: 17px;
+  color: #fff;
+}
+
+#home-slider .slick-dots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+  z-index: 50;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 29px;
+  padding-right: 150px;
+}
+
+#home-slider .slick-dots li {
+  float: right;
+  margin: 3px;
+}
+
+#home-slider .slick-dots li button {
+  background: #919191;
+  border-radius: 50%;
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border: 0;
+}
+
+#home-slider .slick-dots li.slick-active button {
+  background: #fff;
 }

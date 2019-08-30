@@ -1,0 +1,97 @@
+.partner-list{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px 0;
+    .partner-list-title{
+        font-family: 'GoboldBold';
+        font-size:16px;
+        margin: 0 0 12px;
+    }
+    .partner-list-content{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .pl-block{
+            width: 10%;
+            text-align: center;
+            vertical-align: middle;
+            box-sizing: border-box;
+            img{
+                display:inline-block;
+                vertical-align: middle;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+#home-slider{
+    .embed-responsive{
+        height: 475px;
+        width: 100%;
+        background-size: cover !important;
+        position: relative;
+    }
+    .home-slider-content{
+        z-index: 49;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        text-align: right;
+        .home-slider-content-inner{
+            display:inline-block; 
+            text-align: left;
+            .hs-wrapper{
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+            }
+            .home-slide-text{
+                background: $green;
+                width: 450px;
+                height: 250px;
+                color: #fff;
+                padding: 25px;
+                margin: 0 0 10px;
+            }
+            .home-slide-small{
+                font-family: 'ProximaNova-LightIt';
+                font-size: 17px;
+                color:#fff;
+            }
+        }
+    }
+    .slick-dots{
+        list-style: none;
+        margin:0;
+        padding:0;
+        display: block;
+        text-align: left;
+        z-index: 50;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 29px;
+        padding-right: 150px;
+        li{
+            float: right;
+            margin: 3px;
+            button{
+                background: #919191;
+                border-radius: 50%;
+                font-size:0;
+                width: 15px;
+                height: 15px;
+                border:0;
+            }
+            &.slick-active{
+                button{
+                    background: #fff;
+                }
+            }
+        }
+        
+    }
+}
