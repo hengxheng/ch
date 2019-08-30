@@ -10,7 +10,7 @@ use Elementor\Widget_Base;
 
 class Custom_El_Slider extends Widget_Base {
   public function get_name() {
-    return 'Custom Slider';
+    return 'slider';
   }
 
   public function get_title() {
@@ -25,6 +25,13 @@ class Custom_El_Slider extends Widget_Base {
     return [ 'custom' ];
   }
 
+  public function get_script_depends() {
+		return [ 
+            'elementor-custome-widget-slick',
+            'elementor-custome-widget-js' 
+          ];
+  }
+  
   protected function _register_controls() {
     $this->start_controls_section(
       'content_section',
@@ -47,12 +54,15 @@ class Custom_El_Slider extends Widget_Base {
       ]
     );
 
+    
+
+
     $repeater = new Repeater();
 
     $repeater->add_control(
       'image',
       [
-        'label'   => __( 'Choose Image', 'kawai' ),
+        'label'   => 'Choosec Image',
         'type'    => Controls_Manager::MEDIA,
         'default' => [
           'url' => Utils::get_placeholder_image_src(),
@@ -63,7 +73,7 @@ class Custom_El_Slider extends Widget_Base {
     $repeater->add_control(
       'content',
       [
-        'label'      => __( 'Content', 'kawai' ),
+        'label'      => 'Content',
         'type'       => Controls_Manager::WYSIWYG,
         'show_label' => false,
       ]
@@ -72,7 +82,7 @@ class Custom_El_Slider extends Widget_Base {
     $this->add_control(
       'list',
       [
-        'label'  => __( 'Repeater List', 'kawai' ),
+        'label'  => 'Repeater List',
         'type'   => Controls_Manager::REPEATER,
         'fields' => $repeater->get_controls(),
       ]
@@ -115,11 +125,10 @@ class Custom_El_Slider extends Widget_Base {
           </div>
 
           <div class="nav py-2 justify-content-end align-items-center <?= count( $settings['list'] ) > 1 ? 'd-flex' : 'd-none' ?>">
-            <a href="#" class="arrow left"><img src="<? the_assets_path( 'images/arrow-left.svg' ) ?>" alt="Left" class="img-fluid" width="25"></a>
-
+            <a href="#" class="arrow left">Left</a>
             <div class="slide-number px-3"><span class="current-slide">1</span>/<?= count( $settings['list'] ) ?></div>
 
-            <a href="#" class="arrow right"><img src="<? the_assets_path( 'images/arrow-right.svg' ) ?>" alt="Right" class="img-fluid" width="25"></a>
+            <a href="#" class="arrow right">Right</a>
           </div>
         </div>
 

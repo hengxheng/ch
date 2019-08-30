@@ -47,7 +47,7 @@ class Inline_Editing extends Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'fa fa-pencil';
+		return 'fa fa-puzzle-piece';
 	}
 
 	/**
@@ -114,6 +114,35 @@ class Inline_Editing extends Widget_Base {
 
 
 		$this->end_controls_section();
+
+		//style tab
+		$this->start_controls_section(
+			'section_style',
+			[
+				'label' => 'Style',
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'text-transform',
+			[
+				'label' => 'Text transform',
+				'type' => Controls_Manager::SELECT,
+				'default' => '',
+				'options' => [
+					'' => 'None',
+					'uppercase' => 'UPPERCASE',
+					'lowercase' => 'lowercase',
+					'capitalize' => 'Capitalize',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .title' => 'text-transform: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
 	}
 
 	/**
@@ -135,28 +164,6 @@ class Inline_Editing extends Widget_Base {
 		<h2 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo $settings['title']; ?></h2>
 		<div <?php echo $this->get_render_attribute_string( 'description' ); ?>><?php echo $settings['description']; ?></div>
 		<div <?php echo $this->get_render_attribute_string( 'content' ); ?>><?php echo $settings['content']; ?></div>
-		<?php
-	}
-
-	/**
-	 * Render the widget output in the editor.
-	 *
-	 * Written as a Backbone JavaScript template and used to generate the live preview.
-	 *
-	 * @since 1.1.0
-	 *
-	 * @access protected
-	 */
-	protected function _content_template() {
-		?>
-		<#
-		view.addInlineEditingAttributes( 'title', 'none' );
-		view.addInlineEditingAttributes( 'description', 'basic' );
-		view.addInlineEditingAttributes( 'content', 'advanced' );
-		#>
-		<h2 {{{ view.getRenderAttributeString( 'title' ) }}}>{{{ settings.title }}}</h2>
-		<div {{{ view.getRenderAttributeString( 'description' ) }}}>{{{ settings.description }}}</div>
-		<div {{{ view.getRenderAttributeString( 'content' ) }}}>{{{ settings.content }}}</div>
 		<?php
 	}
 }
