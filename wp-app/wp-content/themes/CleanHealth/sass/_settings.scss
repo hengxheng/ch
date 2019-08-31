@@ -212,6 +212,45 @@ $secText: #313136;
   }
 }
 
+.g-btn{
+  font-family: 'ProximaNova-Semibold';
+  display:inline-block;
+  padding: 7px 10px;
+  border: 1px solid $green;
+  color: #fff;
+  background: $green;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.btn-arrow{
+  font-family: 'ProximaNova-Semibold';
+  display:inline-block;
+  padding: 7px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 16px;
+  line-height: 16px;
+  span{
+    &:after{
+      content: '';
+      display:inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('assets/images/icon/w-arrow.png') no-repeat center center;
+      background-size: contain;
+      margin-left: 10px;
+      vertical-align: -3px;
+    }
+  }
+  &:hover{
+    border-color: $green;
+    background:$green;
+    color: #fff;
+  }
+}
+
 .text-wysiwyg{
   font-size: 18px;
   h2{

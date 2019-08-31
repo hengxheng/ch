@@ -32,7 +32,7 @@ class Right_Text extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Content', 'elementor-hello-world' ),
+				'label' => 'Content',
 			]
 		);
 

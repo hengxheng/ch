@@ -60,12 +60,15 @@ class Plugin {
 	 */
 	private function include_widgets_files() {
 		require_once( __DIR__ . '/widgets/partner-list.php' );
-		require_once( __DIR__ . '/widgets/inline-editing.php' );
 		require_once( __DIR__ . '/widgets/home-slider.php' );
 		require_once( __DIR__ . '/widgets/multiple-column-layout.php' );
 		require_once( __DIR__ . '/widgets/story-line.php' );
 		require_once( __DIR__ . '/widgets/team-profile.php' );
 		require_once( __DIR__ . '/widgets/right-text.php' );
+		require_once( __DIR__ . '/widgets/left-right-fullwidth.php' );
+
+
+		require_once( __DIR__ . '/widgets/inline-editing.php' );
 	}
 
 	/**
@@ -87,6 +90,8 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Story_Line() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Profile() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Right_Text() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Left_Right_Fullwidth() );
+
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}

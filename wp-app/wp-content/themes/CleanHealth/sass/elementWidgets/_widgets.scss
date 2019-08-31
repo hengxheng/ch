@@ -132,6 +132,7 @@
                 }
                 .mcl-col-image{
                     margin: 0 0 25px;
+                    text-align: center;
                     img{
                         display:inline-block;
                         vertical-align: middle;
@@ -144,10 +145,76 @@
             }
         }
     }
-    .mcl-footer{
+    // .mcl-footer{
 
+    // }
+}
+
+.left-right-fullwidth-widget{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .col2{
+        width: 50%;
+        overflow:hidden;
+        &:first-child{
+            .lr-block{
+                justify-content: flex-end;
+            }
+        }
+        &:nth-child(2){
+            .lr-block{
+                justify-content: flex-start;
+            }
+        }
+        .lr-block{
+            position:relative;
+            width: 100%;
+            padding: 140px 60px;
+            display:flex;
+            flex-wrap:wrap;
+            box-sizing: border-box;
+            &:before{
+                content:"";
+                position: absolute;
+                z-index: 1;
+                left:0;
+                right:0;
+                top:0;
+                bottom:0;
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #000000, $alpha: 0.75);
+            }
+            
+            .lr-block-inner{
+                text-align:left;
+                z-index: 1;
+                width: 600px;
+                height: 250px;
+                display:inline-block;
+                color: #fff !important;
+                .lr-title{
+                    display: inline-block;
+                    padding: 8px 15px;
+                    background: $green;
+                    color: #000;
+                    margin: 0 0 15px;
+                    font-family: 'ProximaNova-Bold';
+                    font-size: 15px;
+                }
+                .lr-content{
+                    margin: 0 0 15px;
+                    h3{
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
     }
 }
+
 
 .home-course{
     text-align: center;
@@ -178,5 +245,43 @@
     
 }
 
+.home-map{
+    text-align: center;
+    background: #f3f3f3;
+    .cta{
+        a{
+            display:inline-block;
+            margin:10px;
+        }
+    }
+}
 
-
+.home-education{
+    .mcl-content{
+        .mcl-col{
+            &:hover{
+                background: $green;
+                color:#fff;
+            }
+            .mcl-col-inner{
+                .mcl-col-image{
+                    margin: 40px auto;
+                    width: 80%;
+                }
+                .mcl-col-footer{
+                    margin: 40px auto;
+                    width: 80%;
+                    h2{
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    .cta{
+        a{
+            display:inline-block;
+            margin:10px;
+        }
+    }
+}
