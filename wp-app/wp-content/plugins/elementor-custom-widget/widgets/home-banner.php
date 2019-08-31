@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @since 1.1.0
  */
-class Right_Text extends Widget_Base {
+class Home_Banner extends Widget_Base {
 
 	public function get_name() {
-		return 'right_text';
+		return 'home-banner';
 	}
 
 	public function get_title() {
-		return 'Right Text';
+		return 'Home Banner';
 	}
 
 	public function get_icon() {
@@ -37,6 +37,18 @@ class Right_Text extends Widget_Base {
 		);
 
 		$this->add_control(
+            'full_width',
+            [
+              'label'        => 'Full Width',
+              'type'         => Controls_Manager::SWITCHER,
+              'label_on'     => 'ON',
+              'label_off'    => 'OFF',
+              'return_value' => 1,
+              'default'      => 0,
+            ]
+		);
+
+		$this->add_control(
             'image',
             [
               'label'   => 'Background Image',
@@ -50,10 +62,33 @@ class Right_Text extends Widget_Base {
 		$this->add_control(
 			'content',
 			[
-				'label' => 'Left Content',
+				'label' => 'Content',
 				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
+
+		// $this->add_control(
+		// 	'button-text',
+		// 	[
+		// 		'label' => 'Button Text',
+		// 		'type' => Controls_Manager::TEXT,
+		// 	]
+		// );
+
+		// $this->add_control(
+		// 	'button-link',
+		// 	[
+		// 		'label' => 'Link',
+		// 		'type' => Controls_Manager::URL,
+		// 		'placeholder' => 'https://your-link.com',
+		// 		'show_external' => true,
+		// 		'default' => [
+		// 			'url' => '',
+		// 			'is_external' => false,
+		// 			'nofollow' => false,
+		// 		],
+		// 	]
+    	// );
 
 
 		$this->end_controls_section();
@@ -72,18 +107,11 @@ class Right_Text extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget">
-			<div class="right-text-strap" >
-				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
-					</div>
-				</div>
-				<div class="col2">
-					<div class="right-text-wrapper">
-						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
-						</div>
+		<div class="home-banner-widget">
+			<div class="banner-inner <?= ($settings['full_width'])?'':'content-inner' ?>" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;background-size:cover">
+				<div class="banner-text-wrapper">
+					<div class="banner-text text-wysiwyg">
+						<?= wpautop( $settings['content'] ) ?>
 					</div>
 				</div>
 			</div>

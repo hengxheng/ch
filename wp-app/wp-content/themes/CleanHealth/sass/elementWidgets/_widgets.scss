@@ -285,3 +285,34 @@
         }
     }
 }
+
+.home-banner-widget{
+    .banner-inner{
+        display:flex;
+        justify-content: flex-end;
+        position:relative;
+        &:before{
+            content:'';
+            display:block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 0 20px 30px;
+            border-color: transparent transparent transparent #ffffff;
+            position: absolute;
+            z-index: 5;
+            top:40px;
+            left:0;
+        }
+        .banner-text-wrapper{
+            width: 40%;
+            padding: 50px 70px 50px 150px;
+            .banner-text{
+                color: #fff;
+                .w-btn{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

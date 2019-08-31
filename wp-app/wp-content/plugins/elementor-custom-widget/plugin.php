@@ -66,7 +66,7 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/team-profile.php' );
 		require_once( __DIR__ . '/widgets/right-text.php' );
 		require_once( __DIR__ . '/widgets/left-right-fullwidth.php' );
-
+		require_once( __DIR__ . '/widgets/home-banner.php' );
 
 		require_once( __DIR__ . '/widgets/inline-editing.php' );
 	}
@@ -91,7 +91,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Profile() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Right_Text() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Left_Right_Fullwidth() );
-
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Home_Banner() );
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}

@@ -576,6 +576,10 @@ template {
   font-size: 75%;
 }
 
+.text-wysiwyg strong {
+  font-family: 'ProximaNova-Bold';
+}
+
 /** === Layout === */
 body {
   font-family: 'ProximaNova-Regular';
@@ -1142,4 +1146,37 @@ body {
 .home-education .cta a {
   display: inline-block;
   margin: 10px;
+}
+
+.home-banner-widget .banner-inner {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.home-banner-widget .banner-inner:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  z-index: 5;
+  top: 40px;
+  left: 0;
+}
+
+.home-banner-widget .banner-inner .banner-text-wrapper {
+  width: 40%;
+  padding: 50px 70px 50px 150px;
+}
+
+.home-banner-widget .banner-inner .banner-text-wrapper .banner-text {
+  color: #fff;
+}
+
+.home-banner-widget .banner-inner .banner-text-wrapper .banner-text .w-btn {
+  margin-top: 50px;
 }
