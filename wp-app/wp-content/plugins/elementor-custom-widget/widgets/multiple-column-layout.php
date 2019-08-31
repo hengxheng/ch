@@ -39,14 +39,28 @@ class Multiple_Column_Layout extends Widget_Base {
 			[
 				'label' => 'Section Class',
 				'type'  => Controls_Manager::TEXT,
+				'description' => 'For special styling, do not change it'
 			]
-        );
+		);
+		
+		$this->add_control(
+			'narrow',
+			[
+				'label'        => 'Narrow',
+				'description'  => 'Content width is narrow',
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => 'Yes',
+				'label_off'    => 'No',
+				'return_value' => 1,
+				'default'      => 1,
+			]
+		);
         
 		$this->add_control(
 			'section-header',
 			[
 				'label' => 'Section Header',
-				'type'  => Controls_Manager::TEXTAREA,
+				'type'  => Controls_Manager::WYSIWYG,
 			]
 		);
 
@@ -54,7 +68,7 @@ class Multiple_Column_Layout extends Widget_Base {
 			'section-footer',
 			[
 				'label' => 'Section Footer',
-				'type'  => Controls_Manager::TEXTAREA,
+				'type'  => Controls_Manager::WYSIWYG,
 			]
 		);
         
@@ -64,7 +78,7 @@ class Multiple_Column_Layout extends Widget_Base {
 			'column-header',
 			[
 				'label' => 'Column Header',
-				'type'  => Controls_Manager::TEXTAREA,
+				'type'  => Controls_Manager::WYSIWYG,
 			]
         );
         
@@ -83,7 +97,7 @@ class Multiple_Column_Layout extends Widget_Base {
 			'column-footer',
 			[
 				'label' => 'Column Footer',
-				'type'  => Controls_Manager::TEXTAREA,
+				'type'  => Controls_Manager::WYSIWYG,
 			]
         );
 
@@ -139,15 +153,17 @@ class Multiple_Column_Layout extends Widget_Base {
         
 	?>
         <div class="multiple-column-layout <?= $settings['section-class'] ?>">
-			<div class="content-inner">
-				<div class="mcl-header"><?= $settings['section-header'] ?></div>
+			<div class="content-inner <?= $settings['narrow']?'narrow':'' ?>">
+				<div class="mcl-header text-wysiwyg">
+					<?= $settings['section-header'] ?>
+				</div>
 				<div class="mcl-content">
                 <?php if($count_culumns): ?>
 					<?php foreach ( $columns as $index => $item ) :?> 
 						<div class="mcl-col" style="width: <?= $column_width?>%">
                             <div class="mcl-col-inner"> 
                                 <?php if($item['column-header']): ?>
-                                    <div class="mcl-col-header">
+                                    <div class="mcl-col-header text-wysiwyg">
                                        <?= $item['column-header'] ?>
                                     </div>
                                 <?php endif; ?>
@@ -159,7 +175,7 @@ class Multiple_Column_Layout extends Widget_Base {
                                 <?php endif; ?>
 
                                 <?php if($item['column-footer']): ?>
-                                    <div class="mcl-col-footer">
+                                    <div class="mcl-col-footer text-wysiwyg">
                                         <?= $item['column-footer'] ?>
                                     </div>
                                 <?php endif; ?>
@@ -169,7 +185,7 @@ class Multiple_Column_Layout extends Widget_Base {
 					<?php endforeach; ?>
                 <?php endif; ?>
 				</div>
-                <div class="mcl-footer"><?= $settings['section-footer'] ?></div>
+                <div class="mcl-footer text-wysiwyg"><?= $settings['section-footer'] ?></div>
 			</div>
 		</div>
 	<?php

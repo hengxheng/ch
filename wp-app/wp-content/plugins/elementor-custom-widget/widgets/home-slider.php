@@ -41,19 +41,6 @@ class Home_Slider extends Widget_Base {
       ]
     );
 
-    // $this->add_control(
-    //   'use_image',
-    //   [
-    //     'label'        => 'Use Image <img> tag',
-    //     'description'  => 'Set to No if you have different image sizes',
-    //     'type'         => Controls_Manager::SWITCHER,
-    //     'label_on'     => 'Yes',
-    //     'label_off'    => 'No',
-    //     'return_value' => 1,
-    //     'default'      => 1,
-    //   ]
-    // );
-
     $repeater = new Repeater();
 
     $repeater->add_control(

@@ -65,6 +65,7 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/multiple-column-layout.php' );
 		require_once( __DIR__ . '/widgets/story-line.php' );
 		require_once( __DIR__ . '/widgets/team-profile.php' );
+		require_once( __DIR__ . '/widgets/right-text.php' );
 	}
 
 	/**
@@ -85,6 +86,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Multiple_Column_Layout() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Story_Line() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Profile() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Right_Text() );
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}

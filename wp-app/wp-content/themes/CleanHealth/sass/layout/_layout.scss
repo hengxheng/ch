@@ -18,6 +18,10 @@ body{
 	&.withPadding{
 		padding: 0 10px;
 	}
+	&.narrow{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
 	@media screen{
 		
 	}
