@@ -67,6 +67,10 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/right-text.php' );
 		require_once( __DIR__ . '/widgets/left-right-fullwidth.php' );
 		require_once( __DIR__ . '/widgets/home-banner.php' );
+		require_once( __DIR__ . '/widgets/testimonial-slider.php' );
+		require_once( __DIR__ . '/widgets/footer_subscription.php' );
+		require_once( __DIR__ . '/widgets/footer_contact.php' );
+		require_once( __DIR__ . '/widgets/footer_video.php' );
 
 		require_once( __DIR__ . '/widgets/inline-editing.php' );
 	}
@@ -92,6 +96,10 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Right_Text() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Left_Right_Fullwidth() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Home_Banner() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Testimonial_Slider() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Footer_Contact() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Footer_Video() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Footer_Subscription() );
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
 	}

@@ -287,6 +287,7 @@
 }
 
 .home-banner-widget{
+    margin: 0 0 30px;
     .banner-inner{
         display:flex;
         justify-content: flex-end;
@@ -297,7 +298,7 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 20px 0 20px 30px;
+            border-width: 20px 0 20px 40px;
             border-color: transparent transparent transparent #ffffff;
             position: absolute;
             z-index: 5;
@@ -312,6 +313,135 @@
                 .w-btn{
                     margin-top: 50px;
                 }
+            }
+        }
+    }
+}
+
+#testimonial-slider{
+    .t-slider-content{
+        .t-slider-content-inner{
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            height: 585px;
+            overflow: hidden;
+            .t-slider-image{
+                width: 48%;
+                overflow: hidden;
+                text-align: left;
+                align-self: center;
+                img{
+                    max-width: 100%;
+                    display:inline-block;
+                }
+            }
+            .t-slider-text{
+                width: 49.5%;
+                overflow: hidden;
+                background: $green;
+                color: #fff;
+                padding: 7%;
+                text-align: left;
+                position: relative;
+                &::before{
+                    content:"";
+                    display:block;
+                    position: absolute;
+                    top:30px;
+                    left:0;
+                    z-index:5;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 20px 0 20px 30px;
+                    border-color: transparent transparent transparent #ffffff;
+                }
+                .ts-name{
+                    font-family: 'ProximaNova-Bold';
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin: 0 0 20px;
+                }
+                .ts-title{
+                    font-family: 'ProximaNova-Bold';
+                    font-size: 22px;
+                    line-height: 26px;
+                    margin: 0 0 20px;
+                }
+                .ts-words{
+                    font-family: 'ProximaNova-RegularIt';
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin: 0 0 20px;
+                    .ts-quote{
+                        font-family: 'ProximaNova-Bold';
+                        &:last-child{
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+                height: auto;
+                .t-slider-image{
+                    width: 100%;
+                    text-align: center;
+                }
+                .t-slider-text{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .slick-dots{
+        list-style: none;
+        margin:0;
+        padding:0;
+        display: block;
+        text-align: left;
+        z-index: 50;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 29px;
+        padding-right: 150px;
+        li{
+            float: right;
+            margin: 3px;
+            button{
+                background: #919191;
+                border-radius: 50%;
+                font-size:0;
+                width: 15px;
+                height: 15px;
+                border:0;
+            }
+            &.slick-active{
+                button{
+                    background: #fff;
+                }
+            }
+        }
+        
+    }
+    .ts-bottom{
+        font-family: 'ProximaNova-Bold';
+        font-size: 16px;
+        padding: 20px 0;
+        border-bottom: 2px solid $green;
+        margin: 0 0 25px;
+        a{
+            text-decoration: none;
+            color: #000;
+            &::after{
+                content:">";
+                display:inline-block;
+                margin-left: 12px;
+                font-size: 30px;
+                vertical-align: middle;
             }
         }
     }
