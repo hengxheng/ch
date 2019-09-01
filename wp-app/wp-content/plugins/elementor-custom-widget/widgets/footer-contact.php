@@ -50,7 +50,7 @@ class Footer_Contact extends Widget_Base {
 		$this->add_control(
 			'content',
 			[
-				'label' => 'Left Content',
+				'label' => 'Content',
 				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
@@ -70,22 +70,24 @@ class Footer_Contact extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget">
-			<div class="right-text-strap" >
+		<div class="footer-contact-widget" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center; background-size: cover;">
+			<div class="content-inner">
+			<div class="footer-contact-strap">
 				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
-					</div>
-				</div>
-				<div class="col2">
-					<div class="right-text-wrapper">
-						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
+					<div class="footer-contact-content">
+						<div class="fc-title">
+							<?= $settings['content'] ?>
+						</div>
+						<div class="fc-form">
+							<?php echo do_shortcode('[contact-form-7 id="52" title="Footer Contact"]'); ?>
 						</div>
 					</div>
 				</div>
+				<div class="col2">
+				
+				</div>
+			</div>
 			</div>
 		</div>
 		<?php

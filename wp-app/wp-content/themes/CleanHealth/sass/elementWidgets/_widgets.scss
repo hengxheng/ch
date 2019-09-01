@@ -448,7 +448,7 @@
 }
 
 .footer-subscription-widget{
-    margin-top: 50px;
+    margin-top: 90px;
     .footer-subscription-wrapper{    
         padding: 60px 0 0;
        .fs-inner{
@@ -507,6 +507,34 @@
             .video-text{
                 font-family: 'GoboldBold';
                 color: #fff;
+            }
+        }
+    }
+}
+
+.footer-contact-widget{
+    .footer-contact-strap{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .col2{
+            width: 50%;
+            .footer-contact-content{
+                color: #fff;
+                padding: 40px 0;
+                .fc-title{
+                    font-family: 'ProximaNova-Bold';
+                    font-size: 32px;
+                    margin: 0 0 40px;
+                }
+                .fc-form{
+                    input[type='submit']{
+                        border:0;
+                        background: $green;
+                        color: #fff;
+                        padding: 8px 15px;
+                    }
+                }
             }
         }
     }

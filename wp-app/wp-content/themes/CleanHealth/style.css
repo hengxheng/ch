@@ -584,13 +584,22 @@ template {
   margin: 0 0 15px;
 }
 
+.form-row .form-row-cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row .form-row-cols .form-col2 {
+  width: 49%;
+}
+
 .form-row label {
   display: block;
   width: 100%;
   font-size: 17px;
 }
 
-.form-row input[type="text"] {
+.form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
   background: transparent;
   border: 0;
   border-bottom: 1px solid #fff;
@@ -1344,7 +1353,7 @@ body {
 }
 
 .footer-subscription-widget {
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 .footer-subscription-widget .footer-subscription-wrapper {
@@ -1413,6 +1422,34 @@ body {
 .footer-video-widget .footer-video-strap .footer-video-wrapper .video-text {
   font-family: 'GoboldBold';
   color: #fff;
+}
+
+.footer-contact-widget .footer-contact-strap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-contact-widget .footer-contact-strap .col2 {
+  width: 50%;
+}
+
+.footer-contact-widget .footer-contact-strap .col2 .footer-contact-content {
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-contact-widget .footer-contact-strap .col2 .footer-contact-content .fc-title {
+  font-family: 'ProximaNova-Bold';
+  font-size: 32px;
+  margin: 0 0 40px;
+}
+
+.footer-contact-widget .footer-contact-strap .col2 .footer-contact-content .fc-form input[type='submit'] {
+  border: 0;
+  background: #9aca3c;
+  color: #fff;
+  padding: 8px 15px;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10

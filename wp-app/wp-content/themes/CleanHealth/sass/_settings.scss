@@ -305,12 +305,20 @@ $secText: #313136;
 
 .form-row{
   margin:0 0 15px;
+  .form-row-cols{
+    display:flex;
+    justify-content: space-between;
+    .form-col2{
+      width: 49%;
+    }
+  }
+  
   label{
     display:block;
     width: 100%;
     font-size: 17px;
   }
-  input[type="text"]{
+  input[type="text"], input[type="email"], textarea{
     background: transparent;
     border:0;
     border-bottom: 1px solid #fff;
