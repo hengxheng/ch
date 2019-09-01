@@ -53,6 +53,7 @@
 				CONTACT
 			</div>
 			<div id="footer-contact">
+				<?php echo do_shortcode('[widget id="custom_html-3"]'); ?>
 			</div>
 		</div>
 			</div>
