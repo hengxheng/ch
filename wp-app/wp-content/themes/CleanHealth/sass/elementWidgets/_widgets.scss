@@ -487,3 +487,27 @@
        } 
     }
 }
+
+.footer-video-widget{
+    .footer-video-strap{
+        .footer-video-wrapper{
+            text-align:center;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            .play-icon{
+                font-size: 60px;            
+                text-decoration: none;
+                margin: 0 0 20px;
+                i{
+                    color: $green;
+                }
+            }
+            .video-text{
+                font-family: 'GoboldBold';
+                color: #fff;
+            }
+        }
+    }
+}

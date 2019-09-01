@@ -17,7 +17,7 @@ class Footer_Video extends Widget_Base {
 	}
 
 	public function get_title() {
-		return 'Footer_Video';
+		return 'Footer Video';
 	}
 
 	public function get_icon() {
@@ -28,6 +28,12 @@ class Footer_Video extends Widget_Base {
 		return [ 'custom' ];
 	}
 
+	public function get_script_depends() {
+		return [ 
+            'elementor-custome-widget-lity',
+		];
+  	}
+  
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'section_content',
@@ -50,8 +56,16 @@ class Footer_Video extends Widget_Base {
 		$this->add_control(
 			'content',
 			[
-				'label' => 'Left Content',
-				'type' => Controls_Manager::WYSIWYG,
+				'label' => 'Content',
+				'type' => Controls_Manager::TEXT,
+			]
+		);
+
+		$this->add_control(
+			'link',
+			[
+				'label' => 'Youtube Embed Link',
+				'type' => Controls_Manager::TEXT,
 			]
 		);
 
@@ -72,19 +86,17 @@ class Footer_Video extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget">
-			<div class="right-text-strap" >
-				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
+		<div class="footer-video-widget">
+			<div class="footer-video-strap" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center; background-size: cover;">
+				<div class="footer-video-wrapper">
+				<div class="footer-video-inner">
+					<div class="play-icon">
+						<a href="<?= $settings['link'] ?>" data-lity><i class="fa fa-play-circle"></i></a>
+					</div>
+					<div class="video-text">
+						<?= $settings['content']  ?>
 					</div>
 				</div>
-				<div class="col2">
-					<div class="right-text-wrapper">
-						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

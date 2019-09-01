@@ -48,6 +48,7 @@ class Plugin {
 	public function widget_scripts() {
 		wp_register_script( 'elementor-custome-widget-js', plugins_url( '/assets/js/widgets.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'elementor-custome-widget-slick', plugins_url( '/assets/js/slick-1.8.1/slick/slick.min.js', __FILE__ ), [ 'jquery' ], false, true );
+		wp_register_script( 'elementor-custome-widget-lity', plugins_url( '/assets/js/lity-2.4.0/dist/lity.min.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 
 	/**
