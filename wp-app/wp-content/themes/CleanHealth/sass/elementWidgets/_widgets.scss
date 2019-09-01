@@ -446,3 +446,44 @@
         }
     }
 }
+
+.footer-subscription-widget{
+    margin-top: 50px;
+    .footer-subscription-wrapper{    
+        padding: 60px 0 0;
+       .fs-inner{
+           display:flex;
+           justify-content: space-around;
+           flex-wrap: wrap;
+           flex-direction: row;
+           align-items: flex-end;
+           height: 330px;
+            .fs-image{
+                width: 50%;
+                position: relative;
+                img{
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    left: 0;
+                    max-width: 100%;
+                }
+            }
+            .fs-content{
+                width: 50%;
+                align-self: center;
+                color: #fff;
+                .fs-content-inner{
+                    box-sizing: border-box;
+                    padding: 50px;
+                    form{
+                        width:100;
+                    }
+                    .w-btn{
+                        margin-top: 20px;
+                    }
+                }
+            }
+       } 
+    }
+}

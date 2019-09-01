@@ -68,9 +68,9 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/left-right-fullwidth.php' );
 		require_once( __DIR__ . '/widgets/home-banner.php' );
 		require_once( __DIR__ . '/widgets/testimonial-slider.php' );
-		require_once( __DIR__ . '/widgets/footer_subscription.php' );
-		require_once( __DIR__ . '/widgets/footer_contact.php' );
-		require_once( __DIR__ . '/widgets/footer_video.php' );
+		require_once( __DIR__ . '/widgets/footer-subscription.php' );
+		require_once( __DIR__ . '/widgets/footer-contact.php' );
+		require_once( __DIR__ . '/widgets/footer-video.php' );
 
 		require_once( __DIR__ . '/widgets/inline-editing.php' );
 	}

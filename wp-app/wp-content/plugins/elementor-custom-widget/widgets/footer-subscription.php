@@ -37,9 +37,20 @@ class Footer_Subscription extends Widget_Base {
 		);
 
 		$this->add_control(
-            'image',
+            'image1',
             [
-              'label'   => 'Background Image',
+              'label'   => 'Background Image 1',
+              'type'    => Controls_Manager::MEDIA,
+              'default' => [
+                'url' => Utils::get_placeholder_image_src(),
+              ],
+            ]
+		);
+		
+		$this->add_control(
+            'image2',
+            [
+              'label'   => 'Background Image 2',
               'type'    => Controls_Manager::MEDIA,
               'default' => [
                 'url' => Utils::get_placeholder_image_src(),
@@ -50,7 +61,7 @@ class Footer_Subscription extends Widget_Base {
 		$this->add_control(
 			'content',
 			[
-				'label' => 'Left Content',
+				'label' => 'Content',
 				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
@@ -72,19 +83,32 @@ class Footer_Subscription extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget">
-			<div class="right-text-strap" >
-				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
+		<div class="footer-subscription-widget">
+			<div class="footer-subscription-wrapper">
+				<div class="content-inner">
+				<div class="fs-inner" style="background:url(<?= $settings['image2']['url'] ?>) no-repeat center center; background-size: cover;">
+					<div class="fs-image">
+						<img src="<?= $settings['image1']['url'] ?>" alt="img"/>	
 					</div>
-				</div>
-				<div class="col2">
-					<div class="right-text-wrapper">
-						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
+					<div class="fs-content">
+						<div class="fs-content-inner">
+							<div class="text-wysiwyg">
+								<?= wpautop( $settings['content'] ) ?>
+							</div>
+							<div class="subcription-form">
+								<form action="">
+									<div class="form-row">
+										<label for="">Email</label>
+										<input type="text" name='sub-email'/>
+									</div>
+									<div class="form-row">
+										<input type="submit" class="w-btn" value="SIGN UP NOW">
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 			</div>
 		</div>

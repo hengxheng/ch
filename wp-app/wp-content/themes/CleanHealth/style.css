@@ -580,6 +580,23 @@ template {
   font-family: 'ProximaNova-Bold';
 }
 
+.form-row {
+  margin: 0 0 15px;
+}
+
+.form-row label {
+  display: block;
+  width: 100%;
+  font-size: 17px;
+}
+
+.form-row input[type="text"] {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+}
+
 /** === Layout === */
 body {
   font-family: 'ProximaNova-Regular';
@@ -1324,4 +1341,53 @@ body {
   margin-left: 12px;
   font-size: 30px;
   vertical-align: middle;
+}
+
+.footer-subscription-widget {
+  margin-top: 50px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper {
+  padding: 60px 0 0;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 330px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-image {
+  width: 50%;
+  position: relative;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-image img {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  left: 0;
+  max-width: 100%;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content {
+  width: 50%;
+  align-self: center;
+  color: #fff;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner {
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner form {
+  width: 100;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .w-btn {
+  margin-top: 20px;
 }
