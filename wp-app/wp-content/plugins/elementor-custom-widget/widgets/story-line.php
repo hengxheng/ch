@@ -37,14 +37,6 @@ class Story_Line extends Widget_Base {
 		$repeater = new Repeater();
 
 		$repeater->add_control(
-			'story-sub-heading',
-			[
-				'label' => 'Story Heading',
-				'type' => Controls_Manager::TEXT,
-			]
-		);
-
-		$repeater->add_control(
 			'year',
 			[
 				'label' => 'Year',
