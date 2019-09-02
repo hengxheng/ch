@@ -52,31 +52,6 @@ class Plugin {
 	}
 
 	/**
-	 * Include Widgets files
-	 *
-	 * Load widgets files
-	 *
-	 * @since 1.2.0
-	 * @access private
-	 */
-	private function include_widgets_files() {
-		require_once( __DIR__ . '/widgets/partner-list.php' );
-		require_once( __DIR__ . '/widgets/home-slider.php' );
-		require_once( __DIR__ . '/widgets/multiple-column-layout.php' );
-		require_once( __DIR__ . '/widgets/story-line.php' );
-		require_once( __DIR__ . '/widgets/team-profile.php' );
-		require_once( __DIR__ . '/widgets/right-text.php' );
-		require_once( __DIR__ . '/widgets/left-right-fullwidth.php' );
-		require_once( __DIR__ . '/widgets/home-banner.php' );
-		require_once( __DIR__ . '/widgets/testimonial-slider.php' );
-		require_once( __DIR__ . '/widgets/footer-subscription.php' );
-		require_once( __DIR__ . '/widgets/footer-contact.php' );
-		require_once( __DIR__ . '/widgets/footer-video.php' );
-
-		require_once( __DIR__ . '/widgets/inline-editing.php' );
-	}
-
-	/**
 	 * Register Widgets
 	 *
 	 * Register new Elementor widgets.
@@ -85,24 +60,32 @@ class Plugin {
 	 * @access public
 	 */
 	public function register_widgets() {
-		// Its is now safe to include Widgets files
-		$this->include_widgets_files();
+		
+		$widgets = [
+			'partner-list',
+			'home-slider',
+			'multiple-column-layout',
+			'story-line',
+			'team-profile',
+			'right-text',
+			'left-right-fullwidth',
+			'home-banner',
+			'testimonial-slider',
+			'footer-subscription',
+			'footer-contact',
+			'footer-video',
+			'woo-products',
 
-		// Register Widgets
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Home_Slider() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Partner_List() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Multiple_Column_Layout() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Story_Line() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Profile() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Right_Text() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Left_Right_Fullwidth() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Home_Banner() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Testimonial_Slider() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Footer_Contact() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Footer_Video() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Footer_Subscription() );
+			'inline-editing'
+        ];
 
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Inline_Editing() );
+        foreach ( $widgets as $widget ) {
+            require( __DIR__ . '/widgets/' . $widget . '.php' );
+
+            $class_name = str_replace(' ', '_', ucwords(str_replace( '-', ' ', $widget )));
+            $class_name = __NAMESPACE__.'\Widgets\\' . $class_name;
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new $class_name() );
+		}
 	}
 
 	function add_elementor_widget_categories( $elements_manager ) {
@@ -116,6 +99,9 @@ class Plugin {
 		);
 	}
 	
+	public function includes() {
+        require( __DIR__ . '/inc/functions.php' );
+    }
 
 	/**
 	 *  Plugin class constructor
@@ -126,6 +112,8 @@ class Plugin {
 	 * @access public
 	 */
 	public function __construct() {
+
+		$this->includes();
 
 		// Register widget scripts
 		add_action( 'elementor/frontend/after_register_scripts', [ $this, 'widget_scripts' ] );

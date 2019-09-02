@@ -85,7 +85,6 @@ class Footer_Subscription extends Widget_Base {
 		?>
 		<div class="footer-subscription-widget">
 			<div class="footer-subscription-wrapper">
-				<div class="content-inner">
 				<div class="fs-inner" style="background:url(<?= $settings['image2']['url'] ?>) no-repeat center center; background-size: cover;">
 					<div class="fs-image">
 						<img src="<?= $settings['image1']['url'] ?>" alt="img"/>	
@@ -108,7 +107,6 @@ class Footer_Subscription extends Widget_Base {
 							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 		</div>
