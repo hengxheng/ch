@@ -75,6 +75,20 @@ body{
 .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{
 	padding: 0 !important;
 }
+.elementor-inner-section{
+	max-width: $content-width !important;
+	width: 100% !important;
+	margin: 0 auto !important;
+	box-sizing: border-box;
+}
+
+.elementor-column.elementor-col-33{
+	width: 25% !important;
+}
+
+.elementor-column.elementor-col-66{
+	width: 75% !important;
+}
 
 @import "header";
 @import "footer";

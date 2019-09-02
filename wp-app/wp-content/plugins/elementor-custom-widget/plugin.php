@@ -75,6 +75,9 @@ class Plugin {
 			'footer-contact',
 			'footer-video',
 			'woo-products',
+			'side-menu',
+			'page-header',
+			'html-content',
 
 			'inline-editing'
         ];
