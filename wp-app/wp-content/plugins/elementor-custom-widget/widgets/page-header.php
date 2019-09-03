@@ -62,7 +62,7 @@ class Page_Header extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		?>
 		<div class="page-header-widget" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;background-size:cover">
-			<div class="content-inner">
+			<div class="content-inner withPadding">
 				<div class="p-title">
 					<?= $settings['title'] ?>
 				</div>

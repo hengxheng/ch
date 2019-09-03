@@ -688,6 +688,7 @@ body {
   width: 100% !important;
   margin: 0 auto !important;
   box-sizing: border-box;
+  padding: 0 10px;
 }
 
 .elementor-column.elementor-col-33 {
@@ -1497,6 +1498,10 @@ body {
   margin: 0 0 40px;
 }
 
+.footer-contact-widget .footer-contact-strap .col2 .footer-contact-content .fc-form input {
+  color: #fff;
+}
+
 .footer-contact-widget .footer-contact-strap .col2 .footer-contact-content .fc-form input[type='submit'] {
   border: 0;
   background: #9aca3c;
@@ -1514,7 +1519,7 @@ body {
   font-family: 'ProximaNova-Bold';
   color: #313136;
   border-bottom: 1px solid #d0d0d0;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .side-menu-widget .side-menu-inner .sidemnu-content ul {
@@ -1564,6 +1569,58 @@ body {
 
 .side-multi-colomns {
   padding: 0;
+}
+
+.story-line-widget .story-strap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: url("assets/images/grey-bg.png") repeat-y 10px center;
+}
+
+.story-line-widget .story-strap:hover .story-header .story-profile-image img {
+  filter: grayscale(0);
+}
+
+.story-line-widget .story-strap .story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  padding: 15px 0;
+}
+
+.story-line-widget .story-strap .story-header .green-circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #9aca3c;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.story-line-widget .story-strap .story-header .story-year {
+  font-family: 'GoboldBold';
+  font-size: 34px;
+  color: #d5d5d5;
+}
+
+.story-line-widget .story-strap .story-header .story-profile-image img {
+  filter: grayscale(100%);
+}
+
+.story-line-widget .story-strap .story-header .sep-line {
+  display: block;
+  width: 2px;
+  height: 100px;
+  background: #3b3b3b;
+}
+
+.story-line-widget .story-strap .story-desc {
+  width: 65%;
+  font-size: 18px;
+  padding: 25px;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10

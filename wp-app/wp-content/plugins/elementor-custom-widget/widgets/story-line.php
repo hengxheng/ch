@@ -59,7 +59,7 @@ class Story_Line extends Widget_Base {
 			'description',
 			[
 				'label' => 'Description',
-				'type' => Controls_Manager::TEXTAREA,
+				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
 
@@ -79,27 +79,24 @@ class Story_Line extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		if(!empty($settings['stories'])):
 	?>
-        <div class="story-line-wrapper">
+        <div class="story-line-widget">
 			<div class="content-inner">
 				<?php foreach ( $settings['stories'] as $index => $item ) : ?>
-					<?php if($item['story-sub-heading']): ?>
-						<div class="story-subheading">
-							<h2><?= $item['story-sub-heading'] ?></h2>
-						</div>
-					<?php endif;?>
 					<div class="story-strap">
-						<?php if($item['story-sub-heading']): ?>
-							<div class="story-year hasYear"><?= $item['year'] ?></div>
-						<?php else: ?>
-							<div class="story-year"></div>
-						<?php endif;?>
-
-						<div class="story-profile-image">
-							<img src="<?= $item['image']['url'] ?>" alt="<?= $item['year'] ?>">	
+						<div class="story-header">
+							<i class="green-circle"></i>
+							<?php if($item['year']): ?>
+								<div class="story-year"><?= $item['year'] ?></div>
+							<?php endif; ?>
+							<div class="story-profile-image">
+								<img src="<?= $item['image']['url'] ?>" alt="<?= $item['year'] ?>">	
+							</div>
+							<div class="sep-line"></div>
 						</div>
 						<div class="story-desc">
 							<?= $item['description'] ?>
 						</div>
+						
 					</div>
 				<?php endforeach; ?>
 			</div>

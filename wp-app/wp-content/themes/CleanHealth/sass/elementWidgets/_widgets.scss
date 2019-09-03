@@ -528,6 +528,9 @@
                     margin: 0 0 40px;
                 }
                 .fc-form{
+                    input{
+                        color: #fff;
+                    }
                     input[type='submit']{
                         border:0;
                         background: $green;
@@ -549,7 +552,7 @@
             font-family: 'ProximaNova-Bold';
             color: #313136;
             border-bottom: 1px solid #d0d0d0;
-            font-size: 28px;
+            font-size: 24px;
         }
         .sidemnu-content{
             ul{
@@ -598,4 +601,59 @@
 
 .side-multi-colomns{
     padding: 0;
+}
+
+.story-line-widget{
+    .story-strap{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        background: url('assets/images/grey-bg.png') repeat-y 10px center;
+        &:hover{
+            .story-header{
+                .story-profile-image{
+                    img{
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+        .story-header{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 35%;
+            padding: 15px 0;
+            .green-circle{
+                display:block;
+                width: 20px;
+                height: 20px;
+                border: 3px solid $green;
+                border-radius: 50%;
+                background: #fff;
+            }
+            .story-year{
+                font-family: 'GoboldBold';
+                font-size: 34px;
+                color: #d5d5d5;
+            }
+            .story-profile-image{
+                img{
+                    filter: grayscale(100%);
+                }
+            }
+            .sep-line{
+                display:block;
+                width: 2px;
+                height: 100px;
+                background: $grey;
+            }
+        }   
+        .story-desc{
+            width: 65%;
+            font-size: 18px;
+            padding: 25px;
+        }
+    }
 }
