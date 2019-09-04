@@ -66,7 +66,7 @@ class Plugin {
 			'home-slider',
 			'multiple-column-layout',
 			'story-line',
-			'team-profile',
+			'team-member-block',
 			'right-text',
 			'left-right-fullwidth',
 			'home-banner',

@@ -657,3 +657,39 @@
         }
     }
 }
+
+.team-member-strip{
+    .tm-wrapper{
+        .tm-block-fullwidth{
+            display:flex;
+            flex-wrap: row;
+            justify-content: space-between;
+            .tmf-image{
+                width: 50%;
+                text-align: center;
+                img{
+                    max-width: 100%;
+                    display:inline-block;
+                }
+            }
+            .tmf-content{
+                width: 50%;
+                .tmf-name{
+
+                }
+                .tmf-title{
+
+                }
+                .tmf-desc{
+
+                }
+                .tmf-cta{
+
+                }
+            }
+        }
+        .tm-block{
+
+        }
+    }
+}

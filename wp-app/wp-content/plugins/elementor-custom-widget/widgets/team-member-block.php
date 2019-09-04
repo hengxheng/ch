@@ -8,14 +8,14 @@ use Elementor\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Team_Profile extends Widget_Base {
+class Team_Member_Block extends Widget_Base {
 
 	public function get_name() {
-		return 'team-profile';
+		return 'team-member-block';
 	}
 
 	public function get_title() {
-		return 'Team Profile';
+		return 'Team Member Block';
 	}
 
 	public function get_icon() {
@@ -61,22 +61,6 @@ class Team_Profile extends Widget_Base {
         );
         
         $repeater->add_control(
-			'name',
-			[
-				'label' => 'Name',
-				'type' => Controls_Manager::TEXT,
-			]
-        );
-
-        $repeater->add_control(
-			'title',
-			[
-				'label' => 'Title',
-				'type' => Controls_Manager::TEXT,
-			]
-        );
-        
-        $repeater->add_control(
 			'description',
 			[
 				'label' => 'Description',
@@ -90,7 +74,7 @@ class Team_Profile extends Widget_Base {
                 'label' => 'Select a team member',
                 'type' => Controls_Manager::SELECT,
                 'default' => '1',
-                'options' => $this->getPostsForSelect()
+                'options' => $this->getTeamMemberForSelect()
             ]
         );
 
@@ -109,22 +93,37 @@ class Team_Profile extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 	
-		$padding = '10px';
-		if($settings['padding']){
-			$padding = $settings['padding'];
-		}
-
-		$heading = $settings['heading'];
-		if(!empty($settings['partners'])):
+		if(!empty($settings['team_members'])):
 	?>
-        <div class="partner-list">
+        <div class="team-member-strip">
 			<div class="content-inner">
-				<div class="partner-list-title"><?= $heading ?></div>
-				<div class="partner-list-content">
-					<?php foreach ( $settings['partners'] as $index => $item ) : ?>
-						<div class="pl-block" style="padding: <?= $padding ?>">
-							<img src="<?= $item['image']['url'] ?>" alt="Image">
-						</div>
+				<div class="tm-wrapper">
+					<?php foreach ( $settings['team_members'] as $index => $item ) : ?>
+						<?php 
+							$member = get_post($item['team_member']); 
+							$name = $member->post_title;
+							$title = get_post_meta($item['team_member'], 'title');
+						?>
+						
+						<?php if($item['full_width']): ?>
+							<div class="tm-block-fullwidth">
+								<div class="tmf-image">
+									<img src="<?= $item['image']['url'] ?>" alt="Image">
+								</div>
+								<div class="tmf-content">
+									<div class="tmf-name"><?= $name ?></div>
+									<div class="tmf-title"><?= $title ?></div>
+									<div class="tmf-desc"><?= $item['description'] ?></div>
+									<div class="tmf-cta">
+										<a href="<?= get_post_permalink($member->ID) ?>" class="w-btn">VIEW PROFILE</a>
+									</div>
+								</div>
+							</div>
+						<?php else: ?>
+							<div class="tm-block">
+								<img src="<?= $item['image']['url'] ?>" alt="Image">
+							</div>
+						<?php endif; ?>
 					<?php endforeach; ?>
 				</div>
 			</div>
@@ -135,11 +134,15 @@ class Team_Profile extends Widget_Base {
     
 
     //helper
-    public function getPostsForSelect( $args = null ) {
-        $posts = get_posts();
-        $select_posts = [];
-        foreach( $posts as $post ) {
-            $select_posts[$post->ID] = ucfirst( $post->post_title );
+    public function getTeamMemberForSelect( $args = null ) {
+        $pages = get_posts(array(
+			'post_type' => 'coach',
+			'posts_per_page' => -1
+		));
+		$select_pages = [];
+        foreach( $pages as $p ) {
+			
+            $select_posts[$p->ID] = ucfirst( $p->post_title );
         }
         return $select_posts;
     }

@@ -115,7 +115,7 @@ class Side_Menu extends Widget_Base {
 					<ul>
 						<?php foreach($settings['menu-list'] as $item):?>
 							<li <?= $item['highlight']?'class="actived"':'' ?>>
-								<a href="<?= get_site_url().'/?page_id='.$item['menu-link']; ?>"><?= $item['menu-item'] ?></a>
+								<a href="<?= get_post_permalink($item['menu-link']); ?>"><?= $item['menu-item'] ?></a>
 							</li>
 						<?php endforeach; ?>
 					</ul>
