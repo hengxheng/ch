@@ -112,7 +112,7 @@ class Team_Member_Block extends Widget_Base {
 								</div>
 								<div class="tmf-content">
 									<div class="tmf-name"><?= $name ?></div>
-									<div class="tmf-title"><?= $title ?></div>
+									<div class="tmf-title"><?= $title[0] ?></div>
 									<div class="tmf-desc"><?= $item['description'] ?></div>
 									<div class="tmf-cta">
 										<a href="<?= get_post_permalink($member->ID) ?>" class="w-btn">VIEW PROFILE</a>
@@ -121,7 +121,14 @@ class Team_Member_Block extends Widget_Base {
 							</div>
 						<?php else: ?>
 							<div class="tm-block">
-								<img src="<?= $item['image']['url'] ?>" alt="Image">
+								<div class="tmf-image">
+									<img src="<?= $item['image']['url'] ?>" alt="Image">
+								</div>
+								<div class="tmf-name"><?= $name ?></div>
+								<div class="tmf-title"><?= $title[0] ?></div>
+								<div class="tmf-cta">
+									<a href="<?= get_post_permalink($member->ID) ?>" class="b-btn">VIEW PROFILE</a>
+								</div>
 							</div>
 						<?php endif; ?>
 					<?php endforeach; ?>

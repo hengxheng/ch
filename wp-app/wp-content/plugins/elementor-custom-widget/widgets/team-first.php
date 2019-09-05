@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @since 1.1.0
  */
-class Footer_Contact extends Widget_Base {
+class Team_First extends Widget_Base {
 
 	public function get_name() {
-		return 'footer_contact';
+		return 'team_first';
 	}
 
 	public function get_title() {
-		return 'Footer Contact';
+		return 'Team First';
 	}
 
 	public function get_icon() {
@@ -35,6 +35,15 @@ class Footer_Contact extends Widget_Base {
 				'label' => 'Content',
 			]
 		);
+		
+		$this->add_control(
+			'section-class',
+			[
+				'label' => 'Section Class',
+				'type'  => Controls_Manager::TEXT,
+				'description' => 'For special styling, do not change it'
+			]
+		);
 
 		$this->add_control(
             'image',
@@ -50,10 +59,25 @@ class Footer_Contact extends Widget_Base {
 		$this->add_control(
 			'content',
 			[
-				'label' => 'Content',
+				'label' => 'Left Content',
 				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
+
+		$this->add_control(
+			'instagram_link',
+			[
+				'label' => 'Instagram_Link',
+				'type' => \Elementor\Controls_Manager::URL,
+				'placeholder' => 'https://your-link.com',
+				'show_external' => true,
+				'default' => [
+					'url' => '',
+					'is_external' => false,
+					'nofollow' => false,
+				],
+			]
+    	);
 
 
 		$this->end_controls_section();
@@ -70,21 +94,24 @@ class Footer_Contact extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
+		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="footer-contact-widget" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center; background-size: cover;">
-			<div class="content-inner withPadding">
-			<div class="footer-contact-strap">
+		<div class="team-first-widget">
+			<div class="content-inner">
+			<div class="team-first-strap">
 				<div class="col2">
-					<div class="footer-contact-content">
-						<div class="fc-title">
-							<?= $settings['content'] ?>
-						</div>
-						<div class="fc-form">
-							<?php echo do_shortcode('[contact-form-7 id="52" title="Footer Contact"]'); ?>
-						</div>
+					<div class="team-first-image">
+						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
 					</div>
 				</div>
-				<div class="col2"></div>
+				<div class="col2">
+					<div class="team-first-text-wrapper">
+						<div class="text-wysiwyg">
+							<?= wpautop( $settings['content'] ) ?>
+						</div>
+						<a href="<?= $settings['instagram_link'] ?>" class="w-btn">FIND ME IN INSTAGRAM</a>
+					</div>
+				</div>
 			</div>
 			</div>
 		</div>

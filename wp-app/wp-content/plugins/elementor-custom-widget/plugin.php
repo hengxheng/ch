@@ -78,6 +78,9 @@ class Plugin {
 			'side-menu',
 			'page-header',
 			'html-content',
+			'team-first',
+			'team-second',
+			'team-gallery',
 
 			'inline-editing'
         ];

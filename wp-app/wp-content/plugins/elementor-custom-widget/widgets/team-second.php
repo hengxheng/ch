@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @since 1.1.0
  */
-class Footer_Contact extends Widget_Base {
+class Team_Second extends Widget_Base {
 
 	public function get_name() {
-		return 'footer_contact';
+		return 'team_second';
 	}
 
 	public function get_title() {
-		return 'Footer Contact';
+		return 'Team Second';
 	}
 
 	public function get_icon() {
@@ -35,11 +35,20 @@ class Footer_Contact extends Widget_Base {
 				'label' => 'Content',
 			]
 		);
+		
+		$this->add_control(
+			'section-class',
+			[
+				'label' => 'Section Class',
+				'type'  => Controls_Manager::TEXT,
+				'description' => 'For special styling, do not change it'
+			]
+		);
 
 		$this->add_control(
             'image',
             [
-              'label'   => 'Background Image',
+              'label'   => 'Left Image',
               'type'    => Controls_Manager::MEDIA,
               'default' => [
                 'url' => Utils::get_placeholder_image_src(),
@@ -50,7 +59,7 @@ class Footer_Contact extends Widget_Base {
 		$this->add_control(
 			'content',
 			[
-				'label' => 'Content',
+				'label' => 'Right Content',
 				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
@@ -70,22 +79,17 @@ class Footer_Contact extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
+		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="footer-contact-widget" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center; background-size: cover;">
-			<div class="content-inner withPadding">
-			<div class="footer-contact-strap">
-				<div class="col2">
-					<div class="footer-contact-content">
-						<div class="fc-title">
-							<?= $settings['content'] ?>
-						</div>
-						<div class="fc-form">
-							<?php echo do_shortcode('[contact-form-7 id="52" title="Footer Contact"]'); ?>
-						</div>
+		<div class="team-second-widget">
+			<div class="team-second-strap" >		
+				<div class="text-wrapper">
+					<div class="text-wysiwyg">
+						<?= wpautop( $settings['content'] ) ?>
 					</div>
 				</div>
-				<div class="col2"></div>
-			</div>
+				<div class="image-wrapper" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;background-size:cover">
+				</div>
 			</div>
 		</div>
 		<?php

@@ -35,6 +35,15 @@ class Right_Text extends Widget_Base {
 				'label' => 'Content',
 			]
 		);
+		
+		$this->add_control(
+			'section-class',
+			[
+				'label' => 'Section Class',
+				'type'  => Controls_Manager::TEXT,
+				'description' => 'For special styling, do not change it'
+			]
+		);
 
 		$this->add_control(
             'image',

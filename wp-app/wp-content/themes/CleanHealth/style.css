@@ -535,7 +535,6 @@ template {
   font-family: 'ProximaNova-Bold';
   margin: 0 0 15px;
   line-height: 28px;
-  color: #313136;
 }
 
 .text-wysiwyg p {
@@ -1057,7 +1056,6 @@ body {
 }
 
 .right-text-widget .right-text-strap .col2 .right-text-wrapper {
-  width: 700px;
   box-sizing: border-box;
   padding: 150px 30px;
   margin-right: auto;
@@ -1623,24 +1621,175 @@ body {
   padding: 25px;
 }
 
+.team-member-strip .tm-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .team-member-strip .tm-wrapper .tm-block-fullwidth {
   display: flex;
-  flex-wrap: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  background: url("assets/images/team-bg.png") no-repeat left bottom #000;
+  color: #fff;
+  padding-top: 30px;
+  position: relative;
+}
+
+.team-member-strip .tm-wrapper .tm-block-fullwidth::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent #ffffff;
 }
 
 .team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-image {
   width: 50%;
   text-align: center;
+  align-self: flex-end;
 }
 
 .team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-image img {
   max-width: 100%;
-  display: inline-block;
+  display: block;
+  width: 80%;
 }
 
 .team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-content {
   width: 50%;
+}
+
+.team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-content .tmf-name {
+  font-size: 32px;
+  margin: 0 0 10px;
+  font-family: 'ProximaNova-Bold';
+}
+
+.team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-content .tmf-title {
+  font-size: 22px;
+  margin: 0 0 10px;
+  font-family: 'ProximaNova-Bold';
+}
+
+.team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-content .tmf-desc {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 20px;
+}
+
+.team-member-strip .tm-wrapper .tm-block-fullwidth .tmf-content .tmf-cta {
+  margin: 0 0 30px;
+}
+
+.team-member-strip .tm-wrapper .tm-block {
+  width: 33%;
+  margin: 0 0 15px;
+}
+
+.team-member-strip .tm-wrapper .tm-block .tmf-image {
+  background: #000;
+  padding: 15px 15px 0;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+}
+
+.team-member-strip .tm-wrapper .tm-block .tmf-image img {
+  max-width: 100%;
+  display: block;
+}
+
+.team-member-strip .tm-wrapper .tm-block .tmf-name {
+  font-size: 22px;
+  margin: 0 0 5px;
+  font-family: 'ProximaNova-Bold';
+}
+
+.team-member-strip .tm-wrapper .tm-block .tmf-title {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.team-member-strip .tm-wrapper .tm-block .tmf-desc {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 20px;
+}
+
+.team-first-widget .team-first-strap {
+  background: url("assets/images/team-bg.png") no-repeat left bottom #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-first-widget .team-first-strap .col2 {
+  width: 50%;
+}
+
+.team-first-widget .team-first-strap .col2 .team-first-text-wrapper {
+  box-sizing: border-box;
+  padding: 30px;
+  margin-right: auto;
+}
+
+.team-first-widget .team-first-strap .col2 .team-first-text-wrapper .text-wysiwyg {
+  font-size: 16px;
+}
+
+.team-first-widget .team-first-strap .col2 .team-first-image img {
+  display: block;
+}
+
+.team-first-widget .team-first-strap .col2:first-child {
+  align-self: flex-end;
+}
+
+@media (max-width: 800px) {
+  .team-first-widget .team-first-strap {
+    display: block;
+  }
+  .team-first-widget .team-first-strap .col2 {
+    display: block;
+    width: 100%;
+  }
+}
+
+.team-second-widget .team-second-strap {
+  color: #fff;
+  display: table;
+}
+
+.team-second-widget .team-second-strap .text-wrapper {
+  width: 50%;
+  display: table-cell;
+  background: #000;
+  box-sizing: border-box;
+  padding: 50px 30px;
+}
+
+.team-second-widget .team-second-strap .image-wrapper {
+  display: table-cell;
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .team-second-widget .team-second-strap .text-wrapper, .team-second-widget .team-second-strap .image-wrapper {
+    display: block;
+    width: 100%;
+  }
+}
+
+.type-coach .page-header-widget, .type-coach .elementor-widget-page_header {
+  margin: 0 !important;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10
