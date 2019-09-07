@@ -22,10 +22,6 @@
 				}
 				]
 			});
-
-			// slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-			// 	sliderWrapper.find('.current-slide').text(nextSlide + 1);
-			// });
 		});
 	};
 
@@ -50,10 +46,27 @@
 		});
 	};
 
+	var WidgetGalleryHanlder = function( $scope, $ ) {
+		$(document).ready(function($) {
+			$('body').on('click','.gallery-item>img', function(e){
+				console.log("cc");
+				var w = $(this).parents('.gallery-item').find('.gellery-content-wrapper');
+				if(!w.hasClass('show')){
+					w.addClass('show');
+				}
+			});
+
+			$('body').on('click', '.gellery-content-wrapper', function(e){
+				$(this).removeClass('show');
+			});
+		});
+	};
+
 	
 	// Make sure you run this code under Elementor.
 	$( window ).on( 'elementor/frontend/init', function() {
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/home-slider.default', WidgetSliderHanlder );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/testimonial-slider.default', WidgetTestimonialSliderHanlder );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/team-gallery.default', WidgetGalleryHanlder );
 	} );
 } )( jQuery );

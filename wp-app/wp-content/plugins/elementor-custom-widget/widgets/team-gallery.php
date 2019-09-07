@@ -26,6 +26,13 @@ class Team_Gallery extends Widget_Base {
 		return [ 'custom' ];
 	}
 
+	public function get_script_depends() {
+		return [ 
+            'elementor-custome-widget-js' 
+          ];
+  	}
+  
+
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'section_content',
@@ -34,21 +41,11 @@ class Team_Gallery extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'heading',
-			[
-				'label' => 'Heading',
-				'type' => Controls_Manager::TEXT,
-				'default' => 'AS FEATURED IN',
-			]
-		);
-
 		$repeater = new Repeater();
-
 		$repeater->add_control(
-			'image',
+			'main-image',
 			[
-			  'label'   => 'Partner Logo',
+			  'label'   => 'Main Image',
 			  'type'    => Controls_Manager::MEDIA,
 			  'default' => [
 				'url' => Utils::get_placeholder_image_src(),
@@ -56,32 +53,55 @@ class Team_Gallery extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'partners',
+		$repeater->add_control(
+			'image1',
 			[
-				'label'  => 'Partner List',
+			  'label'   => 'Image1',
+			  'type'    => Controls_Manager::MEDIA,
+			  'default' => [
+				'url' => Utils::get_placeholder_image_src(),
+			  ],
+			]
+		);
+
+		$repeater->add_control(
+			'image2',
+			[
+			  'label'   => 'Image2',
+			  'type'    => Controls_Manager::MEDIA,
+			  'default' => [
+				'url' => Utils::get_placeholder_image_src(),
+			  ],
+			]
+		);
+
+
+		$repeater->add_control(
+			'image3',
+			[
+			  'label'   => 'Image3',
+			  'type'    => Controls_Manager::MEDIA,
+			  'default' => [
+				'url' => Utils::get_placeholder_image_src(),
+			  ],
+			]
+		);
+
+		$repeater->add_control(
+			'content',
+			[
+			  'label'   => 'Content',
+			  'type'    => Controls_Manager::WYSIWYG,
+			]
+		);
+
+
+		$this->add_control(
+			'gallery',
+			[
+				'label'  => 'Gallery',
 				'type'   => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
-			]
-		);
-
-		$this->end_controls_section();
-
-		
-		$this->start_controls_section(
-			'section_style',
-			[
-				'label' => 'Style',
-				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		$this->add_control(
-			'padding',
-			[
-				'label' => 'Padding',
-				'type' => Controls_Manager::TEXT,
-				'default' => '10px',
 			]
 		);
 
@@ -91,24 +111,36 @@ class Team_Gallery extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 	
-		$padding = '10px';
-		if($settings['padding']){
-			$padding = $settings['padding'];
-		}
-
-		$heading = $settings['heading'];
-		if(!empty($settings['partners'])):
+		if(!empty($settings['gallery'])):
 	?>
-        <div class="partner-list">
-			<div class="content-inner">
-				<div class="partner-list-title"><?= $heading ?></div>
-				<div class="partner-list-content">
-					<?php foreach ( $settings['partners'] as $index => $item ) : ?>
-						<div class="pl-block" style="padding: <?= $padding ?>">
-							<img src="<?= $item['image']['url'] ?>" alt="Image">
+        <div class="gallery-list-widget">
+			<div class="gallery-wrapper">
+				<?php foreach ( $settings['gallery'] as $index => $item ) : ?>
+					<div class="gallery-item">
+						<img src="<?= $item['main-image']['url'] ?>" alt="Image">
+						<div class="gellery-content-wrapper">
+							<div class="gallery-content-bg"></div>
+							<div class="gallery-content">
+								<div class="gc-content-inner">
+									<div class="gc-images">
+										<div class="gc-img">
+											<img src="<?= $item['image1']['url'] ?>" alt="">
+										</div>
+										<div class="gc-img">
+											<img src="<?= $item['image2']['url'] ?>" alt="">
+										</div>
+										<div class="gc-img">
+											<img src="<?= $item['image3']['url'] ?>" alt="">
+										</div>
+									</div>
+									<div class="gc-text text-wysiwyg">
+										<?= $item['content']; ?>
+									</div>
+								</div>
+							</div>
 						</div>
-					<?php endforeach; ?>
-				</div>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	<?php
