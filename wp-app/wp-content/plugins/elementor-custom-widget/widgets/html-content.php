@@ -45,6 +45,25 @@ class HTML_Content extends Widget_Base {
 		);
 
 		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'section_style',
+			[
+				'label' => 'Style',
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'content-width',
+			[
+				'label' => 'Content Width',
+				'type' => Controls_Manager::TEXT,
+				'default' => '100%',
+			]
+		);
+
+		$this->end_controls_section();
 	}
 	
 	protected function render() {
@@ -52,7 +71,7 @@ class HTML_Content extends Widget_Base {
 		?>
 		<div class="html-content-widget">
 			<div class="content-inner">
-				<div class="text-wysiwyg">
+				<div class="text-wysiwyg" style="width: <?= $settings['content-width'] ?>;margin: 0 auto;">
 					<?= $settings['content'] ?>
 				</div>
 			</div>

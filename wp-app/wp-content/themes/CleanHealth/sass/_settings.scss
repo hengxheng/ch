@@ -325,4 +325,14 @@ $secText: #313136;
   }
 }
 
+// coach post type
+.type-coach{
+  .page-header-widget, .elementor-widget-page_header{
+      margin:0 !important;
+  }
+  #testimonial-slider{
+      margin: 50px 0;
+  }
+}
+
 $content-width: 1440px;

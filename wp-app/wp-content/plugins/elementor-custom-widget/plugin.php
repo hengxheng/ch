@@ -81,7 +81,8 @@ class Plugin {
 			'team-first',
 			'team-second',
 			'team-gallery',
-
+			'related-team-members',
+			
 			'inline-editing'
         ];
 

@@ -49,7 +49,6 @@
 	var WidgetGalleryHanlder = function( $scope, $ ) {
 		$(document).ready(function($) {
 			$('body').on('click','.gallery-item>img', function(e){
-				console.log("cc");
 				var w = $(this).parents('.gallery-item').find('.gellery-content-wrapper');
 				if(!w.hasClass('show')){
 					w.addClass('show');

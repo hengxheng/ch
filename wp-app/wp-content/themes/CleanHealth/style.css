@@ -605,6 +605,14 @@ template {
   width: 100%;
 }
 
+.type-coach .page-header-widget, .type-coach .elementor-widget-page_header {
+  margin: 0 !important;
+}
+
+.type-coach #testimonial-slider {
+  margin: 50px 0;
+}
+
 /** === Layout === */
 body {
   font-family: 'ProximaNova-Regular';
@@ -1267,7 +1275,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 585px;
+  height: 510px;
   overflow: hidden;
 }
 
@@ -1288,7 +1296,7 @@ body {
   overflow: hidden;
   background: #9aca3c;
   color: #fff;
-  padding: 7%;
+  padding: 5%;
   text-align: left;
   position: relative;
 }
@@ -1360,7 +1368,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 29px;
+  bottom: 55px;
   padding-right: 150px;
 }
 
@@ -1788,8 +1796,8 @@ body {
   }
 }
 
-.type-coach .page-header-widget, .type-coach .elementor-widget-page_header {
-  margin: 0 !important;
+.gallery-list-widget {
+  margin: 0 0 30px;
 }
 
 .gallery-list-widget .gallery-wrapper {
@@ -1883,6 +1891,38 @@ body {
   .gallery-list-widget .gallery-wrapper .gallery-item .gellery-content-wrapper .gallery-content .gc-content-inner {
     width: 90%;
   }
+}
+
+.team-related-widget .team-related-strap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-related-widget .team-related-strap .tm-block {
+  text-align: center;
+  width: 19%;
+}
+
+.team-related-widget .team-related-strap .tm-block .tm-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 15px;
+}
+
+.team-related-widget .team-related-strap .tm-block .tm-content {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.team-related-widget .team-related-strap .tm-block .tm-content .tm-name {
+  font-family: 'ProximaNova-Bold';
+  margin: 0 0 10px;
+}
+
+.team-related-widget .team-related-strap .tm-block .tm-content .tm-title {
+  margin: 0 0 10px;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10

@@ -96,7 +96,7 @@ class Testimonial_Slider extends Widget_Base {
 
     if ( ! empty( $settings['list'] ) ) : ?>
       <div id="testimonial-slider">
-        <div class="content-inner">
+        <div class="content-inner withPadding">
           <div class="slider carousel">
             <?php foreach ( $settings['list'] as $index => $item ) : ?>
               <div class="slide carousel-item <?= 0 == $index ? 'active' : '' ?>">
