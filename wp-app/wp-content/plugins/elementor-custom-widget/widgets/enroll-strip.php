@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @since 1.1.0
  */
-class Right_Text extends Widget_Base {
+class Enroll_Strip extends Widget_Base {
 
 	public function get_name() {
-		return 'right_text';
+		return 'enroll_strip';
 	}
 
 	public function get_title() {
-		return 'Right Text';
+		return 'Enroll Strip';
 	}
 
 	public function get_icon() {
@@ -45,21 +45,19 @@ class Right_Text extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-            'image',
-            [
-              'label'   => 'Background Image',
-              'type'    => Controls_Manager::MEDIA,
-              'default' => [
-                'url' => Utils::get_placeholder_image_src(),
-              ],
-            ]
-        );
 
 		$this->add_control(
-			'content',
+			'left-content',
 			[
 				'label' => 'Left Content',
+				'type' => Controls_Manager::WYSIWYG,
+			]
+		);
+
+		$this->add_control(
+			'right-content',
+			[
+				'label' => 'Right Content',
 				'type' => Controls_Manager::WYSIWYG,
 			]
 		);
@@ -81,17 +79,19 @@ class Right_Text extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget <?= $settings['section-class'] ?>">
-			<div class="right-text-strap">
+		<div class="enroll-strip-widget">
+			<div class="enroll-strap content-inner withPadding">
 				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
+					<div class="col-wrapper">
+						<div class="text-wysiwyg">
+							<?= wpautop( $settings['left-content'] ) ?>
+						</div>
 					</div>
 				</div>
 				<div class="col2">
-					<div class="right-text-wrapper">
+					<div class="col-wrapper">
 						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
+							<?= wpautop( $settings['right-content'] ) ?>
 						</div>
 					</div>
 				</div>

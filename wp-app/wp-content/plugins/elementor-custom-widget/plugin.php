@@ -82,7 +82,9 @@ class Plugin {
 			'team-second',
 			'team-gallery',
 			'related-team-members',
-			
+			'enroll-strip',
+			'footer-contact-map',
+
 			'inline-editing'
         ];
 
@@ -130,6 +132,8 @@ class Plugin {
 
 		// custom widget category
 		add_action( 'elementor/elements/categories_registered', [ $this, 'add_elementor_widget_categories' ] );
+
+		add_shortcode( 'pw_map', 'pw_map_shortcode' );
 	}
 }
 

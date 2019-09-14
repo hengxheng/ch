@@ -340,6 +340,12 @@ class Woo_Products extends Widget_Base {
 
 	protected function render() {
         $args = $this->parse_query_args();
-        echo elementwoo_do_shortcode( 'products', $args );
+        ?>
+        <div class="shop-page">
+            <div class="content-inner withPadding">
+                <?php echo elementwoo_do_shortcode( 'products', $args ); ?>
+            </div>
+        </div>
+        <?php
     }
 }

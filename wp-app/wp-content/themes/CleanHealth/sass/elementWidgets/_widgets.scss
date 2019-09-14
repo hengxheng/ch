@@ -109,6 +109,9 @@
                 padding: 150px 30px;
                 margin-right: auto;
             }
+            img{
+                display: block;
+            }
         }
     }
 }
@@ -344,19 +347,7 @@
                 padding: 5%;
                 text-align: left;
                 position: relative;
-                &::before{
-                    content:"";
-                    display:block;
-                    position: absolute;
-                    top:30px;
-                    left:0;
-                    z-index:5;
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 20px 0 20px 30px;
-                    border-color: transparent transparent transparent #ffffff;
-                }
+                @include top-left-triangle;
                 .ts-name{
                     font-family: 'ProximaNova-Bold';
                     font-size: 32px;
@@ -670,19 +661,7 @@
             color: #fff;
             padding-top: 30px;
             position: relative;
-            &::before{
-                content:"";
-                display:block;
-                position: absolute;
-                top:30px;
-                left:0;
-                z-index:5;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 20px 0 20px 30px;
-                border-color: transparent transparent transparent #ffffff;
-            }
+            @include top-left-triangle;
             .tmf-image{
                 width: 50%;
                 text-align: center;
@@ -919,5 +898,63 @@
                 }
             }
         }
+    }
+}
+
+.enroll-strip-widget{
+    color: #fff;
+    background: $green;
+    padding: 30px 0;
+    .enroll-strap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        h1, h2, h3, p{
+            margin: 0;
+        }
+    }
+}
+
+.footer-contact-map-widget{
+    background: $grey;
+    .footer-contact-strap{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .col2{
+            width: 50%;
+            display:flex;
+            justify-content: flex-end;
+            .footer-contact-content{
+                width: 700px;
+                padding: 50px;
+                color: #fff;
+                .fc-title{
+                    font-family: 'ProximaNova-Bold';
+                    font-size: 32px;
+                    margin: 0 0 40px;
+                }
+                .fc-form{
+                    input{
+                        color: #fff;
+                    }
+                    input[type='submit']{
+                        border:1px solid #fff;
+                        background: transparent;
+                        color: #fff;
+                        padding: 8px 15px;
+                    }
+                }
+            }   
+            &.gm-block{
+                position:relative;
+                @include top-left-triangle;
+                &::before{
+                    border-color: transparent transparent transparent $grey;
+                }
+            }
+        }
+        
     }
 }

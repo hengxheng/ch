@@ -613,6 +613,18 @@ template {
   margin: 50px 0;
 }
 
+#post-26 .page-header-widget {
+  margin: 0;
+}
+
+#post-26 #testimonial-slider {
+  padding: 80px 0;
+}
+
+#post-26 .service-main-1 .right-text-wrapper, #post-26 .service-main-2 .right-text-wrapper {
+  padding: 30px !important;
+}
+
 /** === Layout === */
 body {
   font-family: 'ProximaNova-Regular';
@@ -1069,6 +1081,10 @@ body {
   margin-right: auto;
 }
 
+.right-text-widget .right-text-strap .col2 img {
+  display: block;
+}
+
 .multiple-column-layout {
   padding: 80px 0;
 }
@@ -1311,7 +1327,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 20px 0 20px 30px;
+  border-width: 20px 0 20px 20px;
   border-color: transparent transparent transparent #ffffff;
 }
 
@@ -1655,7 +1671,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 20px 0 20px 30px;
+  border-width: 20px 0 20px 20px;
   border-color: transparent transparent transparent #ffffff;
 }
 
@@ -1925,6 +1941,84 @@ body {
   margin: 0 0 10px;
 }
 
+.enroll-strip-widget {
+  color: #fff;
+  background: #9aca3c;
+  padding: 30px 0;
+}
+
+.enroll-strip-widget .enroll-strap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enroll-strip-widget .enroll-strap h1, .enroll-strip-widget .enroll-strap h2, .enroll-strip-widget .enroll-strap h3, .enroll-strip-widget .enroll-strap p {
+  margin: 0;
+}
+
+.footer-contact-map-widget {
+  background: #3b3b3b;
+}
+
+.footer-contact-map-widget .footer-contact-strap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2 .footer-contact-content {
+  width: 700px;
+  padding: 50px;
+  color: #fff;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2 .footer-contact-content .fc-title {
+  font-family: 'ProximaNova-Bold';
+  font-size: 32px;
+  margin: 0 0 40px;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2 .footer-contact-content .fc-form input {
+  color: #fff;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2 .footer-contact-content .fc-form input[type='submit'] {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 8px 15px;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2.gm-block {
+  position: relative;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2.gm-block::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+.footer-contact-map-widget .footer-contact-strap .col2.gm-block::before {
+  border-color: transparent transparent transparent #3b3b3b;
+}
+
 /*! Lity - v2.4.0 - 2019-08-10
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2019 Jan Sorgalla; Licensed MIT */
@@ -2133,5 +2227,13 @@ body {
 }
 
 .lity-hide {
+  display: none;
+}
+
+.woocommerce-ordering {
+  display: none;
+}
+
+.woocommerce-result-count {
   display: none;
 }
