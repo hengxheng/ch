@@ -15,12 +15,7 @@
 			</div>
 			<?php echo do_shortcode('[widget id="custom_html-2"]'); ?>
 			<div class="footer-social">
-				<ul>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				</ul>
+				<?php echo do_shortcode('[widget id="custom_html-4"]'); ?>
 			</div>
 			<div class="footer-rologo">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/rto-logo.png"/>

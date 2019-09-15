@@ -84,7 +84,9 @@ class Plugin {
 			'related-team-members',
 			'enroll-strip',
 			'footer-contact-map',
-
+			'google-map',
+			'contact-page-main',
+			
 			'inline-editing'
         ];
 
