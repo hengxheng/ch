@@ -86,8 +86,7 @@ class Plugin {
 			'footer-contact-map',
 			'google-map',
 			'contact-page-main',
-			
-			'inline-editing'
+			'article-page-main'
         ];
 
         foreach ( $widgets as $widget ) {

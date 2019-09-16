@@ -2,6 +2,7 @@
 
 $green: #9aca3c;
 $grey: #3b3b3b;
+$red: #d8242f;
 $light-grey: #f5f5f5;
 $secText: #313136;
 
@@ -194,6 +195,11 @@ $secText: #313136;
   background: transparent;
   font-size: 16px;
   line-height: 16px;
+  &:hover{
+    border-color: $green;
+    background:$green;
+    color: #fff;
+  }
 }
 
 .b-btn{
@@ -208,7 +214,7 @@ $secText: #313136;
   &:hover{
     border-color: $green;
     background:$green;
-    color: #fff;
+    color: #fff !important;
   }
 }
 

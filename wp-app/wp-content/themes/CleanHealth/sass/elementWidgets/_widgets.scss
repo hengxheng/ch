@@ -1042,3 +1042,200 @@
         }
     }
 }
+
+.post-list-widget{
+    .post-category-block{
+        ul#post-category-nav{
+            list-style:none;
+            width: 100%;
+            margin: 30px 0;
+            padding: 0;
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-top: 2px solid $green;
+            border-bottom: 2px solid $green;
+            li{
+                display: inline-block;
+                a{
+                    display:block;
+                    padding: 12px 15px;
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-family: 'ProximaNova-Bold';
+                    text-align: center;
+                    text-transform: uppercase;
+                    &:hover{
+                        background: $green;
+                        color: #fff;
+                    }
+                    
+                }
+                &.actived{
+                    a{
+                        background: $green;
+                        color: #fff;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            left:50%;
+                            bottom:-12px;
+                            display:block;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 10px 10px 0 10px;
+                            border-color: $green transparent transparent transparent;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .post-list-block{
+        .post-list-tools{
+            .post-pagination{
+                ul{
+                    list-style:none;
+                    display:flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    margin: 0 0 30px;
+                    li{
+                        display:inline-block;
+                        
+                        a{
+                            width: 27px;
+                            height: 27px;
+                            display:block;
+                            border: 1px solid #b7b7b7;
+                            border-left:none;
+                            color: #b7b7b7;
+                            text-decoration: none;
+                            font-size: 14px;
+                            padding: 5px;
+                            text-align: center;
+                            
+                            &:hover{
+                                background: $green;
+                                color: #fff;
+                            }
+                            &.actived{
+                                background: $green;
+                                color: #fff;
+                            }
+                        }
+                        &:first-child{
+                            a{
+                                border-left: 1px solid #b7b7b7;
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+        .post-list-body{
+            .no-article{
+                text-align: center;
+            }
+            .post-featured{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 50px;
+                background: $grey;
+                color: #fff;
+                margin: 0 0 30px;
+                .item-img{
+                    width: 49%;
+                    margin: 0 0 15px;
+                    img{
+                        width: 100%;
+                        display:block;
+                    }
+                }
+                .item-content{
+                    width: 49%;
+                    padding: 50px 20px;
+                    .featured-label{
+                        font-size: 22px;
+                        font-family: 'ProximaNova-Bold';
+                        background: $red;
+                        padding: 5px 15px;
+                        display:inline-block;
+                        margin: 0 0 15px;
+                    }
+                    .post-title{
+                        font-size: 32px;
+                        margin: 0 0 10px;
+                        font-family: 'ProximaNova-Bold';
+                    }
+                    .post-subtitle{
+                        font-size: 22px;
+                        margin: 0 0 10px;
+                        font-family: 'ProximaNova-Bold';
+                    }
+                    .post-excerpt{
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin: 0 0 15px;
+                    }
+                    .post-cta{
+                        a{
+                            margin: 0 10px 0 0;
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .post-list{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 25px 0;
+                .post-item{
+                    width: 32.5%;
+                    margin: 0 0 30px;
+                    .item-img{
+                        margin: 0 0 15px;
+                        img{
+                            width: 100%;
+                            display:block;
+                        }
+                    }
+                    .item-content{
+                        .post-title{
+                            font-size: 32px;
+                            margin: 0 0 10px;
+                            font-family: 'ProximaNova-Bold';
+                        }
+                        .post-subtitle{
+                            font-size: 22px;
+                            margin: 0 0 10px;
+                            font-family: 'ProximaNova-Bold';
+                        }
+                        .post-excerpt{
+                            font-size: 16px;
+                            line-height: 20px;
+                            margin: 0 0 15px;
+                        }
+                        .post-cta{
+                            a{
+                                margin: 0 10px 0 0;
+                                text-decoration: none;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
