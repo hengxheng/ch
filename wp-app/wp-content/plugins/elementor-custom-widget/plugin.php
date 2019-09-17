@@ -86,7 +86,9 @@ class Plugin {
 			'footer-contact-map',
 			'google-map',
 			'contact-page-main',
-			'article-page-main'
+			'article-page-main',
+			'education-banner',
+			'calendar-strip',
         ];
 
         foreach ( $widgets as $widget ) {

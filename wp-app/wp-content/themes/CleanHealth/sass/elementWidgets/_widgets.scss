@@ -294,19 +294,7 @@
         display:flex;
         justify-content: flex-end;
         position:relative;
-        &:before{
-            content:'';
-            display:block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 20px 0 20px 40px;
-            border-color: transparent transparent transparent #ffffff;
-            position: absolute;
-            z-index: 5;
-            top:40px;
-            left:0;
-        }
+        @include top-left-triangle;
         .banner-text-wrapper{
             width: 40%;
             padding: 50px 70px 50px 150px;
@@ -1247,6 +1235,49 @@
         .col2{
             .right-text-wrapper{
                 padding: 30px;
+            }
+        }
+    }
+}
+
+.education-banner-widget{
+    margin: 0 0 30px;
+    .banner-inner{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        position:relative;
+        margin: 0 0 20px;
+        @include top-left-triangle;
+        .banner-text-wrapper{
+            width: 50%;
+            padding: 50px 0;
+            .banner-text{
+                color: #fff;
+                .w-btn{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+.calendar-strip-widget{
+    margin: 0 0 50px;
+    .calendar-strip-strap{
+        .calendar-strip-wrapper{
+            text-align:center;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            i{
+                color: $red;
+                font-size: 60px;
+            }
+            .calendar-text{
+                font-family: 'GoboldBold';
+                color: #fff;
             }
         }
     }

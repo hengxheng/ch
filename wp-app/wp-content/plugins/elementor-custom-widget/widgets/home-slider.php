@@ -46,7 +46,7 @@ class Home_Slider extends Widget_Base {
     $repeater->add_control(
       'image',
       [
-        'label'   => 'Choosec Image',
+        'label'   => 'Choose Image',
         'type'    => Controls_Manager::MEDIA,
         'default' => [
           'url' => Utils::get_placeholder_image_src(),
