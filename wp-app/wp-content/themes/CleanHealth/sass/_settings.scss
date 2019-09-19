@@ -257,6 +257,34 @@ $secText: #313136;
   }
 }
 
+a.tick{
+  &:before{
+    content:"\f00c";
+    font-family: FontAwesome;
+    font-size: 18px;
+    display:inline-block;
+    margin-right: 10px;
+  }
+}
+
+a.download-btn{
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+  margin-left: 15px;
+  &:before{
+    content:"\f019";
+    font-family: FontAwesome;
+    font-size: 18px;
+    display:inline-block;
+    margin-right: 8px;
+  }
+  &:hover{
+    color: $green;
+  }
+}
+
 .text-wysiwyg{
   font-size: 18px;
   h2{
@@ -305,6 +333,12 @@ $secText: #313136;
   }
   strong{
     font-family: 'ProximaNova-Bold';
+  }
+  .red-bg{
+    display:inline-block;
+    background: $red;
+    color: #fff;
+    padding: 6px 12px;
   }
 }
 
@@ -357,6 +391,12 @@ $secText: #313136;
     margin-top: -170px;
   }
 }
+#post-375{
+  .calendar-strip-widget{
+    margin: 0;
+  }
+}
+
 
 @mixin top-left-triangle{
   &::before{

@@ -98,7 +98,7 @@ class Education_Banner extends Widget_Base {
 		?>
 		<div class="education-banner-widget">
 			<?php foreach ($settings['banners'] as $key => $item): ?>
-			<div class="banner-inner <?= ($settings['full_width'])?'':'narrow' ?>" style="background:url(<?= $item['image']['url'] ?>) no-repeat center center;background-size:cover">
+			<div class="banner-inner <?= ($settings['full_width'])?'':'content-inner narrow' ?>" style="background:url(<?= $item['image']['url'] ?>) no-repeat center center;background-size:cover">
 				<div class="banner-text-wrapper">
 					<div class="banner-text text-wysiwyg">
 						<?= wpautop( $item['content'] ) ?>

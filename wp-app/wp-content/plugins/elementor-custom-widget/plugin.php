@@ -89,6 +89,8 @@ class Plugin {
 			'article-page-main',
 			'education-banner',
 			'calendar-strip',
+			'get-qualified-strip',
+			'video-list',
         ];
 
         foreach ( $widgets as $widget ) {

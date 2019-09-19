@@ -525,6 +525,34 @@ template {
   color: #fff;
 }
 
+a.tick:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a.download-btn {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+  margin-left: 15px;
+}
+
+a.download-btn:before {
+  content: "\f019";
+  font-family: FontAwesome;
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+a.download-btn:hover {
+  color: #9aca3c;
+}
+
 .text-wysiwyg {
   font-size: 18px;
 }
@@ -585,6 +613,13 @@ template {
   font-family: 'ProximaNova-Bold';
 }
 
+.text-wysiwyg .red-bg {
+  display: inline-block;
+  background: #d8242f;
+  color: #fff;
+  padding: 6px 12px;
+}
+
 .form-row {
   margin: 0 0 15px;
 }
@@ -629,6 +664,10 @@ template {
 
 #post-37 .elementor-widget-footer_subscription {
   margin-top: -170px;
+}
+
+#post-375 .calendar-strip-widget {
+  margin: 0;
 }
 
 /** === Layout === */
@@ -2382,6 +2421,12 @@ body {
   margin-top: 50px;
 }
 
+.education-banner-widget .banner-inner.narrow {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .calendar-strip-widget {
   margin: 0 0 50px;
 }
@@ -2402,6 +2447,49 @@ body {
 .calendar-strip-widget .calendar-strip-strap .calendar-strip-wrapper .calendar-text {
   font-family: 'GoboldBold';
   color: #fff;
+}
+
+.get-qualified-strip-widget .get-qualified-strap {
+  background: #d8242f;
+  padding: 30px 0;
+}
+
+.get-qualified-strip-widget .get-qualified-strap .text-wysiwyg {
+  color: #fff;
+}
+
+.video-list-widget .video-list-strap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-list-widget .video-list-strap .video-box {
+  text-align: center;
+  width: 33%;
+}
+
+.video-list-widget .video-list-strap .video-box .video-title {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-family: 'ProximaNova-Bold';
+}
+
+.video-list-widget .video-list-strap .video-box .video-list-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+
+.video-list-widget .video-list-strap .video-box .play-icon {
+  font-size: 60px;
+  text-decoration: none;
+  margin: 0 0 20px;
+}
+
+.video-list-widget .video-list-strap .video-box .play-icon i {
+  color: #9aca3c;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10

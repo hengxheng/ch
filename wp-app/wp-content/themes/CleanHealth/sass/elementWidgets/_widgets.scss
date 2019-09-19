@@ -1259,6 +1259,11 @@
                 }
             }
         }
+        &.narrow{
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
@@ -1278,6 +1283,47 @@
             .calendar-text{
                 font-family: 'GoboldBold';
                 color: #fff;
+            }
+        }
+    }
+}
+
+.get-qualified-strip-widget{
+    .get-qualified-strap{
+        background: $red;
+        padding: 30px 0;
+        .text-wysiwyg{
+            color: #fff;
+        }
+    }
+}
+
+.video-list-widget{
+    .video-list-strap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .video-box{
+            text-align:center;
+            width: 33%;
+            .video-title{
+                font-size: 18px;
+                margin: 0 0 10px;
+                font-family: 'ProximaNova-Bold';
+            }
+            .video-list-body{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 300px;
+            }
+            .play-icon{
+                font-size: 60px;            
+                text-decoration: none;
+                margin: 0 0 20px;
+                i{
+                    color: $green;
+                }
             }
         }
     }
