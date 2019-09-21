@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @since 1.1.0
  */
-class Right_Text extends Widget_Base {
+class Left_Text extends Widget_Base {
 
 	public function get_name() {
-		return 'right_text';
+		return 'left_text';
 	}
 
 	public function get_title() {
-		return 'Right Text';
+		return 'Left Text';
 	}
 
 	public function get_icon() {
@@ -81,18 +81,18 @@ class Right_Text extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget <?= $settings['section-class'] ?>">
-			<div class="right-text-strap">
-				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
-					</div>
-				</div>
+		<div class="left-text-widget <?= $settings['section-class'] ?>">
+			<div class="left-text-strap">
 				<div class="col2">
 					<div class="text-wrapper">
 						<div class="text-wysiwyg">
 							<?= wpautop( $settings['content'] ) ?>
 						</div>
+					</div>
+				</div>
+				<div class="col2">
+					<div class="placeholder-block">
+						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
 					</div>
 				</div>
 			</div>

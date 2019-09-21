@@ -553,6 +553,10 @@ a.download-btn:hover {
   color: #9aca3c;
 }
 
+a.download-btn.white {
+  color: #fff;
+}
+
 .text-wysiwyg {
   font-size: 18px;
 }
@@ -658,7 +662,7 @@ a.download-btn:hover {
   padding: 80px 0;
 }
 
-#post-26 .service-main-1 .right-text-wrapper, #post-26 .service-main-2 .right-text-wrapper {
+#post-26 .service-main-1 .text-wrapper, #post-26 .service-main-2 .text-wrapper {
   padding: 30px !important;
 }
 
@@ -668,6 +672,35 @@ a.download-btn:hover {
 
 #post-375 .calendar-strip-widget {
   margin: 0;
+}
+
+#post-375 .right-text-widget .right-text-strap .col2 .text-wrapper {
+  padding: 90px 30px;
+}
+
+.right-text-widget.performance-left .right-text-strap {
+  background: #e6e6e6;
+}
+
+.right-text-widget.performance-left .right-text-strap .col2:last-child {
+  background: url("assets/images/performance-bg.jpg") no-repeat center right #e6e6e6;
+}
+
+@media (max-width: 1280px) {
+  .right-text-widget.performance-left .right-text-strap .col2:last-child {
+    background: #e6e6e6;
+  }
+}
+
+.right-text-widget.performance-left .right-text-strap .col2 .text-wrapper {
+  width: 540px;
+  padding: 125px 30px;
+}
+
+@media (max-width: 800px) {
+  .right-text-widget.performance-left .right-text-strap .col2 .text-wrapper {
+    width: 100%;
+  }
 }
 
 /** === Layout === */
@@ -1121,18 +1154,55 @@ body {
   width: 50%;
 }
 
-.right-text-widget .right-text-strap .col2 .right-text-wrapper {
+.right-text-widget .right-text-strap .col2 .text-wrapper {
   box-sizing: border-box;
   padding: 150px 30px;
   margin-right: auto;
+  width: 700px;
+}
+
+@media (max-width: 1300px) {
+  .right-text-widget .right-text-strap .col2 .text-wrapper {
+    width: 100%;
+  }
 }
 
 .right-text-widget .right-text-strap .col2 img {
   display: block;
 }
 
+.right-text-widget.white-bg .right-text-strap {
+  background: #fff;
+}
+
+.left-text-widget .left-text-strap {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-text-widget .left-text-strap .col2 {
+  width: 50%;
+}
+
+.left-text-widget .left-text-strap .col2 .text-wrapper {
+  box-sizing: border-box;
+  padding: 150px 30px;
+  margin-left: auto;
+  width: 700px;
+}
+
+.left-text-widget .left-text-strap .col2 img {
+  display: block;
+}
+
 .multiple-column-layout {
   padding: 80px 0;
+}
+
+.multiple-column-layout.grey-bg {
+  background: #f6f6f6;
 }
 
 .multiple-column-layout .mcl-header {
@@ -2490,6 +2560,29 @@ body {
 
 .video-list-widget .video-list-strap .video-box .play-icon i {
   color: #9aca3c;
+}
+
+.text-with-image-bg-widget .text-with-image-bg-strap {
+  padding: 80px 0;
+}
+
+.text-with-image-bg-widget .text-with-image-bg-strap .text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-with-image-bg-widget .text-with-image-bg-strap .text-wrapper.text-left {
+  justify-content: flex-start;
+}
+
+.text-with-image-bg-widget .text-with-image-bg-strap .text-wrapper.text-right {
+  justify-content: flex-end;
+}
+
+.text-with-image-bg-widget .text-with-image-bg-strap .text-wrapper .text-wysiwyg {
+  width: 35%;
+  color: #fff;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10

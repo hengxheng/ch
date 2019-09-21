@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @since 1.1.0
  */
-class Right_Text extends Widget_Base {
+class Text_With_Image_Bg extends Widget_Base {
 
 	public function get_name() {
-		return 'right_text';
+		return 'text_with_image_bg';
 	}
 
 	public function get_title() {
-		return 'Right Text';
+		return 'Text With Image Background';
 	}
 
 	public function get_icon() {
@@ -57,13 +57,26 @@ class Right_Text extends Widget_Base {
         );
 
 		$this->add_control(
-			'content',
-			[
-				'label' => 'Left Content',
-				'type' => Controls_Manager::WYSIWYG,
+            'text_align',
+            [
+                'label' => 'Text Align',
+                'type' => Controls_Manager::SELECT,
+                'default' => 'center;',
+                'options' => [
+					'text-center' => 'Center',
+					'text-left' => 'Left',
+					'text-right' => 'Right'
+				]
 			]
 		);
 
+		$this->add_control(
+			'content',
+			[
+				'label' => 'Content',
+				'type' => Controls_Manager::WYSIWYG,
+			]
+		);
 
 		$this->end_controls_section();
 	}
@@ -81,15 +94,10 @@ class Right_Text extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="right-text-widget <?= $settings['section-class'] ?>">
-			<div class="right-text-strap">
-				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
-					</div>
-				</div>
-				<div class="col2">
-					<div class="text-wrapper">
+		<div class="text-with-image-bg-widget <?= $settings['section-class'] ?>">
+			<div class="text-with-image-bg-strap" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;background-size:cover">
+				<div class="content-inner withPadding">	
+					<div class="text-wrapper <?= $settings['text_align'] ?>">
 						<div class="text-wysiwyg">
 							<?= wpautop( $settings['content'] ) ?>
 						</div>
