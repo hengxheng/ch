@@ -136,7 +136,7 @@ class Article_Single_Page_Body extends Widget_Base {
 								the_post_navigation(
 									array(
 										'next_text' => '<span class="meta-nav" aria-hidden="true">Next <i class="fa fa-arrow-right"></i></span>',
-										'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous <i class="fa fa-arrow-left"></i></span>',
+										'prev_text' => '<span class="meta-nav" aria-hidden="true"><i class="fa fa-arrow-left"></i> Prev</span>',
 									)
 								);
 							?>
