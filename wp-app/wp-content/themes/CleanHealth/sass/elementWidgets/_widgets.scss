@@ -1067,60 +1067,60 @@
     }
 }
 
-.post-list-widget{
-    .post-category-block{
-        ul#post-category-nav{
-            list-style:none;
-            width: 100%;
-            margin: 30px 0;
-            padding: 0;
-            text-align: center;
-            display:flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            border-top: 2px solid $green;
-            border-bottom: 2px solid $green;
-            li{
-                display: inline-block;
+.post-category-block{
+    ul#post-category-nav{
+        list-style:none;
+        width: 100%;
+        margin: 30px 0;
+        padding: 0;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: 2px solid $green;
+        border-bottom: 2px solid $green;
+        li{
+            display: inline-block;
+            a{
+                display:block;
+                padding: 12px 15px;
+                color: #000;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: 'ProximaNova-Bold';
+                text-align: center;
+                text-transform: uppercase;
+                &:hover{
+                    background: $green;
+                    color: #fff;
+                }
+                
+            }
+            &.actived{
                 a{
-                    display:block;
-                    padding: 12px 15px;
-                    color: #000;
-                    text-decoration: none;
-                    font-size: 18px;
-                    font-family: 'ProximaNova-Bold';
-                    text-align: center;
-                    text-transform: uppercase;
-                    &:hover{
-                        background: $green;
-                        color: #fff;
+                    background: $green;
+                    color: #fff;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left:50%;
+                        bottom:-12px;
+                        display:block;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 10px 10px 0 10px;
+                        border-color: $green transparent transparent transparent;
+                        transform: translateX(-50%);
                     }
-                    
                 }
-                &.actived{
-                    a{
-                        background: $green;
-                        color: #fff;
-                        position: relative;
-                        &::after{
-                            content: '';
-                            position: absolute;
-                            left:50%;
-                            bottom:-12px;
-                            display:block;
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 10px 10px 0 10px;
-                            border-color: $green transparent transparent transparent;
-                            transform: translateX(-50%);
-                        }
-                    }
-                    
-                }
+                
             }
         }
     }
+}
+.post-list-widget{
     .post-list-block{
         .post-list-tools{
             .post-pagination{
@@ -1383,6 +1383,66 @@
                 color: #fff;
             }
             
+        }
+    }
+}
+
+.post-single-widget{
+    
+    .post-single-body{
+        .post-single-inner{
+            width: 80%;
+            margin: 0 auto;
+            .post-single-toolbar{
+                display: flex;
+                justify-content: space-between;
+                a{
+                    display:inline-block;
+                    padding: 8px 15px;
+                    margin: 5px;
+                    color: $green;
+                    border: 1px solid $green;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-family: 'ProximaNova-Bold';
+                    text-align: center;
+                    text-transform: uppercase;
+                    &:hover{
+                        background: $green;
+                        color: #fff;
+                    }
+                    
+                }
+            }
+            .post-body{
+                img{
+                    width: 100%;
+                    display:block;
+                    margin: 20px 0;
+                }
+            }
+            .post-share{
+                padding: 25px 0;
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                ul.post-social{
+                    list-style:none;
+                    padding:0;
+                    margin:0 0 0 15px;
+                    
+                    li{
+                        display:inline-block;
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                            display:block;
+                            padding: 5px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -22,6 +22,7 @@ if ( post_password_required() ) {
 }
 
 $discussion = twentynineteen_get_discussion_data();
+var_dump($discussion);
 ?>
 
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
@@ -29,11 +30,7 @@ $discussion = twentynineteen_get_discussion_data();
 		<h2 class="comments-title">
 		<?php
 		if ( comments_open() ) {
-			if ( have_comments() ) {
-				_e( 'Join the Conversation', 'twentynineteen' );
-			} else {
-				_e( 'Leave a comment', 'twentynineteen' );
-			}
+			echo 'Leave a comment';
 		} else {
 			if ( '1' == $discussion->responses ) {
 				/* translators: %s: post title */

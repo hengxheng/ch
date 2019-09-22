@@ -2243,7 +2243,7 @@ body {
   padding: 8px 15px;
 }
 
-.post-list-widget .post-category-block ul#post-category-nav {
+.post-category-block ul#post-category-nav {
   list-style: none;
   width: 100%;
   margin: 30px 0;
@@ -2256,11 +2256,11 @@ body {
   border-bottom: 2px solid #9aca3c;
 }
 
-.post-list-widget .post-category-block ul#post-category-nav li {
+.post-category-block ul#post-category-nav li {
   display: inline-block;
 }
 
-.post-list-widget .post-category-block ul#post-category-nav li a {
+.post-category-block ul#post-category-nav li a {
   display: block;
   padding: 12px 15px;
   color: #000;
@@ -2271,18 +2271,18 @@ body {
   text-transform: uppercase;
 }
 
-.post-list-widget .post-category-block ul#post-category-nav li a:hover {
+.post-category-block ul#post-category-nav li a:hover {
   background: #9aca3c;
   color: #fff;
 }
 
-.post-list-widget .post-category-block ul#post-category-nav li.actived a {
+.post-category-block ul#post-category-nav li.actived a {
   background: #9aca3c;
   color: #fff;
   position: relative;
 }
 
-.post-list-widget .post-category-block ul#post-category-nav li.actived a::after {
+.post-category-block ul#post-category-nav li.actived a::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -2583,6 +2583,65 @@ body {
 .text-with-image-bg-widget .text-with-image-bg-strap .text-wrapper .text-wysiwyg {
   width: 35%;
   color: #fff;
+}
+
+.post-single-widget .post-single-body .post-single-inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-single-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-single-toolbar a {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 5px;
+  color: #9aca3c;
+  border: 1px solid #9aca3c;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'ProximaNova-Bold';
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-single-toolbar a:hover {
+  background: #9aca3c;
+  color: #fff;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-body img {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-share {
+  padding: 25px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-share ul.post-social {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 15px;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-share ul.post-social li {
+  display: inline-block;
+}
+
+.post-single-widget .post-single-body .post-single-inner .post-share ul.post-social li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 5px;
+  font-size: 20px;
 }
 
 /*! Lity - v2.4.0 - 2019-08-10

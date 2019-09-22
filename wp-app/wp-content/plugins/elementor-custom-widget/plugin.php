@@ -83,6 +83,7 @@ class Plugin {
 			'enroll-strip',				
 			'contact-page-main',
 			'article-page-main',
+			'article-single-page-body',
 			'education-banner',
 			'get-qualified-strip',
 			'video-list',
