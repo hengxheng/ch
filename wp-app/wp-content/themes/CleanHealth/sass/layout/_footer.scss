@@ -37,13 +37,20 @@
                 }
             }
         }
+        @media (max-width: 1281px){
+            align-items: flex-start;
+        }
+        @media (max-width: 800px){
+            display:none;
+        }
     }
     .footer-bottom{
         text-align:center;
-        padding: 0 0 25px;
+        padding: 0 0 15px;
         #copyright{
             font-size: 13px;
             color: #fff;
+            margin:0;
             span{
                 color: $green;
             }
@@ -97,6 +104,67 @@
                     color: #fff;
                 }
             }
+        }
+    }
+    .footer-mobile-top{
+        display:none;
+        text-align: center;
+        color: #fff;
+        .fm-social{
+            padding: 20px 0;
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    display:inline-block;
+                    a{
+                        color: #fff;
+                        font-size: 25px;
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+        .fm-footer-menu{
+            ul{
+                margin: 0;
+                padding: 0;
+                margin: 0 0 10px;
+                li{
+                    display:inline-block;
+                    a{
+                        color: #fff;
+                        font-size: 16px;
+                        padding: 8px;
+                        text-decoration: none;
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+                    &::after{
+                        content: '|';
+                        display: inline-block;
+                    }
+                    &:last-child{
+                        &::after{
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-rto{
+            background: $green;
+            color: #000;
+            font-size: 16px;
+            line-height: 18px;
+            padding: 10px 0;
+            text-align: center;
+            margin: 0 0 10px;
+            font-family: 'ProximaNova-Bold';
+        }
+        @media (max-width: 800px){
+            display:block;
         }
     }
 }

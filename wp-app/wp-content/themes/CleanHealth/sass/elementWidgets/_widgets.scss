@@ -24,6 +24,9 @@
             }
         }
     }
+    @media (max-width: 800px){
+        display:none;
+    }
 }
 
 #home-slider{
@@ -102,17 +105,22 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        
+        @media (max-width: 800px){
+            flex-direction: column;
+        }
         .col2{
             width: 50%;
             // display:flex;
             // justify-content: flex-start;
+            @media (max-width: 800px) {
+                width: 100% !important;
+            }
             .text-wrapper{
                 box-sizing: border-box;
                 padding: 150px 30px;
                 margin-right: auto;
                 width: 700px;
-                @media (max-width: 1300px){
+                @media (max-width: 1400px){
                     width: 100%;
                 }
             }
@@ -136,6 +144,9 @@
         align-items: center;
         .col2{
             width: 50%;
+            @media (max-width: 800px) {
+                width: 100% !important;
+            }
             .text-wrapper{
                 box-sizing: border-box;
                 padding: 150px 30px;
@@ -181,6 +192,9 @@
                     margin: 0 0 25px;
                 }
             }
+            @media (max-width: 800px) {
+                width: 100% !important;
+            }
         }
     }
     // .mcl-footer{
@@ -196,6 +210,9 @@
     .col2{
         width: 50%;
         overflow:hidden;
+        @media (max-width: 800px) {
+            width: 100% !important;
+        }
         &:first-child{
             .lr-block{
                 justify-content: flex-end;
@@ -333,6 +350,9 @@
         @include top-left-triangle;
         .banner-text-wrapper{
             width: 40%;
+            @media (max-width: 800px){
+                width: 100%;
+            }
             padding: 50px 70px 50px 150px;
             .banner-text{
                 color: #fff;
@@ -498,8 +518,21 @@
                     }
                 }
             }
-       } 
+       }
     }
+    @media (max-width: 800px){
+        margin-top:0;
+        .footer-subscription-wrapper{
+            .fs-inner{
+                .fs-image{
+                    display:none;
+                }
+                .fs-content{
+                    width: 100%;
+                }
+            }
+        }
+   }
 }
 
 .footer-video-widget{
@@ -552,6 +585,9 @@
                         padding: 8px 15px;
                     }
                 }
+            }
+            @media (max-width: 800px){
+                width: 100%;
             }
         }
     }
