@@ -85,10 +85,16 @@ body{
 
 .elementor-column.elementor-col-33{
 	width: 25% !important;
+	@media (max-width: 800px){
+		display:none;
+	}
 }
 
 .elementor-column.elementor-col-66{
 	width: 75% !important;
+	@media (max-width: 800px){
+		width: 100% !important;
+	}
 }
 
 @import "header";

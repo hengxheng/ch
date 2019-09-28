@@ -2,6 +2,9 @@
 /**
  * The header for our theme
  */
+global $woocommerce;
+$item_no = $woocommerce->cart->get_cart_contents_count();
+$total_amount = $woocommerce->cart->get_cart_contents_total();
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -18,12 +21,7 @@
 	<div class="header-top">
 		<div class="content-inner withPadding">
 			<div class="social-top-menu">
-				<ul>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				</ul>
+				<?php echo do_shortcode('[widget id="custom_html-4"]'); ?>
 			</div>
 		</div>
 	</div>
@@ -35,9 +33,9 @@
 				</div>
 				<nav class="secondary-menu">
 					<ul>
-						<li><a href="#"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a></li>		
+						<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a></li>		
 						<li><a href="#">SHOP</a></li>
-						<li><a href="#"><i class="fa fa-shopping-cart"></i> 0 ITEMS - $0.00</a></li>
+						<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <?=$item_no ?> ITEMS - $<?= $total_amount ?></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -63,4 +61,62 @@
 			</div>
 		</div>
 	</div>
+	<div class="mobile-header">
+		<div class="mh-left">
+			<a href="#" id="mb-menu-btn"><i class="fa fa-bars"></i></a>
+		</div>
+		<div class="mh-middle">
+			<div class="site-logo"><?php the_custom_logo(); ?></div>
+		</div>
+		<div class="mh-right">
+			<ul>
+				<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i></a></li>		
+				<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i><span>1</span></a></li>
+			</ul>
+		</div>
+	</div>
 </header><!-- #masthead -->
+<div id="mobile-menu-block">
+	<div class="mmb-header">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mobile-logo.png"/>
+	</div>
+	<div class="mmb-sub-header">
+		<div class="col-2">
+			<a class="mmb-acount" href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+		</div>
+		<div class="col-2">
+			<a class="mmb-cart" href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <?=$item_no ?> ITEMS - $<?= $total_amount ?></a>
+		</div>
+	</div>
+	<div class="mmb-subscription">
+		<form action="#">
+			<p>Sign in to join our Clean Health club</p>
+			<input type="email" placeholder="Enter your email address here">
+		</form>
+	</div>
+	<div class="mmb-menu">
+		<?php
+			wp_nav_menu(
+				array(
+					'menu' => 'mobile-menu',
+					'menu_class' => 'mobile-menu',
+					'depth' => 2,
+				)
+			);
+		?>
+	</div>
+	<div class="mmb-social">
+		<?php echo do_shortcode('[widget id="custom_html-4"]'); ?>
+	</div>
+	<div class="mmb-footer-menu">
+		<?php
+			wp_nav_menu(
+				array(
+					'menu' => 'mobile-footer',
+					'menu_class' => 'footer-mobile-menu',
+					'depth' => 1,
+				)
+			);
+		?>
+	</div>
+</div>	
