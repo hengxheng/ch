@@ -6,6 +6,10 @@ $red: #d8242f;
 $light-grey: #f5f5f5;
 $secText: #313136;
 
+
+$small-width: 800px;
+$content-width: 1440px;
+
 @font-face {
   font-family: 'Gobold';
   src: url('fonts/Gobold.eot?#iefix') format('embedded-opentype'),  
@@ -68,7 +72,7 @@ $secText: #313136;
 
 @font-face {
   font-family: 'GoboldThinLight';
-  src: url('fonts/GoboldThinLight.eot?#iefix') format('embedded-opentype'),  
+  src: url('fonts/GoboldThinLight.eot?#iefix') format('embedded-opentype'), 
     url('fonts/GoboldThinLight.woff') format('woff'), 
     url('fonts/GoboldThinLight.ttf')  format('truetype'), 
     url('fonts/GoboldThinLight.svg#GoboldThinLight') format('svg');
@@ -286,6 +290,11 @@ a.download-btn{
   &.white{
     color: #fff;
   }
+  @media (max-width: 800px){
+    padding: 0;
+    margin: 10px 0;
+    display:block;
+  }
 }
 
 .text-wysiwyg{
@@ -393,8 +402,12 @@ a.download-btn{
 #post-37{
   .elementor-widget-footer_subscription{
     margin-top: -170px;
+    @media (max-width: $small-width){
+      margin-top: 0;
+    }
   }
 }
+
 #post-375{
   .calendar-strip-widget{
     margin: 0;
@@ -441,5 +454,3 @@ a.download-btn{
     border-color: transparent transparent transparent #ffffff;
   }
 }
-
-$content-width: 1440px;

@@ -97,5 +97,22 @@ body{
 	}
 }
 
+.shop-page{
+	.woocommerce{
+		padding: 30px 0;
+	}
+}
+.woocommerce.columns-3{
+	ul.products{
+		li.product{
+			@media (max-width: $small-width){
+				width: 90%;
+				margin-right: auto;
+				margin-left: auto;
+				float: none !important;
+			}
+		}
+	}
+}
 @import "header";
 @import "footer";
