@@ -30,47 +30,33 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
-
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
+	<?php the_content(); ?>
 </div>
 
+<div class="product-single-overlay" style="display:none;"></div>
+<div class="product-single-msg" style="display:none;">
+	<a href="#" class="psm-close"><i class="fa fa-times-circle"></i></a>
+	<div class="psg-inner">
+		<p>The product is added to cart successfully.</p>
+		<a href="<?php echo get_site_url() ?>/products" class="g-btn">Continue Shopping</a>
+		<a href="<?php echo get_site_url() ?>/cart" class="g-btn">View Cart</a>
+	</div>
+</div>
+<div class="product-single-error-msg" style="display:none;">
+<a href="#" class="psm-close"><i class="fa fa-times-circle"></i></a>
+	<div class="psg-inner">
+		<p>The product is not available. Please refresh and try again.</p>
+		<a href="<?php echo get_site_url() ?>/products" class="g-btn">Continue Shopping</a>
+	</div>
+</div>
+	<?php 
+		// echo $product->get_price();
+		// echo $product->get_regular_price(); 
+		// echo $product->get_sale_price();
+		// echo $product->get_name();
+
+	?>
 <?php do_action( 'woocommerce_after_single_product' ); ?>

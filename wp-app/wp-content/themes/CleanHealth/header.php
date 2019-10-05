@@ -35,7 +35,7 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 					<ul>
 						<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a></li>		
 						<li><a href="#">SHOP</a></li>
-						<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <?=$item_no ?> ITEMS - $<?= $total_amount ?></a></li>
+						<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <span id="header-cart-text"><?=$item_no ?> ITEMS - $<?= $total_amount ?></span></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -85,7 +85,7 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 			<a class="mmb-acount" href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
 		</div>
 		<div class="col-2">
-			<a class="mmb-cart" href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <?=$item_no ?> ITEMS - $<?= $total_amount ?></a>
+			<a class="mmb-cart" href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <span id="mobile-header-cart"><?=$item_no ?> ITEMS - $<?= $total_amount ?></span></a>
 		</div>
 	</div>
 	<div class="mmb-subscription">

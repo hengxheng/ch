@@ -8,4 +8,16 @@ jQuery(function($){
         e.preventDefault();
         $(this).next("ul.sub-menu").slideToggle();
     });
+
+    //woocommerce
+
+    $(".psm-close").on("click", function(e){
+        e.preventDefault();
+        $(".product-single-overlay, .product-single-msg, .product-single-error-msg").hide();
+    });
+
+    $(".product-single-overlay").on("click", function(e){
+        e.preventDefault();
+        $(".product-single-overlay, .product-single-msg, .product-single-error-msg").hide();
+    });
 });

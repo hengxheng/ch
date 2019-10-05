@@ -94,6 +94,9 @@ class Plugin {
 			'footer-contact',
 			'footer-video',
 			'woo-products',
+
+			//product page widget
+			'product-page-header',
         ];
 
         foreach ( $widgets as $widget ) {
@@ -111,6 +114,14 @@ class Plugin {
 			'custom',
 			[
 				'title' => __( 'Clean Health', 'plugin-name' ),
+				'icon' => 'fa fa-plug',
+			]
+		);
+
+		$elements_manager->add_category(
+			'product_page',
+			[
+				'title' => __( 'Product Page', 'plugin-name' ),
 				'icon' => 'fa fa-plug',
 			]
 		);
