@@ -30,20 +30,12 @@ class Product_Page_Header extends Widget_Base {
 
 	protected function _register_controls() {
 		$this->start_controls_section(
-			'section_content',
+			'content_section',
 			[
-				'label' => 'Content',
+			  'label' => 'Content',
+			  'tab'   => Controls_Manager::TAB_CONTENT,
 			]
-		);
-		
-		$this->add_control(
-			'section-class',
-			[
-				'label' => 'Section Class',
-				'type'  => Controls_Manager::TEXT,
-				'description' => 'For special styling, do not change it'
-			]
-		);
+		  );
 
 		$this->add_control(
             'image',
@@ -55,20 +47,6 @@ class Product_Page_Header extends Widget_Base {
               ],
             ]
         );
-
-		$this->add_control(
-            'text_align',
-            [
-                'label' => 'Text Align',
-                'type' => Controls_Manager::SELECT,
-                'default' => 'center;',
-                'options' => [
-					'text-center' => 'Center',
-					'text-left' => 'Left',
-					'text-right' => 'Right'
-				]
-			]
-		);
 
 		$this->add_control(
 			'content',
@@ -96,14 +74,26 @@ class Product_Page_Header extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="text-with-image-bg-widget <?= $settings['section-class'] ?>">
-			<div class="text-with-image-bg-strap" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;background-size:cover">
-				<div class="content-inner withPadding">	
-					<div class="text-wrapper <?= $settings['text_align'] ?>">
-						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
-
-							<a href="<?= do_shortcode('[add_to_cart_url id="'.$product_id.'"]'); ?>" data-quantity="1" data-product_id="<?= $product_id ?>" class="add-to-cart-btn g-btn">BUY NOW</a>
+		<div class="product-page-header-widget">
+			<div class="content-inner">
+				<div class="product-page-header" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;">
+					<div class="pph-content">
+						<div class="pph-content-inner">
+							<div class="pph-wrapper">
+								<div class="triangle-strip">
+									<div class="t1"></div>
+									<div class="t2"></div>
+									<div class="t3"></div>
+									<div class="t4"></div>
+								</div>
+								<div class="text-wrapper">
+									<h2 class="p-name"><?= $product->get_name() ?></h2>
+									<div class="text-wysiwyg">
+										<?= wpautop( $settings['content'] ) ?>
+									</div>
+									<a href="<?= do_shortcode('[add_to_cart_url id="'.$product_id.'"]'); ?>" data-quantity="1" data-product_id="<?= $product_id ?>" class="add-to-cart-btn w-btn">BUY NOW</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

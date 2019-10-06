@@ -46,6 +46,18 @@ class Right_Text extends Widget_Base {
 		);
 
 		$this->add_control(
+            'full_width',
+            [
+              'label'        => 'Full Width',
+              'type'         => Controls_Manager::SWITCHER,
+              'label_on'     => 'ON',
+              'label_off'    => 'OFF',
+              'return_value' => 1,
+              'default'      => 1,
+            ]
+		);
+		  
+		$this->add_control(
             'image',
             [
               'label'   => 'Background Image',
@@ -82,7 +94,7 @@ class Right_Text extends Widget_Base {
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
 		<div class="right-text-widget <?= $settings['section-class'] ?>">
-			<div class="right-text-strap">
+			<div class="right-text-strap <?= !$settings['full_width']?"content-inner":"" ?>" >
 				<div class="col2">
 					<div class="placeholder-block">
 						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	

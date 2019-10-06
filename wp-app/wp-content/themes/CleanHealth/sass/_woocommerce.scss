@@ -56,3 +56,9 @@
         display: inline-block;
     }
 }
+
+div.product.type-product{
+    .elementor-widget{
+        margin-bottom: 0 !important;
+    }
+}

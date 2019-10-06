@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 	</div>
 </div>
 <div class="product-single-error-msg" style="display:none;">
-<a href="#" class="psm-close"><i class="fa fa-times-circle"></i></a>
+	<a href="#" class="psm-close"><i class="fa fa-times-circle"></i></a>
 	<div class="psg-inner">
 		<p>The product is not available. Please refresh and try again.</p>
 		<a href="<?php echo get_site_url() ?>/products" class="g-btn">Continue Shopping</a>

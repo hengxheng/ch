@@ -97,6 +97,10 @@ class Plugin {
 
 			//product page widget
 			'product-page-header',
+			'product-page-gallery',
+			'product-page-cta',
+			'product-page-multiple-column-layout',
+			'product-page-banner',
         ];
 
         foreach ( $widgets as $widget ) {

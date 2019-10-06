@@ -632,8 +632,17 @@ a.download-btn.white {
 }
 
 .text-wysiwyg .red-bg {
+  font-family: 'GoboldBold';
   display: inline-block;
   background: #d8242f;
+  color: #fff;
+  padding: 6px 12px;
+}
+
+.text-wysiwyg .green-bg {
+  font-family: 'GoboldBold';
+  display: inline-block;
+  background: #9aca3c;
   color: #fff;
   padding: 6px 12px;
 }
@@ -1000,7 +1009,8 @@ body {
   }
   .site-header .mobile-header .mh-right ul li a span {
     display: inline-block;
-    font-size: 14px;
+    font-size: 11px;
+    line-height: 16px;
     width: 15px;
     height: 15px;
     background: #9aca3c;
@@ -3294,6 +3304,149 @@ body {
   }
 }
 
+.product-page-header-widget {
+  margin: 0 0 50px;
+}
+
+.product-page-header-widget .product-page-header {
+  position: relative;
+  background-size: cover !important;
+  padding: 110px 0;
+}
+
+.product-page-header-widget .product-page-header .pph-content {
+  text-align: right;
+}
+
+.product-page-header-widget .product-page-header .pph-content .pph-content-inner {
+  display: inline-block;
+  text-align: left;
+}
+
+.product-page-header-widget .product-page-header .pph-content .pph-content-inner .pph-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.product-page-header-widget .product-page-header .pph-content .pph-content-inner .text-wrapper {
+  background: #9aca3c;
+  width: 450px;
+  height: 250px;
+  color: #fff;
+  padding: 25px;
+  margin: 0 0 10px;
+}
+
+.product-page-header-widget .product-page-header .pph-content .pph-content-inner .text-wrapper .p-name {
+  margin: 0 0 15px;
+}
+
+.product-banner-1 {
+  margin-top: 30px;
+}
+
+.product-banner-1 .left-text-strap {
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 15%, #f5f5f5 15%, #f5f5f5 100%);
+}
+
+.product-banner-1 .left-text-strap .col2 .text-wrapper {
+  padding-bottom: 20px;
+}
+
+.product-page-gallery-widget .product-page-gallery .mcl-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-page-gallery-widget .product-page-gallery .mcl-content img {
+  display: block;
+}
+
+.product-page-cta-widget {
+  background: #9aca3c;
+  color: #fff;
+  text-align: center;
+}
+
+.product-page-cta-widget .product-page-cta {
+  padding: 30px 0;
+}
+
+.product-page-cta-widget .product-page-cta .b-btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+.product-page-multiple-column-layout-widget .product-page-multiple-column-layout {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-header, .product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-footer {
+  font-size: 28px;
+  margin: 0 0 25px;
+}
+
+.product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-content .mcl-col .mcl-col-inner .mcl-col-image {
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+.product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-content .mcl-col .mcl-col-inner .mcl-col-image img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-content .mcl-col .mcl-col-inner .mcl-col-text {
+  margin: 0 0 25px;
+}
+
+@media (max-width: 800px) {
+  .product-page-multiple-column-layout-widget .product-page-multiple-column-layout .mcl-content .mcl-col {
+    width: 100% !important;
+  }
+}
+
+.product-page-banner-widget .product-page-banner {
+  background: #000;
+}
+
+.product-page-banner-widget .product-page-banner .banner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-page-banner-widget .product-page-banner .banner-inner .col-2 {
+  width: 50%;
+}
+
+.product-page-banner-widget .product-page-banner .banner-inner .col-2 .banner-text-wrapper {
+  padding: 120px 0;
+}
+
+.product-page-banner-widget .product-page-banner .banner-inner .col-2 .banner-text-wrapper .banner-text {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .product-page-banner-widget .product-page-banner .banner-inner .col-2 {
+    width: 100% !important;
+  }
+}
+
 /*! Lity - v2.4.0 - 2019-08-10
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2019 Jan Sorgalla; Licensed MIT */
@@ -3566,4 +3719,8 @@ body {
   margin-left: 10px;
   margin-top: -10px;
   display: inline-block;
+}
+
+div.product.type-product .elementor-widget {
+  margin-bottom: 0 !important;
 }

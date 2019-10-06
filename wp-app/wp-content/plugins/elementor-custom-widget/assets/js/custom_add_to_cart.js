@@ -1,6 +1,6 @@
 jQuery(function($){  
     $(".add-to-cart-btn").click(function(e){ 
-      e.preventDefault();  // Prevent the click from going to the link
+      e.preventDefault();
       var btn = $(this);
       btn.addClass('loading');
       $.ajax({
@@ -25,6 +25,7 @@ jQuery(function($){
               $(".product-single-overlay").show();
               $("#header-cart-text").text(cartMsg);
               $("#mobile-header-cart").text(cartMsg);
+              $("#mh-header-cart").text(response.item_no);
             }
       });
   

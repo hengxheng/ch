@@ -71,7 +71,7 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 		<div class="mh-right">
 			<ul>
 				<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i></a></li>		
-				<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i><span>1</span></a></li>
+				<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i><span id="mh-header-cart"><?=$item_no ?></span></a></li>
 			</ul>
 		</div>
 	</div>
