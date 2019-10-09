@@ -62,3 +62,110 @@ div.product.type-product{
         margin-bottom: 0 !important;
     }
 }
+
+.shop_table{
+    border:0 !important;
+    tr{
+        border-bottom: 2px solid #000;
+        th{
+          background: #dae4e0;  
+          color: #000;
+          font-size: 18px;
+          font-family: 'GoboldBold';
+        }
+        td{
+            color: #000;
+            font-size: 17px;
+            border:0 !important;
+            border-bottom: 1px solid #000 !important;
+            &.product-thumbnail{
+                img{
+                    max-width: 200px;
+                }
+            }
+            &.product-subtotal{
+                font-family: 'ProximaNova-Bold';
+            }
+            &.product-remove{
+                a{
+                    color: #000 !important;
+                }
+            }
+            &.actions{
+                text-align: left !important;
+                a{
+                    text-align: center;
+                    margin-right: 15px;
+                    @media (max-width: 800px){
+                        width: 100%;
+                        margin: 0 0 15px;
+                    }
+                }
+            }
+            &.table-total{
+                text-align: right;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.cart-page-bottom{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .col-2{
+        width: 49%;
+        border: 1px solid #c1c1c1;
+    }
+    .cart-box-title{
+        background: #dae4e0;
+        color: #000;
+        font-family: 'ProximaNova-Extrabld';
+        font-size: 18px;
+        padding: 20px;
+        border-bottom: 1px solid #c1c1c1;
+    }
+    .cart-box-content{
+        padding: 20px;
+        #coupon_code{
+            width: 100%;
+            border: 1px solid #c1c1c1;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin: 0 0 15px;
+        }
+        .shop_table{
+            th{
+                width: 30%;
+                background: none;
+                border-bottom: 1px solid #000 !important;
+                font-family: 'ProximaNova-Bold';
+            }
+            td{
+                width: 70%;
+                text-align: right;
+            }
+            .order-total{
+                td, th{
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+        .wc-proceed-to-checkout{
+            a{
+                text-transform: uppercase;
+            }
+        }
+    }
+    @media (max-width: 800px){
+        .col-2{
+            width: 100%;
+            margin: 0 0 15px;
+        }
+    }
+}

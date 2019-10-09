@@ -3724,3 +3724,122 @@ body {
 div.product.type-product .elementor-widget {
   margin-bottom: 0 !important;
 }
+
+.shop_table {
+  border: 0 !important;
+}
+
+.shop_table tr {
+  border-bottom: 2px solid #000;
+}
+
+.shop_table tr th {
+  background: #dae4e0;
+  color: #000;
+  font-size: 18px;
+  font-family: 'GoboldBold';
+}
+
+.shop_table tr td {
+  color: #000;
+  font-size: 17px;
+  border: 0 !important;
+  border-bottom: 1px solid #000 !important;
+}
+
+.shop_table tr td.product-thumbnail img {
+  max-width: 200px;
+}
+
+.shop_table tr td.product-subtotal {
+  font-family: 'ProximaNova-Bold';
+}
+
+.shop_table tr td.product-remove a {
+  color: #000 !important;
+}
+
+.shop_table tr td.actions {
+  text-align: left !important;
+}
+
+.shop_table tr td.actions a {
+  text-align: center;
+  margin-right: 15px;
+}
+
+@media (max-width: 800px) {
+  .shop_table tr td.actions a {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+
+.shop_table tr td.table-total {
+  text-align: right;
+}
+
+.shop_table tr td.table-total span {
+  font-weight: bold;
+}
+
+.cart-page-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cart-page-bottom .col-2 {
+  width: 49%;
+  border: 1px solid #c1c1c1;
+}
+
+.cart-page-bottom .cart-box-title {
+  background: #dae4e0;
+  color: #000;
+  font-family: 'ProximaNova-Extrabld';
+  font-size: 18px;
+  padding: 20px;
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.cart-page-bottom .cart-box-content {
+  padding: 20px;
+}
+
+.cart-page-bottom .cart-box-content #coupon_code {
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0 0 15px;
+}
+
+.cart-page-bottom .cart-box-content .shop_table th {
+  width: 30%;
+  background: none;
+  border-bottom: 1px solid #000 !important;
+  font-family: 'ProximaNova-Bold';
+}
+
+.cart-page-bottom .cart-box-content .shop_table td {
+  width: 70%;
+  text-align: right;
+}
+
+.cart-page-bottom .cart-box-content .shop_table .order-total td, .cart-page-bottom .cart-box-content .shop_table .order-total th {
+  border-bottom: 0 !important;
+}
+
+.cart-page-bottom .cart-box-content .wc-proceed-to-checkout a {
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .cart-page-bottom .col-2 {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
