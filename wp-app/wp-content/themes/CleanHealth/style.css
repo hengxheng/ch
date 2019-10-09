@@ -3843,3 +3843,30 @@ div.product.type-product .elementor-widget {
     margin: 0 0 15px;
   }
 }
+
+.checkoutCoupon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #dae4e0;
+  padding: 20px;
+  color: #000;
+}
+
+.checkoutCoupon > div {
+  width: 30%;
+}
+
+.checkoutCoupon > div span {
+  vertical-align: middle;
+}
+
+.checkoutCoupon > div input[type="text"] {
+  background: #fff;
+  color: #000;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+}

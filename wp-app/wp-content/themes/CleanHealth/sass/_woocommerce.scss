@@ -169,3 +169,27 @@ div.product.type-product{
         }
     }
 }
+
+.checkoutCoupon{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #dae4e0;
+    padding: 20px;
+    color: #000;
+    >div{
+        width: 30%;
+        span{
+            vertical-align: middle;
+        }
+        input[type="text"]{
+            background: #fff;
+            color: #000;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #c1c1c1;
+            border-radius: 5px;
+        }
+    }
+}
