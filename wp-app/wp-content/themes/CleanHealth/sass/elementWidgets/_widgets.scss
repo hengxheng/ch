@@ -629,6 +629,9 @@
                         display:block;
                         padding: 20px 25px;
                         color: #313136;
+                        &:hover{
+                            color: $green;
+                        }
                     }
                     &.actived{
                         a{
