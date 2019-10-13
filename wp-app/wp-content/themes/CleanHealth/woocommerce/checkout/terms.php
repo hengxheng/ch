@@ -23,7 +23,6 @@ if ( apply_filters( 'woocommerce_checkout_show_terms', true ) && function_exists
 		 */
 		do_action( 'woocommerce_checkout_terms_and_conditions' );
 		?>
-
 		<?php if ( wc_terms_and_conditions_checkbox_enabled() ) : ?>
 			<p class="form-row validate-required">
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">

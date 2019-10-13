@@ -166,9 +166,11 @@ defined( 'ABSPATH' ) || exit;
 						COUPON CODES
 					</div>
 					<div class="cart-box-content">
+					<form method="post">
 						<p>Enter your coupon code if you have one</p> 
 						<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
 						<button type="submit" class="g-btn" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">APPLY COUPON</button>
+					</form>
 					</div>
 					<?php do_action( 'woocommerce_cart_coupon' ); ?>
 				</div>

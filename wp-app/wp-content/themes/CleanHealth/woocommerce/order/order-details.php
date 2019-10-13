@@ -39,20 +39,10 @@ if ( $show_downloads ) {
 	);
 }
 ?>
-<section class="woocommerce-order-details">
+<!-- <section class="woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
-
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
-
+	<div class="wc-order-col-title">Order summary</div>
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
-
-		<thead>
-			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="woocommerce-table__product-table product-total"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
-			</tr>
-		</thead>
-
 		<tbody>
 			<?php
 			do_action( 'woocommerce_order_details_before_order_table_items', $order );
@@ -98,7 +88,7 @@ if ( $show_downloads ) {
 	</table>
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
-</section>
+</section> -->
 
 <?php
 if ( $show_customer_details ) {

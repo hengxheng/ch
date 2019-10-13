@@ -71,7 +71,7 @@ div.product.type-product{
           background: #dae4e0;  
           color: #000;
           font-size: 18px;
-          font-family: 'GoboldBold';
+          font-family: 'ProximaNova-Extrabld';
         }
         td{
             color: #000;
@@ -190,6 +190,278 @@ div.product.type-product{
             padding: 5px;
             border: 1px solid #c1c1c1;
             border-radius: 5px;
+        }
+    }
+}
+
+.checkout.woocommerce-checkout{
+    #customer_details{
+        padding: 30px 0;
+        .checkout-title{
+            font-family: 'ProximaNova-Bold';
+            font-size: 28px;
+            margin: 0 0 30px;
+            text-transform: uppercase;
+        }
+        label{
+            color: #000;
+        }
+        .woocommerce-input-wrapper{
+            .input-text {
+                border: 1px solid #7e7e7e;
+                width: 100%;
+                height: 35px;
+                background: #fff;
+                color: #000;
+                padding: 8px;
+            font-size: 14px;
+                ::placeholder {
+                    color: #7e7e7e;
+                }
+            }
+            .select2-selection--single{
+                border: 1px solid #7e7e7e;
+                width: 100%;
+                height: 35px;
+                color: #000;
+                padding: 8px;
+                font-size: 14px;
+                border-radius: 0;
+            }
+            .select2-selection__arrow{
+                height: 34px;
+                border-left: 1px solid #7e7e7e;
+                b{
+                    border-color: #000 transparent transparent transparent;
+                }
+            }
+            .select2-dropdown{
+                border: 1px solid #7e7e7e;
+            }
+        }
+        .woocommerce-checkout-review-order-table{
+            border: 1px solid #c1c1c1 !important;
+            border-radius: 0 !important;
+            border-collapse: collapse;
+            margin: 0 0 50px;
+            tr{
+                border: 0 !important;
+            }
+            td{
+                border-bottom: 1px solid #c1c1c1 !important;
+            }
+        }
+        .additional-info{
+            padding: 15px;
+            font-family: 'ProximaNova-Bold';
+            background: #dae4e0;
+            color: #000;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .woocommerce-additional-fields__field-wrapper{
+            border: 1px solid #c1c1c1;
+            border-top: 0;
+            padding: 25px;
+            textarea.input-text{
+                border: 1px solid #c1c1c1;
+                width: 100%;
+                height: 200px;
+                color: #000;
+                border-radius: 5px;
+                padding: 8px;
+                font-size: 14px;
+                ::placeholder{
+                    color: #7e7e7e;
+                }
+            }
+        }
+    }
+}
+.woocommerce-checkout{
+    #payment{
+        background: #fff;
+        .payment_method_paypal{
+            .about_paypal{
+                float: none;
+                margin-left: 30px;
+                color: #949494;
+            }
+        }
+        ul.payment_methods{
+            width: 50%;
+        }
+        .place-order{
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: #dae4e0;
+            &:before{
+                display:none;
+            }
+        }
+        button#place_order{
+            background: $green;
+        }
+    }
+}
+
+
+// WC - thank you page
+.thankyou-header{
+    background: url('assets/images/th-header.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    .thankyou-header-inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .col2{
+            width: 50%;
+        }
+        @media (max-width: $small-width){
+            .col2{
+                width: 90%;
+                margin-right: auto;
+                margin-left: auto;
+                float: none !important;
+            }
+        }
+        .ty-header-content{
+            text-align: center;
+            color: #fff;
+            .ty-sign{
+                margin: 0 0 20px;
+                i{
+                    color: $green;
+                    font-size: 50px;
+                }
+            }
+            h3{
+                font-size: 45px;
+                line-height: 50px;
+                font-family: 'ProximaNova-Semibold';
+                margin: 0 0 20px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        .ty-newsletter{
+            .ty-newsletter-box{
+                width: 100%;
+                padding: 40px;
+                margin: 30px 0 30px 0;
+                background:$green;
+                color: #fff;
+                h3{
+                    font-size: 32px;
+                    font-family: 'ProximaNova-Bold';
+                    margin: 0 0 20px;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin: 0 0 25px;
+                }
+                .form-row{
+                    margin: 0 0 25px;
+                    input[type='email']{
+                        background: #fff;
+                        border: 0;
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 35px;
+                        color: #000;
+                        box-sizing: border-box;
+                        padding: 8px;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+.woocommerce-order{
+    .woocommerce-order-inner{
+        padding: 40px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .wc-order-left{
+            width: 49%;
+        }
+        .wc-order-right{
+            width: 49%;
+            .widgettitle{
+                display:none;
+            }
+        }
+        @media (max-width: $small-width){
+            .wc-order-left, .wc-order-right{
+                width: 90%;
+                margin-right: auto;
+                margin-left: auto;
+                float: none !important;
+            }
+        }
+        .wc-order-col-title{
+            background: $light-green;
+            padding: 15px;
+            font-family: 'ProximaNova-Bold';
+            color: #000;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .wc-order-col-content{
+            border: 1px solid #c1c1c1;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 0 25px;
+            ul.order_details{
+                margin: 0;
+                padding:0;
+                li{
+                    float:none;
+                    display:block;
+                    margin: 0 auto 10px;
+                    padding:5px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    border: 0;
+                    border-bottom: 1px solid #c1c1c1;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    >span{
+                        display:block;
+                    }
+                    >strong{
+                        display: block;
+                        float:none !important;
+                        font-family: 'ProximaNova-Regular';
+                        font-size: 16px;
+                        line-height: 22px;
+                        text-align: right;
+                    }
+                }
+                &.download_details{
+                    li{
+                        align-items: center;
+                        >img{
+                            width: 20%;
+                            display: block;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

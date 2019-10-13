@@ -320,3 +320,23 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
+function override_default_address_checkout_fields( $address_fields ) {
+    $address_fields['first_name']['placeholder'] = 'Type your first name';
+    $address_fields['last_name']['placeholder'] = 'Type your last name';
+    $address_fields['address_1']['placeholder'] = 'Type your address here';
+    $address_fields['postcode']['placeholder'] = 'Postcode';
+	$address_fields['city']['placeholder'] = 'Type your suburb';
+	$address_fields['phone']['placeholder'] = 'Type your contact number here';
+	$address_fields['email']['placeholder'] = 'Type your email address here';
+    return $address_fields;
+}
+
+add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');
+function custom_woocommerce_checkout_fields( $fields ) {
+     $fields['order']['order_comments']['placeholder'] = 'Type your notes about your order, e.g Special notes for delivery';
+     return $fields;
+}
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 1 );
