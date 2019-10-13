@@ -94,7 +94,7 @@ class Plugin {
 			'footer-contact',
 			'footer-video',
 			'woo-products',
-
+			'woo-bundle',
 			//product page widget
 			'product-page-header',
 			'product-page-gallery',

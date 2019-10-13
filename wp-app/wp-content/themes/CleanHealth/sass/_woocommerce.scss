@@ -428,44 +428,46 @@ div.product.type-product{
     }
 }
 
-ul.order_details{
-    margin: 0;
-    padding:0;
-    li{
-        float:none;
-        display:block;
-        margin: 0 auto 10px;
-        padding:5px;
-        font-size: 16px !important;
-        line-height: 22px !important;
-        border: 0 !important;
-        border-bottom: 1px solid #a09292 !important;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        >span{
-            display:block;
-        }
-        >strong{
-            display: block;
-            float:none !important;
-            font-family: 'ProximaNova-Regular';
-            font-size: 16px;
-            line-height: 22px;
-            text-align: right;
-        }
-        span.d-action{
-            margin-left: auto;
-        }
-    }
-    &.download_details{
+.woocommerce{
+    ul.order_details{
+        margin: 0;
+        padding:0;
         li{
-            align-items: center;
-            >img{
-                width: 20%;
+            float:none !important;
+            margin: 0 auto 10px;
+            padding:5px;
+            font-size: 16px !important;
+            line-height: 22px !important;
+            border: 0 !important;
+            border-bottom: 1px solid #a09292 !important;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            >span{
+                display:block;
+            }
+            >strong{
                 display: block;
-                margin-right: 10px;
+                float:none !important;
+                font-family: 'ProximaNova-Regular';
+                font-size: 16px;
+                line-height: 22px;
+                text-align: right;
+                margin-left: auto;
+            }
+            span.d-action{
+                margin-left: auto;
+            }
+        }
+        &.download_details{
+            li{
+                align-items: center;
+                >img{
+                    width: 20%;
+                    display: block;
+                    margin-right: 10px;
+                }
             }
         }
     }

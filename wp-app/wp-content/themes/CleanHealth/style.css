@@ -3451,6 +3451,94 @@ body {
   }
 }
 
+.woo-bundle-widget {
+  margin: 30px 0 20px;
+}
+
+.woo-bundle-widget .woo-bundle-strap {
+  background: #9aca3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .woo-bundle-widget .woo-bundle-strap {
+    flex-direction: column;
+  }
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .woo-bundle-widget .woo-bundle-strap .col2 {
+    width: 100% !important;
+  }
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 .text-wrapper {
+  box-sizing: border-box;
+  padding: 80px 30px;
+  margin-right: auto;
+  width: 700px;
+  background: #9aca3c;
+  position: relative;
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 .text-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+@media (max-width: 1400px) {
+  .woo-bundle-widget .woo-bundle-strap .col2 .text-wrapper {
+    padding: 50px 30px;
+    width: 100%;
+  }
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 img {
+  display: block;
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 .bundle-form {
+  width: 100%;
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 .bundle-form .form-row {
+  margin: 0 0 15px;
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 .bundle-form .form-row select {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  color: #000;
+  padding: 8px;
+  height: 35px;
+  border-radius: 4px;
+}
+
+.woo-bundle-widget .woo-bundle-strap .col2 .bundle-form .form-row .learn-more {
+  font-family: 'ProximaNova-Semibold';
+  display: inline-block;
+  padding: 7px 10px;
+  color: #fff;
+  margin-left: 10px;
+}
+
 /*! Lity - v2.4.0 - 2019-08-10
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2019 Jan Sorgalla; Licensed MIT */
@@ -4135,14 +4223,13 @@ div.product.type-product .elementor-widget {
   margin: 0 0 25px;
 }
 
-ul.order_details {
+.woocommerce ul.order_details {
   margin: 0;
   padding: 0;
 }
 
-ul.order_details li {
-  float: none;
-  display: block;
+.woocommerce ul.order_details li {
+  float: none !important;
   margin: 0 auto 10px;
   padding: 5px;
   font-size: 16px !important;
@@ -4155,28 +4242,29 @@ ul.order_details li {
   align-items: flex-start;
 }
 
-ul.order_details li > span {
+.woocommerce ul.order_details li > span {
   display: block;
 }
 
-ul.order_details li > strong {
+.woocommerce ul.order_details li > strong {
   display: block;
   float: none !important;
   font-family: 'ProximaNova-Regular';
   font-size: 16px;
   line-height: 22px;
   text-align: right;
-}
-
-ul.order_details li span.d-action {
   margin-left: auto;
 }
 
-ul.order_details.download_details li {
+.woocommerce ul.order_details li span.d-action {
+  margin-left: auto;
+}
+
+.woocommerce ul.order_details.download_details li {
   align-items: center;
 }
 
-ul.order_details.download_details li > img {
+.woocommerce ul.order_details.download_details li > img {
   width: 20%;
   display: block;
   margin-right: 10px;
