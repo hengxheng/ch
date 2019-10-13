@@ -341,9 +341,25 @@ class Woo_Products extends Widget_Base {
 	protected function render() {
         $args = $this->parse_query_args();
         ?>
-        <div class="shop-page">
+        <div class="shop-page product-list-page">
             <div class="content-inner withPadding">
                 <?php echo elementwoo_do_shortcode( 'products', $args ); ?>
+            </div>
+        </div>
+        <div class="product-single-overlay" style="display:none;"></div>
+        <div class="product-single-msg" style="display:none;">
+            <a href="#" class="psm-close"><i class="fa fa-times-circle"></i></a>
+            <div class="psg-inner">
+                <p>The product is added to cart successfully.</p>
+                <a href="<?php echo get_site_url() ?>/products" class="g-btn">Continue Shopping</a>
+                <a href="<?php echo get_site_url() ?>/cart" class="g-btn">View Cart</a>
+            </div>
+        </div>
+        <div class="product-single-error-msg" style="display:none;">
+            <a href="#" class="psm-close"><i class="fa fa-times-circle"></i></a>
+            <div class="psg-inner">
+                <p>The product is not available. Please refresh and try again.</p>
+                <a href="<?php echo get_site_url() ?>/products" class="g-btn">Continue Shopping</a>
             </div>
         </div>
         <?php

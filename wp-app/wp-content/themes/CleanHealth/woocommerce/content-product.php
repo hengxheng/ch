@@ -23,8 +23,10 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+$product_id = $product->get_id();
 ?>
 <li <?php wc_product_class( '', $product ); ?>>
+	<div class="product-box">
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
@@ -62,6 +64,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
+	// do_action( 'woocommerce_after_shop_loop_item' );
 	?>
+	<a href="<?= do_shortcode('[add_to_cart_url id="'.$product_id.'"]'); ?>" data-quantity="1" data-product_id="<?= $product_id ?>" class="add-to-cart-btn b-btn">BUY NOW</a>
+	<a href="<?= get_permalink($product_id); ?>" class="learn-more">LEARN MORE <i class="fa fa-play-circle"></i></a>
+</div>
 </li>
