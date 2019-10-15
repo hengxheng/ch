@@ -48,24 +48,19 @@ $product_id = $product->get_id();
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
-
-	/**
-	 * Hook: woocommerce_after_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
-
-	/**
-	 * Hook: woocommerce_after_shop_loop_item.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	// do_action( 'woocommerce_after_shop_loop_item' );
-	?>
+?>
+	<div class="product-name">
+		<?php do_action( 'woocommerce_shop_loop_item_title' ); ?>
+	</div>
+	<div class="product-desc">
+		<?= wp_trim_words($product->get_short_description(), 30); ?>
+	</div>
+	<div class="product-price">
+		<span class="price">ONLY $<?=  $product->get_regular_price(); ?> USD</span>
+		<?php  if( $product->is_on_sale() ): ?>
+			<span class="sale-price">WAS $<?= $product->get_sale_price(); ?> USD - SAVE $<?= (int)$product->get_regular_price() - (int)$product->get_sale_price() ?> </span>
+		<?php endif; ?>
+	</div>
 	<a href="<?= do_shortcode('[add_to_cart_url id="'.$product_id.'"]'); ?>" data-quantity="1" data-product_id="<?= $product_id ?>" class="add-to-cart-btn b-btn">BUY NOW</a>
 	<a href="<?= get_permalink($product_id); ?>" class="learn-more">LEARN MORE <i class="fa fa-play-circle"></i></a>
 </div>

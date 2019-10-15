@@ -1877,18 +1877,40 @@
                 .onsale{
                     display:none;
                 }
-        
+                img{
+                    margin: 0 0 15px;
+                }
                 h2.woocommerce-loop-product__title{
                     font-family: 'ProximaNova-bold';
                     font-size: 20px;
-                    margin: 0 0 15px;
-                    min-height: 56px;
-                }
-                .price{
-                    font-size: 28px;
-                    font-family: 'GoboldBold';
+                    margin: 0 0 25px;
+                    padding: 0;
+                    text-transform: uppercase;
                     color: #000;
+                }
+                .product-desc{
+                    font-size: 16px;
+                    color:#000;
+                    line-height: 20px;
+                    margin: 0 0 25px;
+                }
+                .product-price{
+                    font-family: 'GoboldBold';
+                    margin: 0 0 25px;
                     text-decoration: none;
+                    .price{
+                        display:inline-block;
+                        font-size: 30px;
+                        color: #000;
+                        margin-right: 10px;
+                    }
+                    .sale-price{
+                        display:inline-block;
+                        font-size: 18px;
+                        color: #000;
+                    }
+                    
+                    
                 }
                 .learn-more{
                     font-family: 'ProximaNova-Semibold';

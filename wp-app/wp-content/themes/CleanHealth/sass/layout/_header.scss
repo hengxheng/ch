@@ -1,4 +1,26 @@
+body{
+    padding-top: 162px;
+    @media (max-width: $small-width){
+        padding-top: 75px;
+    }
+}
+
 .site-header{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    &.admin{
+        top:32px;
+    }
+    @media (max-width: $small-width){
+        &.admin{
+            top:46px;
+        }
+    }
     .header-top{
         text-align: right;
         padding: 10px 0;

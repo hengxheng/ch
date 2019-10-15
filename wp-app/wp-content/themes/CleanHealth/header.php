@@ -17,7 +17,7 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 
 <body>
 <?php wp_body_open(); ?>
-<header id="masthead" class="site-header">
+<header id="masthead" class="site-header <?= is_admin_bar_showing()?"admin": ""; ?>">
 	<div class="header-top">
 		<div class="content-inner withPadding">
 			<div class="social-top-menu">
