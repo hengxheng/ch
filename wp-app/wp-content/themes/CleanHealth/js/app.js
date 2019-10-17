@@ -28,24 +28,26 @@ jQuery(function($){
         $(".product-single-overlay, .product-single-msg, .product-single-error-msg").hide();
     });
 
-    var p = $(".home-course").offset().top-800;
-    var els = document.querySelectorAll('.home-course span.num');
+    if($(".home-course").length>0){
+        var p = $(".home-course").offset().top-800;
+        var els = document.querySelectorAll('.home-course span.num');
 
-    $(window).scroll(function(e) {
-        var scroll = $(window).scrollTop();
-        if(scroll > p){ 
-            var i;
-            for(i = 0; i<els.length; i++){
-                var el = els[i];
-                var n = parseInt(el.innerHTML);
-                    od = new Odometer({
-                    el: el,
-                    value: 1,
-                    format: ',ddd',
+        $(window).scroll(function(e) {
+            var scroll = $(window).scrollTop();
+            if(scroll > p){ 
+                var i;
+                for(i = 0; i<els.length; i++){
+                    var el = els[i];
+                    var n = parseInt(el.innerHTML);
+                        od = new Odometer({
+                        el: el,
+                        value: 1,
+                        format: ',ddd',
 
-                });
-                od.update(n);
+                    });
+                    od.update(n);
+                }
             }
-        }
-    });
+        });
+    }
 });
