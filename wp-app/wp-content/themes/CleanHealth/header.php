@@ -64,6 +64,13 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 	<div class="mobile-header">
 		<div class="mh-left">
 			<a href="#" id="mb-menu-btn"><i class="fa fa-bars"></i></a>
+			<!-- <a href="#" id="mb-menu-btn">
+				<div id="nav-icon1">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a> -->
 		</div>
 		<div class="mh-middle">
 			<div class="site-logo"><?php the_custom_logo(); ?></div>

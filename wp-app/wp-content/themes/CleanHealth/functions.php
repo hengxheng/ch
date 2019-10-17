@@ -220,13 +220,11 @@ function twentynineteen_scripts() {
 	wp_enqueue_style( 'twentynineteen-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 	wp_style_add_data( 'twentynineteen-style', 'rtl', 'replace' );
-
+	wp_enqueue_script( 'js-odometer', get_theme_file_uri( '/js/odometer-0.4.6/odometer.min.js' ), array(), '1.1', true );
 	wp_enqueue_script( 'ch-main', get_theme_file_uri( '/js/app.js' ), array(), '1.1', true );
-		// wp_enqueue_script( 'twentynineteen-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
-
-
+	wp_enqueue_style( 'odometer-style', get_template_directory_uri() . '/js/odometer-0.4.6/themes/odometer-theme-default.css', array(), wp_get_theme()->get( 'Version' ));
 	wp_enqueue_style( 'twentynineteen-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
-
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
