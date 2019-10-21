@@ -5,7 +5,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         font-size: 13px;
         padding: 25px 0;
         .footer-col{
@@ -15,6 +15,9 @@
                 font-family: 'ProximaNova-Extrabld';
                 margin: 0 0 15px;
                 color: $green;
+            }
+            #instragram-footer{
+                padding-left: 10px;
             }
         }
         .footer-menu{

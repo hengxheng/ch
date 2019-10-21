@@ -38,10 +38,12 @@
 			</nav>
 		</div>
 		<div class="footer-col">
-			<div class="footer-col-title">
+			<div class="footer-col-title" id="instragram-footer">
 				INSTAGRAM
 			</div>
-			<div id="instragram-widget"></div>
+			<div id="instragram-widget">
+				<?= do_shortcode('[instagram-feed]'); ?>
+			</div>
 		</div>
 		<div class="footer-col">
 			<div class="footer-col-title">
