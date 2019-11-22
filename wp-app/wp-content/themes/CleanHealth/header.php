@@ -26,7 +26,7 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 		</div>
 	</div>
 	<div class="header-middle">
-		<div class="content-inner withPadding">
+		<div class="content-inner">
 			<div class="col-2-section">
 				<div class="site-description">
 					<?php echo get_bloginfo( 'description', 'display' ); ?>
@@ -34,15 +34,16 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 				<nav class="secondary-menu">
 					<ul>
 						<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a></li>		
-						<li><a href="#">SHOP</a></li>
-						<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <span id="header-cart-text"><?=$item_no ?> ITEMS - $<?= $total_amount ?></span></a></li>
+						<li><a href="/products">SHOP</a></li>
+						<li id="cart-li"><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <span id="header-cart-text"><?=$item_no ?> ITEMS - $<?= $total_amount ?></span></a></li>
+						<li id="enquire-now-li"><a href="#">ENQUIRE NOW</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</div>
 	<div class="header-bottom">
-		<div class="content-inner withPadding">
+		<div class="content-inner">
 			<div class="col-2-section">
 				<div class="site-logo"><?php the_custom_logo(); ?></div>
 				<nav id="site-navigation" class="main-navigation">
@@ -64,13 +65,6 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 	<div class="mobile-header">
 		<div class="mh-left">
 			<a href="#" id="mb-menu-btn"><i class="fa fa-bars"></i></a>
-			<!-- <a href="#" id="mb-menu-btn">
-				<div id="nav-icon1">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</a> -->
 		</div>
 		<div class="mh-middle">
 			<div class="site-logo"><?php the_custom_logo(); ?></div>
@@ -80,6 +74,11 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 				<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i></a></li>		
 				<li><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i><span id="mh-header-cart"><?=$item_no ?></span></a></li>
 			</ul>
+		</div>
+	</div>
+	<div id="header-search-block">
+		<div class="content-inner withPadding">
+			<?php get_search_form(); ?>
 		</div>
 	</div>
 </header><!-- #masthead -->

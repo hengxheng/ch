@@ -8,6 +8,7 @@ $red: #d8242f;
 $light-grey: #f5f5f5;
 $secText: #313136;
 $light-green: #dae4e0;
+$blue: #5fc2d1;
 
 $small-width: 800px;
 $content-width: 1440px;
@@ -35,6 +36,23 @@ $content-width: 1440px;
   border: 1px solid #000;
   color: #000;
   background: transparent;
+  font-size: 16px;
+  line-height: 16px;
+  &:hover{
+    border-color: $green;
+    background:$green;
+    color: #fff !important;
+  }
+}
+
+.blk-btn{
+  text-decoration: none;
+  font-family: 'ProximaNova-Semibold';
+  display:inline-block;
+  padding: 7px 13px;
+  border: 1px solid #000;
+  color: #fff;
+  background: #000;
   font-size: 16px;
   line-height: 16px;
   &:hover{

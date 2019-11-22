@@ -50,4 +50,9 @@ jQuery(function($){
             }
         });
     }
+
+    $("#header-search-btn").on("click", function(e){
+        e.preventDefault();
+        $("#header-search-block").slideToggle();
+    })
 });

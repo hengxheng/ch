@@ -56,12 +56,15 @@ body{
                 list-style: none;
                 margin: 0;
                 padding: 0;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: flex-end;
                 li{
                     display:inline-block;
                     a{
                         color: #fff;
                         display:block;
-                        padding: 9px 5px;
+                        padding: 9px 10px;
                         text-align: center;
                         text-decoration: none;
                         height: 25px;
@@ -72,13 +75,29 @@ body{
                         }
                     }
                 }
+                #cart-li{
+                    background: $secText;
+                }
+                #enquire-now-li{
+                    background: $blue;
+                    a{
+                        padding: 9px 15px;
+                    }
+                }
             }
         }
     }
 
     .header-bottom{
         box-sizing: border-box;
-        padding: 10px 0;
+        padding: 0;
+        .content-inner{
+            background: $green;
+        }
+        .site-logo{
+            background: #fff;
+            padding: 10px 25px 10px 10px;
+        }
         #site-navigation{
             .menu-main-container{
                 display: inline-block;
@@ -89,20 +108,25 @@ body{
                 padding: 0;
                 li{
                     display:inline-block;
-                    font-size: 12px;
+                    font-size: 16px;
                     vertical-align: middle;
                     a{
                         text-transform: uppercase;
                         font-family: 'ProximaNova-Bold';
-                        font-size: 13px;
-                        color: #000;
+                        font-size: 16px;
+                        color: #fff;
                         display:inline-block;
                         padding: 5px;
                         text-align: center;
                         text-decoration: none;
                         &:hover{
-                            color: $green;
+                            color: #000;
                         }
+                    }
+                    span{
+                        color: #fff;
+                        display:inline-block;
+                        margin: 0 5px;
                     }
                     &:last-child{
                         span{
@@ -113,14 +137,14 @@ body{
             }
             #header-search{
                 display:inline-block;
-                padding: 5px 0 5px 13px;
+                padding: 5px 35px 5px 20px;
                 #header-search-btn{
                     display:inline-block;
                     font-size: 20px;
-                    color: #000;
+                    color: #fff;
                     text-decoration: none;
                     &:hover{
-                        color: $green;
+                        color: #000;
                     }
                 }
             }
@@ -330,5 +354,47 @@ body{
     }
     @media (max-width: 800px){
         display:block;
+    }
+}
+
+#header-search-block{
+    display:none;
+    margin: -5px 0 10px;
+    #searchform{
+        position: relative;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        z-index: 9999;
+        &:after{
+            content: '';
+            position: absolute;
+            right: 19px;
+            top: -13px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 15px 20px 15px;
+            border-color: transparent transparent #000000 transparent;
+        }
+        input[type="text"]{
+            height: 40px;
+            border:0;
+            box-sizing: border-box;
+            padding:15px;
+            color: #fff;
+            background: $green;
+            width: calc( 100% - 100px);
+            ::placeholder{
+                color: #ddd;
+            }
+        }
+        input[type="submit"]{
+            background: #000;
+            color: #fff;
+            border: 0;
+            text-align: center;
+            width: 100px;
+        }
     }
 }

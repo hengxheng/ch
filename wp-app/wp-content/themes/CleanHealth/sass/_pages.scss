@@ -1,0 +1,91 @@
+.search-page{
+    padding: 30px 50px;
+    .search-page-title{
+        margin: 0 0 15px;
+        font-family: 'ProximaNova-Regular';
+        strong{
+            font-family: 'ProximaNova-bold';
+        }
+        span{
+            font-size: 80%;
+        }
+    }
+    .search-result-block{
+        .search-result-item{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #ddd;
+            margin: 0 0 10px;
+            .sr-left{
+                width: calc( 100% - 250px);
+                .entry-title{
+                    font-family: 'ProximaNova-bold';
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+                @media (max-width: 800px){      
+                    width: 100%;
+                }
+            }
+            .sr-right{
+                width: 120px;
+                align-self: center;
+                @media (max-width: 800px){      
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
+
+.post-pagination{
+    .nav-links{
+        list-style:none;
+        display:flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0 0 30px;
+        a{
+            display:inline-block;
+            width: 27px;
+            height: 27px;
+            display:block;
+            border: 1px solid #b7b7b7;
+            border-left:none;
+            color: #b7b7b7;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px;
+            text-align: center;
+            box-sizing: border-box;
+            &:hover{
+                background: $green;
+                color: #fff;
+            }
+            &:first-child{
+                border-left: 1px solid #b7b7b7;
+            }
+        }
+        span.current{
+            display:inline-block;
+            width: 27px;
+            height: 27px;
+            display:block;
+            border: 1px solid #b7b7b7;
+            border-left:none;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px;
+            text-align: center;
+            box-sizing: border-box;
+            background: $green;
+            color: #fff;
+        }
+    }
+}
