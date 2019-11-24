@@ -73,6 +73,8 @@ class Plugin {
 			'home-banner',
 			'left-right-fullwidth',
 			'home-slider',
+			'home-course',
+			'home-qualified',
 			'testimonial-slider',
 			'story-line',			
 			'team-member-block',

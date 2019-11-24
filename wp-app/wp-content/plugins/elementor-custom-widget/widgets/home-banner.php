@@ -37,6 +37,15 @@ class Home_Banner extends Widget_Base {
 		);
 
 		$this->add_control(
+			'section-class',
+			[
+				'label' => 'Section Class',
+				'type'  => Controls_Manager::TEXT,
+				'description' => 'For special styling, do not change it'
+			]
+		);
+
+		$this->add_control(
             'full_width',
             [
               'label'        => 'Full Width',
@@ -107,13 +116,19 @@ class Home_Banner extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
-		<div class="home-banner-widget">
+		<div class="home-banner-widget <?= $settings['section-class'] ?>">
 			<div class="banner-inner <?= ($settings['full_width'])?'':'content-inner' ?>" style="background:url(<?= $settings['image']['url'] ?>) no-repeat center center;background-size:cover">
+			<?php if($settings['full_width']): ?>
+				<div class="content-inner">
+			<?php endif; ?>
 				<div class="banner-text-wrapper">
 					<div class="banner-text text-wysiwyg">
 						<?= wpautop( $settings['content'] ) ?>
 					</div>
 				</div>
+			<?php if($settings['full_width']): ?>
+				</div>
+			<?php endif; ?>
 			</div>
 		</div>
 		<?php

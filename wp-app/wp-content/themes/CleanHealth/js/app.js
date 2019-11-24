@@ -1,4 +1,4 @@
-jQuery(function($){
+jQuery(function($){  
     $("#mb-menu-btn").on("click", function(e){
         e.preventDefault();
         $("#mobile-menu-block").toggleClass("opened");

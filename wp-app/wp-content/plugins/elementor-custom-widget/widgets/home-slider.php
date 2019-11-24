@@ -125,7 +125,7 @@ class Home_Slider extends Widget_Base {
                               <?= wpautop( $item['content'] ) ?>
                               <?php if($item['website_link']): ?>
                                   <br/>
-                                  <a href="<?= $item['website_link'] ?>" class="w-btn">LEARN MORE</a>
+                                  <a href="<?= $item['website_link']["url"] ?>" class="w-btn">LEARN MORE</a>
                               <?php endif; ?>
                             </div>
                           </div>

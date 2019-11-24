@@ -3719,6 +3719,187 @@ body {
   margin-left: 10px;
 }
 
+.home-course-widget {
+  padding: 50px 0;
+}
+
+.home-course-widget .mcl-header {
+  font-family: 'ProximaNova-Bold';
+  font-size: 28px;
+  margin: 0 0 35px;
+}
+
+.home-course-widget .mcl-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.home-course-widget .mcl-content .course-col {
+  width: calc( 25% - 15px);
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-image {
+  margin: 0;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-image img {
+  display: block;
+  width: 100%;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-header {
+  margin: 0 0 25px;
+  position: relative;
+  font-family: 'ProximaNova-Bold';
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 5px 0;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-header .ch-icon {
+  height: 30px;
+  margin-right: 10px;
+  display: block;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-content.text-wysiwyg {
+  margin: 0 0 25px;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-content.text-wysiwyg ul {
+  margin: 0 0 15px;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-content.text-wysiwyg ul li {
+  position: relative;
+  padding: 6px 3px;
+  border-top: 1px solid #e6e7e8;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-content.text-wysiwyg ul li:last-child {
+  border-bottom: 1px solid #e6e7e8;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-content.text-wysiwyg ul li::before {
+  display: none;
+}
+
+.home-course-widget .mcl-content .course-col .course-inner .course-content.text-wysiwyg ul li::after {
+  content: "\f18e";
+  position: absolute;
+  z-index: 3;
+  display: block;
+  font-family: FontAwesome;
+  font-size: 20px;
+  right: 0;
+  top: 4px;
+  color: #000;
+}
+
+@media (max-width: 1000px) {
+  .home-course-widget .mcl-content .course-col {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-course-widget .mcl-content .course-col {
+    width: 100% !important;
+  }
+}
+
+.home-gualified-widget {
+  margin: 0 0 40px;
+}
+
+.home-gualified-widget .section-header {
+  border-top: 1px dotted #e6e7e8;
+  padding: 25px 0;
+  font-family: 'ProximaNova-Bold';
+  font-size: 28px;
+  text-align: center;
+}
+
+.home-gualified-widget .home-qualified-wrapper {
+  padding: 25px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home-gualified-widget .home-qualified-wrapper .home-qualified-inner {
+  display: inline-block;
+  position: relative;
+}
+
+.home-gualified-widget .home-qualified-wrapper .home-qualified-inner::after {
+  content: '';
+  position: absolute;
+  width: 476px;
+  height: 81px;
+  background: url(./assets/images/badge-arrow.png) no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  top: 50%;
+  left: 106%;
+  transform: translateY(-50%);
+}
+
+.home-gualified-widget .home-qualified-wrapper .home-qualified-inner img {
+  display: block;
+  max-width: 100%;
+}
+
+.modes-of-study {
+  padding: 30px 0;
+  background: #f1f2f2;
+}
+
+.elementor-widget-home-banner {
+  background: #f5f5f5;
+}
+
+.home-section-3 {
+  margin-top: -20px;
+}
+
+.home-section-3 .banner-inner .content-inner {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.home-section-3 .banner-inner .content-inner .banner-text-wrapper {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 75px 70px;
+}
+
+.home-section-3 .banner-inner .content-inner .banner-text-wrapper .banner-text {
+  color: #fff;
+}
+
+.home-section-3 .banner-inner .content-inner .banner-text-wrapper .banner-text .w-btn {
+  margin-top: 70px;
+}
+
+@media (max-width: 800px) {
+  .home-section-3 .banner-inner .content-inner .banner-text-wrapper {
+    width: 100%;
+  }
+}
+
 /*! Lity - v2.4.0 - 2019-08-10
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2019 Jan Sorgalla; Licensed MIT */

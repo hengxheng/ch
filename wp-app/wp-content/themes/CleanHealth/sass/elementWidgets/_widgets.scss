@@ -207,9 +207,6 @@
             }
         }
     }
-    // .mcl-footer{
-
-    // }
 }
 
 .left-right-fullwidth-widget{
@@ -1918,6 +1915,161 @@
                     padding: 7px 10px;
                     color: #000;
                     margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.home-course-widget{
+    padding: 50px 0;
+    .mcl-header{
+        font-family: 'ProximaNova-Bold';
+        font-size: 28px;
+        margin: 0 0 35px;
+    }
+    .mcl-content{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .course-col{
+            width: calc( 25% - 15px );
+            .course-inner{
+                
+                .course-image{
+                    margin: 0;
+                    img{
+                        display:block;
+                        width: 100%;
+                    }
+                }
+                .course-header{
+                    margin: 0 0 25px;
+                    position: relative;
+                    font-family: 'ProximaNova-Bold';
+                    font-size: 16px;
+                    line-height: 22px;
+                    display:flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    padding: 5px 0;
+                    .ch-icon{
+                        height: 30px;
+                        margin-right: 10px;
+                        display:block;
+                    }              
+                    
+                }
+                .course-content.text-wysiwyg{
+                    margin: 0 0 25px;
+                    text-align: left;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    ul{
+                        margin: 0 0 15px;
+                        li{
+                            position: relative;
+                            padding: 6px 3px;
+                            border-top: 1px solid #e6e7e8;
+                            padding-right: 20px;
+                            box-sizing: border-box;
+                            &:last-child{
+                                border-bottom: 1px solid #e6e7e8;
+                            }
+                            &::before{
+                                display:none;
+                            }
+                            &::after{
+                                content:"\f18e";
+                                position: absolute;
+                                z-index: 3;
+                                display: block;
+                                font-family: FontAwesome;
+                                font-size: 20px;
+                                right: 0;
+                                top: 4px;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1000px) {
+                width: 50% !important;
+            }
+            @media (max-width: 800px) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.home-gualified-widget{
+    margin: 0 0 40px;
+    .section-header{
+        border-top: 1px dotted #e6e7e8;
+        padding: 25px 0;
+        font-family: 'ProximaNova-Bold';
+        font-size: 28px;
+        text-align: center;
+    }
+    .home-qualified-wrapper{
+        padding: 25px 0;
+        text-align: center;
+        overflow: hidden;
+        .home-qualified-inner{
+            display:inline-block;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 476px;
+                height: 81px;
+                background: url(./assets/images/badge-arrow.png) no-repeat center center;
+                background-size: cover;
+                z-index: 1;
+                top: 50%;
+                left: 106%;
+                transform: translateY(-50%);
+            }
+            img{
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.modes-of-study{
+    padding: 30px 0;
+    background: #f1f2f2;
+}
+
+.elementor-widget-home-banner{
+    background: #f5f5f5;
+}
+.home-section-3{
+    margin-top: -20px;
+    .banner-inner{
+        .content-inner{
+            display:flex;
+            justify-content: flex-end;
+            position:relative;
+            .banner-text-wrapper{
+                width: 40%;
+                background: rgba(0,0,0,0.3);
+                padding: 75px 70px;
+                .banner-text{
+                    color: #fff;
+                    .w-btn{
+                        margin-top: 70px;
+                    }
+                }
+                @media (max-width: 800px){
+                    width: 100%;
                 }
             }
         }
