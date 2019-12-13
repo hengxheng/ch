@@ -684,7 +684,7 @@ a.download-btn.white {
   font-size: 17px;
 }
 
-.form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
+.form-row input[type="text"], .form-row input[type="email"], .form-row input[type="tel"], .form-row textarea {
   color: #fff;
   background: transparent;
   border: 0;
@@ -710,6 +710,7 @@ a.download-btn.white {
 
 #post-37 .elementor-widget-footer_subscription {
   margin-top: -170px;
+  z-index: -1;
 }
 
 @media (max-width: 800px) {

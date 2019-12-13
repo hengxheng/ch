@@ -338,3 +338,12 @@ function custom_woocommerce_checkout_fields( $fields ) {
 }
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 1 );
+
+
+add_filter('comment_form_default_fields', 'website_remove');
+function website_remove($fields)
+{
+	if(isset($fields['url']))
+	unset($fields['url']);
+	return $fields;
+}

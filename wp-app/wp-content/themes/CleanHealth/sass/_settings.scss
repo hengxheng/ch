@@ -222,7 +222,7 @@ a.download-btn{
     width: 100%;
     font-size: 17px;
   }
-  input[type="text"], input[type="email"], textarea{
+  input[type="text"], input[type="email"], input[type="tel"], textarea{
     color:#fff;
     background: transparent;
     border:0;
@@ -255,6 +255,7 @@ a.download-btn{
 #post-37{
   .elementor-widget-footer_subscription{
     margin-top: -170px;
+    z-index:-1;
     @media (max-width: $small-width){
       margin-top: 0;
     }
