@@ -19,6 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 $customer_id = get_current_user_id();
 
+$customer = new WC_Customer( $customer_id );
+
 if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 	$get_addresses = apply_filters(
 		'woocommerce_my_account_get_addresses',
@@ -65,6 +67,22 @@ $col    = 1;
 		<address>
 			<?php
 				echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
+			?>
+			<?php 
+				if($name == "billing"){
+					echo "<br/>";
+					echo $customer->get_billing_email();
+					echo "<br/>";
+					echo $customer->get_billing_phone();
+				}
+
+				if($name == "shipping"){
+					echo "<br/>";
+					echo $customer->shipping_phone;
+					echo "<br/>";
+					echo $customer->get_shipping_phone();
+					echo "<br/>";
+				}
 			?>
 		</address>
 	</div>

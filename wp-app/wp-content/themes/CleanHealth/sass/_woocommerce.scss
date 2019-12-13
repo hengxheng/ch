@@ -552,8 +552,8 @@ div.product.type-product{
 }
 
 
-.woocommerce-EditAccountForm{
-    input[type='email'], input[type='text'], input[type='password']{
+.woocommerce-EditAccount, .woocommerce-MyAccount-content{
+    input[type='email'], input[type='text'], input[type='password'], input[type='tel'], select{
         background: #fff;
         border: 1px solid #c1c1c1;
         border-radius: 5px;
@@ -642,6 +642,26 @@ div.product.type-product{
                     }
                 }
             }
+        }
+    }
+}
+
+
+.woocommerce-Address-title {
+    a.edit{
+        font-family: 'ProximaNova-Semibold';
+        display:inline-block;
+        padding: 7px 10px;
+        border: 1px solid $green;
+        color: #fff;
+        background: $green;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        margin: 0 0 15px;
+        &:hover{
+            background: #fff;
+            color: $green;
         }
     }
 }

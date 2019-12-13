@@ -4711,7 +4711,7 @@ div.product.type-product .elementor-widget {
   }
 }
 
-.woocommerce-EditAccountForm input[type='email'], .woocommerce-EditAccountForm input[type='text'], .woocommerce-EditAccountForm input[type='password'] {
+.woocommerce-EditAccount input[type='email'], .woocommerce-EditAccount input[type='text'], .woocommerce-EditAccount input[type='password'], .woocommerce-EditAccount input[type='tel'], .woocommerce-EditAccount select, .woocommerce-MyAccount-content input[type='email'], .woocommerce-MyAccount-content input[type='text'], .woocommerce-MyAccount-content input[type='password'], .woocommerce-MyAccount-content input[type='tel'], .woocommerce-MyAccount-content select {
   background: #fff;
   border: 1px solid #c1c1c1;
   border-radius: 5px;
@@ -4812,6 +4812,24 @@ div.product.type-product .elementor-widget {
 
 .login-page .dashboard-login-block form.login .form-row .form-login-2 a {
   color: #000;
+}
+
+.woocommerce-Address-title a.edit {
+  font-family: 'ProximaNova-Semibold';
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid #9aca3c;
+  color: #fff;
+  background: #9aca3c;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  margin: 0 0 15px;
+}
+
+.woocommerce-Address-title a.edit:hover {
+  background: #fff;
+  color: #9aca3c;
 }
 
 .search-page {
