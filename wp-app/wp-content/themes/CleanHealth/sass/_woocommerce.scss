@@ -32,6 +32,12 @@
     max-width: 80%;
     .psg-inner{
         padding: 15px 30px 30px;
+        @media (max-width: $small-width){
+            a.g-btn{
+                margin: 0 0 10px;
+                width: 100%;
+            }
+        }
     }
     .psm-close{
         float:right;
@@ -292,6 +298,9 @@ div.product.type-product{
         }
         ul.payment_methods{
             width: 50%;
+            @media (max-width: $small-width){
+                width: 100%;
+            }
         }
         .place-order{
             display:flex;
@@ -664,4 +673,8 @@ div.product.type-product{
             color: $green;
         }
     }
+}
+
+.product-list-page .product_tag-bundle{
+    display: none;
 }

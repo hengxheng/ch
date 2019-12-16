@@ -97,7 +97,7 @@ class Team_First extends Widget_Base {
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
 		<div class="team-first-widget">
-			<div class="content-inner">
+			<div class="">
 			<div class="team-first-strap">
 				<div class="col2">
 					<div class="team-first-image">

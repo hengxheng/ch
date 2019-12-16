@@ -72,15 +72,6 @@ class Woo_Bundle extends Widget_Base {
             ]
         );
 
-		$this->add_control(
-			'content',
-			[
-				'label' => 'Left Content',
-				'type' => Controls_Manager::WYSIWYG,
-			]
-		);
-
-
 		$this->end_controls_section();
 	}
 
@@ -95,41 +86,56 @@ class Woo_Bundle extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
+
+		$args = array( 
+			'post_type' 	 => 'product', 
+			'posts_per_page' => 1, 
+			'product_tag' 	 => "Bundle"
+		);
+
+		$bunde_product = new \WP_Query( $args );
 		$this->add_inline_editing_attributes( 'content', 'advanced' );
 		?>
+
+		<?php if( $bunde_product->post_count > 0 ) : ?>
 		<div class="woo-bundle-widget <?= $settings['section-class'] ?>">
 			<div class="content-inner withPadding">
-			<div class="woo-bundle-strap <?= !$settings['full_width']?"content-inner":"" ?>" >
-				<div class="col2">
-					<div class="placeholder-block">
-						<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
-					</div>
-				</div>
-				<div class="col2">
-					<div class="text-wrapper">
-						<div class="text-wysiwyg">
-							<?= wpautop( $settings['content'] ) ?>
-						</div>
-						<div class="bundle-form">
-							<form action="">
-								<div class="form-row">
-								<select name="bundle-select">
-									<option value="">Select your bundle</option>
-									<option value="b1">Bundle 1</option>
-									<option value="b2">Bundle 2</option>
-								</select>
-								</div>
-								<div class="form-row">
-									<input type="submit" class="w-btn" value="BUY NOW">
-									<a href="#" class="learn-more wbtn">LEARN MORE <i class="fa fa-play-circle"></i></a>
-								</div>
-							</form>
+				<div class="woo-bundle-strap <?= !$settings['full_width']?"content-inner":"" ?>" >
+				<?php while ( $bunde_product->have_posts() ) : 
+					$bunde_product->the_post(); 
+					global $product; 
+					$product_id = $product->get_id();
+				?>
+					<div class="col2">
+						<div class="placeholder-block">
+							<img src="<?= $settings['image']['url'] ?>" alt="img"/>	
 						</div>
 					</div>
+					<div class="col2">
+						<div class="text-wrapper">
+							<div class="product-name">
+								<?= $product->get_title() ?>
+							</div>
+							<div class="product-desc text-wysiwyg">
+								<?= wpautop($product->get_short_description()) ?>
+							</div>
+							<div class="product-price">
+								<h2 class="price">ONLY $<?=  $product->get_regular_price(); ?> USD</h2>
+								<?php  if( $product->is_on_sale() ): ?>
+									<strong class="sale-price">WAS $<?= $product->get_sale_price(); ?> USD - SAVE $<?= (int)$product->get_regular_price() - (int)$product->get_sale_price() ?> </strong>
+								<?php endif; ?>
+							</div>
+							<div class="bundle-form">
+								<a href="<?= do_shortcode('[add_to_cart_url id="'.$product_id.'"]'); ?>" data-quantity="1" data-product_id="<?= $product_id ?>" class="add-to-cart-btn w-btn">BUY NOW</a>
+								<a href="<?= get_permalink($product_id); ?>" class="learn-more w-btn">LEARN MORE <i class="fa fa-play-circle"></i></a>
+							</div>
+						</div>
+					</div>
+					<?php endwhile; ?>
 				</div>
-			</div>
 			</div>
 		</div>
 		<?php
+			endif;
 	}
 }

@@ -13,7 +13,7 @@ get_header();
 ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="content-inner" style="min-height: 50vh; padding: 25px; box-sizing: border-box;">
 
 			<div class="error-404 not-found">
 				<header class="page-header">
@@ -21,9 +21,8 @@ get_header();
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentynineteen' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
+					<p><?php _e( 'It looks like nothing was found at this location.', 'twentynineteen' ); ?></p>				
+					</div><!-- .page-content -->
 			</div><!-- .error-404 -->
 
 		</main><!-- #main -->

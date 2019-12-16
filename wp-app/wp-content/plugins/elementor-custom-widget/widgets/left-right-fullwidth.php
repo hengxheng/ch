@@ -147,7 +147,7 @@ class Left_Right_Fullwidth extends Widget_Base {
 							<?= wpautop( $settings['left-content'] ) ?>
 						</div>
 						<?php if($settings['left-link']): ?>
-							<a href="<?= $settings['left-link'] ?>" class="btn-arrow"><span>LEARN MORE</span></a>
+							<a href="<?= $settings['left-link']['url'] ?>" class="btn-arrow"><span>LEARN MORE</span></a>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -162,7 +162,7 @@ class Left_Right_Fullwidth extends Widget_Base {
 							<?= wpautop( $settings['right-content'] ) ?>
 						</div>
 						<?php if($settings['right-link']): ?>
-							<a href="<?= $settings['right-link'] ?>" class="btn-arrow"><span>LEARN MORE</span></a>
+							<a href="<?= $settings['right-link']['url'] ?>" class="btn-arrow"><span>LEARN MORE</span></a>
 						<?php endif; ?>
 					</div>
 				</div>
