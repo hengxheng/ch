@@ -347,3 +347,55 @@ function website_remove($fields)
 	unset($fields['url']);
 	return $fields;
 }
+
+/*===================================================================================
+* Add global options
+* =================================================================================*/
+
+/**
+ *
+ * The page content surrounding the settings fields. Usually you use this to instruct non-techy people what to do.
+ *
+ */
+function theme_settings_page(){ 
+	?>
+	<div class="wrap">
+		<h1>CH settings</h1>
+		<p>This information is used around the website, so changing these here will update them across the website.</p>
+		<form method="post" action="options.php">
+			<?php
+			settings_fields("section");
+			do_settings_sections("theme-options");
+			submit_button();
+			?>
+		</form>
+	</div>
+	
+	<?php }
+
+function display_enquire_link_element(){ ?>
+	
+	<input type="tel" name="enquire_link" placeholder="Enquire Now button link" value="<?php echo get_option('enquire_link'); ?>" size="35">
+
+<?php }
+
+function display_custom_info_fields(){
+	
+	add_settings_section("section", "CH Information", null, "theme-options");
+	add_settings_field("enquire_link", "Enquire Now button link", "display_enquire_link_element", "theme-options", "section");
+	register_setting("section", "enquire_link");
+	
+}
+add_action("admin_init", "display_custom_info_fields");
+/**
+ *
+ * Tie it all together by adding the settings page to wherever you like. For this example it will appear
+ * in Settings > Contact Info
+ *
+ */
+function add_custom_info_menu_item(){
+	
+	add_options_page("CH settings", "CH settings", "manage_options", "ch-settings", "theme_settings_page");
+	
+}
+add_action("admin_menu", "add_custom_info_menu_item");
