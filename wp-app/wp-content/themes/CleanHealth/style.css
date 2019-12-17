@@ -2680,7 +2680,8 @@ body {
 
 .team-related-widget .team-related-strap {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -2688,13 +2689,17 @@ body {
   text-align: center;
   width: 19%;
   display: block;
+  margin: 0 0.5% 15px;
 }
 
 .team-related-widget .team-related-strap .tm-block .tm-image {
+  margin: 0 0 15px;
+}
+
+.team-related-widget .team-related-strap .tm-block .tm-image img {
   display: block;
   width: 100%;
   max-width: 100%;
-  margin: 0 0 15px;
 }
 
 .team-related-widget .team-related-strap .tm-block .tm-content {

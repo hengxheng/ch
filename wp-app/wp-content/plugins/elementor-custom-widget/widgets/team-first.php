@@ -109,7 +109,7 @@ class Team_First extends Widget_Base {
 						<div class="text-wysiwyg">
 							<?= wpautop( $settings['content'] ) ?>
 						</div>
-						<a href="<?= $settings['instagram_link'] ?>" class="w-btn">FIND ME IN INSTAGRAM</a>
+						<a href="<?= $settings['instagram_link'] ?>" class="w-btn">FIND ME ON INSTAGRAM</a>
 					</div>
 				</div>
 			</div>

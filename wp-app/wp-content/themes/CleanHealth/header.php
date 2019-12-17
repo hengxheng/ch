@@ -36,7 +36,7 @@ $total_amount = $woocommerce->cart->get_cart_contents_total();
 						<li><a href="<?php echo get_site_url() ?>/my-account"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a></li>		
 						<li><a href="/products">SHOP</a></li>
 						<li id="cart-li"><a href="<?php echo get_site_url() ?>/cart"><i class="fa fa-shopping-cart"></i> <span id="header-cart-text"><?=$item_no ?> ITEMS - $<?= $total_amount ?></span></a></li>
-						<li id="enquire-now-li"><a href="#">ENQUIRE NOW</a></li>
+						<li id="enquire-now-li"><a href="/contact-us">ENQUIRE NOW</a></li>
 					</ul>
 				</nav>
 			</div>

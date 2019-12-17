@@ -56,9 +56,12 @@ $product_id = $product->get_id();
 		<?= wp_trim_words($product->get_short_description(), 30); ?>
 	</div>
 	<div class="product-price">
-		<span class="price">ONLY $<?=  $product->get_regular_price(); ?> USD</span>
+		
 		<?php  if( $product->is_on_sale() ): ?>
-			<span class="sale-price">WAS $<?= $product->get_sale_price(); ?> USD - SAVE $<?= (int)$product->get_regular_price() - (int)$product->get_sale_price() ?> </span>
+			<span class="price">ONLY $<?=  $product->get_sale_price(); ?> USD</span>
+			<span class="sale-price">WAS $<?= $product->get_regular_price(); ?> USD - SAVE $<?= (int)$product->get_regular_price() - (int)$product->get_sale_price() ?> </span>
+		<?php else: ?>
+			<span class="price">ONLY $<?=  $product->get_regular_price(); ?> USD</span>
 		<?php endif; ?>
 	</div>
 	<a href="<?= do_shortcode('[add_to_cart_url id="'.$product_id.'"]'); ?>" data-quantity="1" data-product_id="<?= $product_id ?>" class="add-to-cart-btn b-btn">BUY NOW</a>

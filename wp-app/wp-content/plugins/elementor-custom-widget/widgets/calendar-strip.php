@@ -102,7 +102,7 @@ class Calendar_Strip extends Widget_Base {
 						<?= $settings['content']  ?>
 					</div>
 					<div class="calendar-cta">
-						<a href="<?= $settings['link'] ?>" class="w-btn">View Course Calendar</a>
+						<a href="<?= $settings['link']['url'] ?>" class="w-btn">View Course Calendar</a>
 					</div>
 					
 				</div>
