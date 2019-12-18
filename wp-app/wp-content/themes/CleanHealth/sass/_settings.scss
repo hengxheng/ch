@@ -23,9 +23,9 @@ $content-width: 1440px;
   font-size: 16px;
   line-height: 16px;
   &:hover{
-    border-color: $green;
-    background:$green;
-    color: #fff;
+    border-color: #fff;
+    background:#fff;
+    color: $green;
   }
 }
 
@@ -231,6 +231,40 @@ a.download-btn{
   }
 }
 
+.hs-form{
+  fieldset{
+    margin: 0 0 15px !important;
+  }
+  .hs-input{
+    width: 100% !important;
+  }
+  label{
+    display:block;
+    width: 100%;
+    font-size: 15px;
+  }
+  input[type="text"], input[type="email"], input[type="tel"], select{
+    height: 35px;
+  }
+  input[type="text"], input[type="email"], input[type="tel"], select, textarea{
+    color:#fff;
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid #fff;
+    width:100% !important;
+  }
+  option{
+    background:$green;
+    color:#fff;
+  }
+  .hs-error-msgs{
+    list-style:none;
+    margin: 5px 0;
+    padding:0;
+    color: red;
+  }
+}
+
 // coach post type
 .type-coach{
   .page-header-widget, .elementor-widget-page_header{
@@ -253,9 +287,26 @@ a.download-btn{
 }
 
 #post-37{
+  .elementor-widget-contact_page_main{
+    margin: 0;
+  }
+  .footer-subscription-widget{
+    margin-top: 0;
+    .footer-subscription-wrapper{
+      padding:0;
+      .fs-inner{
+        height: 400px;
+        .fs-image{
+          // img{
+          // position: relative;
+          // }
+        }
+      }
+    }
+  }
   .elementor-widget-footer_subscription{
-    margin-top: -170px;
-    z-index:-1;
+    // margin-top: -170px;
+    // z-index:-1;
     @media (max-width: $small-width){
       margin-top: 0;
     }

@@ -385,8 +385,8 @@ body{
             color: #fff;
             background: $green;
             width: calc( 100% - 100px);
-            ::placeholder{
-                color: #ddd;
+            &::placeholder{
+                color: #fff;
             }
         }
         input[type="submit"]{

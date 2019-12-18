@@ -399,3 +399,21 @@ function add_custom_info_menu_item(){
 	
 }
 add_action("admin_menu", "add_custom_info_menu_item");
+
+function addPriceSuffix($format, $currency_pos) {
+	switch ( $currency_pos ) {
+		case 'left' :
+			$currency = "USD";
+			$format = '%1$s%2$s&nbsp;' . $currency;
+		break;
+	}
+ 
+	return $format;
+}
+ 
+function addPriceSuffixAction() {
+	add_action('woocommerce_price_format', 'addPriceSuffix', 1, 2);
+}
+ 
+add_action('woocommerce_before_cart', 'addPriceSuffixAction');
+add_action('woocommerce_review_order_before_order_total', 'addPriceSuffixAction');

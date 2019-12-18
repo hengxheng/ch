@@ -464,9 +464,9 @@ template {
 }
 
 .w-btn:hover {
-  border-color: #9aca3c;
-  background: #9aca3c;
-  color: #fff;
+  border-color: #fff;
+  background: #fff;
+  color: #9aca3c;
 }
 
 .b-btn {
@@ -692,6 +692,44 @@ a.download-btn.white {
   width: 100%;
 }
 
+.hs-form fieldset {
+  margin: 0 0 15px !important;
+}
+
+.hs-form .hs-input {
+  width: 100% !important;
+}
+
+.hs-form label {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+}
+
+.hs-form input[type="text"], .hs-form input[type="email"], .hs-form input[type="tel"], .hs-form select {
+  height: 35px;
+}
+
+.hs-form input[type="text"], .hs-form input[type="email"], .hs-form input[type="tel"], .hs-form select, .hs-form textarea {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  width: 100% !important;
+}
+
+.hs-form option {
+  background: #9aca3c;
+  color: #fff;
+}
+
+.hs-form .hs-error-msgs {
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+  color: red;
+}
+
 .type-coach .page-header-widget, .type-coach .elementor-widget-page_header {
   margin: 0 !important;
 }
@@ -708,9 +746,20 @@ a.download-btn.white {
   padding: 30px !important;
 }
 
-#post-37 .elementor-widget-footer_subscription {
-  margin-top: -170px;
-  z-index: -1;
+#post-37 .elementor-widget-contact_page_main {
+  margin: 0;
+}
+
+#post-37 .footer-subscription-widget {
+  margin-top: 0;
+}
+
+#post-37 .footer-subscription-widget .footer-subscription-wrapper {
+  padding: 0;
+}
+
+#post-37 .footer-subscription-widget .footer-subscription-wrapper .fs-inner {
+  height: 400px;
 }
 
 @media (max-width: 800px) {
@@ -1303,8 +1352,8 @@ body {
   width: calc( 100% - 100px);
 }
 
-#header-search-block #searchform input[type="text"] ::placeholder {
-  color: #ddd;
+#header-search-block #searchform input[type="text"]::placeholder {
+  color: #fff;
 }
 
 #header-search-block #searchform input[type="submit"] {
@@ -2168,12 +2217,54 @@ body {
   padding: 50px;
 }
 
-.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner form {
-  width: 100;
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form {
+  width: 100%;
 }
 
-.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .w-btn {
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form .hbspt-form {
+  width: 400px;
+}
+
+@media (max-width: 800px) {
+  .footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form .hbspt-form {
+    width: 100%;
+  }
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form .hs-form-field {
+  margin: 0 0 10px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form label {
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form input[type="text"], .footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form input[type="email"], .footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form input[type="tel"], .footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form select {
+  height: 20px;
+  width: 60%;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form .w-btn {
   margin-top: 20px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form input[type="submit"] {
+  margin-top: 20px;
+  font-family: 'ProximaNova-Semibold';
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-content .fs-content-inner .subcription-form input[type="submit"]:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #9aca3c;
 }
 
 @media (max-width: 800px) {
@@ -2182,6 +2273,9 @@ body {
   }
   .footer-subscription-widget .footer-subscription-wrapper {
     padding: 0;
+  }
+  .footer-subscription-widget .footer-subscription-wrapper .fs-inner {
+    height: auto;
   }
   .footer-subscription-widget .footer-subscription-wrapper .fs-inner .fs-image {
     display: none;
@@ -4865,6 +4959,10 @@ div.product.type-product .elementor-widget {
   font-size: 14px;
 }
 
+.login-page .dashboard-login-block form.login input[type="checkbox"] {
+  height: auto;
+}
+
 .login-page .dashboard-login-block form.login button.button {
   width: 100%;
   float: none;
@@ -4882,6 +4980,14 @@ div.product.type-product .elementor-widget {
 
 .login-page .dashboard-login-block form.login .form-row .form-login-2 {
   width: 50%;
+}
+
+@media (max-width: 800px) {
+  .login-page .dashboard-login-block form.login .form-row .form-login-2 {
+    width: 100%;
+    text-align: left !important;
+    margin: 0 0 10px;
+  }
 }
 
 .login-page .dashboard-login-block form.login .form-row .form-login-2 a {

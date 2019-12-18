@@ -95,15 +95,16 @@ class Footer_Subscription extends Widget_Base {
 								<?= wpautop( $settings['content'] ) ?>
 							</div>
 							<div class="subcription-form">
-								<form action="">
-									<div class="form-row">
-										<label for="">Email</label>
-										<input type="text" name='sub-email'/>
-									</div>
-									<div class="form-row">
-										<input type="submit" class="w-btn" value="SIGN UP NOW">
-									</div>
-								</form>
+								<!--[if lte IE 8]>
+								<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+								<![endif]-->
+								<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+								<script>
+									hbspt.forms.create({
+										portalId: "5113772",
+										formId: "a8beac2e-8fd0-4dc5-aea0-3a5d60e34c1a"
+									});
+								</script>
 							</div>
 						</div>
 					</div>

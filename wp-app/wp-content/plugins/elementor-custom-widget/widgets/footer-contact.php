@@ -80,7 +80,17 @@ class Footer_Contact extends Widget_Base {
 							<?= $settings['content'] ?>
 						</div>
 						<div class="fc-form">
-							<?php echo do_shortcode('[contact-form-7 id="52" title="Footer Contact"]'); ?>
+							<?php //echo do_shortcode('[contact-form-7 id="52" title="Footer Contact"]'); ?>
+							<!--[if lte IE 8]>
+							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+							<![endif]-->
+							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+							<script>
+								hbspt.forms.create({
+									portalId: "5113772",
+									formId: "733f59b0-fb94-4a09-8abd-65988c2e0ac7"
+								});
+							</script>
 						</div>
 					</div>
 				</div>

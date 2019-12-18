@@ -632,6 +632,9 @@ div.product.type-product{
             input[type="text"], input[type="password"]{
                 font-size: 14px;
             }
+            input[type="checkbox"]{
+                height: auto;
+            }
             button.button{
                 width: 100%;
                 float: none;
@@ -646,6 +649,11 @@ div.product.type-product{
                 align-items: center;
                 .form-login-2{
                     width: 50%;
+                    @media (max-width: $small-width){
+                        width: 100%;
+                        text-align: left !important;
+                        margin: 0 0 10px;
+                    }
                     a{
                         color: #000;
                     }
